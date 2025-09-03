@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Barrell.ma
-//Last modified: Tue, Sep 02, 2025 05:32:13 PM
+//Last modified: Tue, Sep 02, 2025 06:03:50 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,22 +11,22 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "E91C47B1-4CD7-0A78-B535-B88EF9B777FC";
+fileInfo "UUID" "BA834AA8-4969-8562-BFED-379210A7FAD5";
 createNode transform -s -n "persp";
 	rename -uid "6AAE181D-45FB-EA9D-430F-90823C720225";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -37.627342137865519 36.477391302852411 -29.540543473625249 ;
-	setAttr ".r" -type "double3" 327.00000001764795 -2651.1999999977802 0 ;
+	setAttr ".t" -type "double3" -36.14430097775783 30.49829320768826 -21.381520260967342 ;
+	setAttr ".r" -type "double3" 328.20000001762543 -2641.599999997587 0 ;
 	setAttr ".rpt" -type "double3" -7.4356163033707593e-16 -3.3965630459052395e-17 -5.3719881970528428e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "9CA49E57-4897-2E71-C77D-BEA065D993E1";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 68.694314053621838;
+	setAttr ".coi" 59.032352903659387;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -10.218035494298478 2.5502513125538826 17.380030077150987 ;
+	setAttr ".tp" -type "double3" 15.36395019159697 2.4638317823410052 5.8000756637408593 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "9AFDDF8A-485D-BE80-80ED-E582D49A54E9";
