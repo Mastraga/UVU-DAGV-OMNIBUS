@@ -249,9 +249,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 284571291087513827, guid: de1b0336af69aca4ebc853ae44aaabff, type: 3}
+      propertyPath: respondEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 284571291087513827, guid: de1b0336af69aca4ebc853ae44aaabff, type: 3}
       propertyPath: respondEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 9100000, guid: 5b88e4fe75381bb4b9c57df26df86cdc, type: 2}
+      objectReference: {fileID: 453140851}
+    - target: {fileID: 284571291087513827, guid: de1b0336af69aca4ebc853ae44aaabff, type: 3}
+      propertyPath: respondEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 284571291087513827, guid: de1b0336af69aca4ebc853ae44aaabff, type: 3}
+      propertyPath: respondEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2098230369999990148, guid: de1b0336af69aca4ebc853ae44aaabff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.0643835
@@ -301,6 +313,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1b0336af69aca4ebc853ae44aaabff, type: 3}
+--- !u!95 &453140851 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4108221237187582347, guid: de1b0336af69aca4ebc853ae44aaabff, type: 3}
+  m_PrefabInstance: {fileID: 453140850}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &483534694
 GameObject:
   m_ObjectHideFlags: 0
