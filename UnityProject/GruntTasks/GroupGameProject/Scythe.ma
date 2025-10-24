@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Scythe.ma
-//Last modified: Sun, Oct 12, 2025 05:10:53 PM
+//Last modified: Thu, Oct 23, 2025 02:43:43 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "E2D4F305-445C-5E2E-F65C-0C82B24EE309";
+fileInfo "UUID" "7A25EA17-4869-40BF-706C-D59D698E0D31";
 createNode transform -s -n "persp";
 	rename -uid "F733437B-4504-E6B2-FA9A-2DA4343DB9EE";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 83.346786064900598 146.50236023187986 323.19643568258192 ;
-	setAttr ".r" -type "double3" 716.0616472739008 358.99999999986716 -8.6981539781084743e-17 ;
+	setAttr ".t" -type "double3" 41.985717200887741 195.9218073363939 314.1661773054841 ;
+	setAttr ".r" -type "double3" 709.46164727389737 353.39999999986469 2.0011084909437627e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "38FC61A5-42F8-11D6-23D5-038F55E6F49F";
 	setAttr -k off ".v" no;
@@ -1204,7 +1204,7 @@ createNode mesh -n "sixFootMan:sixFootManShape" -p "sixFootMan:sixFootMan";
 		 0 0.126083 0 0.5 0 1 0.5 1 0.90319198 0.5 0 0.5 0 0.126083 0 0.5 0 1 0.5 1 0.90319198;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr -s 140 ".pt";
+	setAttr -s 139 ".pt";
 	setAttr ".pt[30]" -type "float3" 2.771616e-06 1.7881393e-06 7.1525574e-07 ;
 	setAttr ".pt[31]" -type "float3" 9.5367432e-07 1.6689301e-06 -2.1457672e-06 ;
 	setAttr ".pt[32]" -type "float3" 4.7683716e-07 3.5762787e-06 -7.1525574e-07 ;
@@ -21475,20 +21475,20 @@ createNode mesh -n "ScytheMatrialShape" -p "ScytheMatrial";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "E6F72986-4046-A6AC-36A1-1188F761DF21";
+	rename -uid "B8F9A48C-4C43-9EF4-DF46-0191C45E77AD";
 	setAttr -s 8 ".lnk";
 	setAttr -s 8 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C075CD5D-4343-25CC-DF5C-1181342BD993";
+	rename -uid "F7A0C377-484A-E2A9-D5E8-D6B3C0ACDDDD";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "9C18F8FF-49BB-9767-8BF8-2EB38D99D38C";
+	rename -uid "BD76A7A4-4F59-B9D2-7F68-6DA75716A0BF";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "180678AD-4427-419D-C101-60B092FBF545";
+	rename -uid "E888243B-45AE-78FC-9EAD-37BA462214C2";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8BF49311-44F6-87CD-1608-11919AB233A6";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "C60A2FB2-4365-AFC5-6014-F9B074C96F36";
+	rename -uid "2800C326-4159-7FAC-B17A-2A80358022E3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "59358C32-46C6-943A-3BA8-6D9883AD46BF";
 	setAttr ".g" yes;
