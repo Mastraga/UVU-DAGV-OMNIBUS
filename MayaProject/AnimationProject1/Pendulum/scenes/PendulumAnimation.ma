@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: PendulumAnimation.ma
-//Last modified: Tue, Nov 04, 2025 01:06:16 PM
+//Last modified: Wed, Nov 05, 2025 08:56:53 AM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Pendulum_v1_0_0" -rfn "Ultimate_Pendulum_v1_0_0RN"
 		 -op "v=0;" -typ "mayaAscii" "E:/Mason/GitRepos/UVU-DAGV-OMNIBUS/MayaProject/AnimationProject1/Rigs/Ultimate_Pendulum_v1.0.0.ma";
@@ -11,23 +11,24 @@ requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.4.5";
 requires "Mayatomr" "2012.0m - 3.9.1.47 ";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "1D5E90F6-45BE-60E2-4A66-7D920BE9A8DD";
+fileInfo "UUID" "67DF0A85-417B-6CC5-7CDF-C09A84AE0E8E";
 createNode transform -s -n "persp";
 	rename -uid "F352E542-47F6-41A0-1CD2-399F2B75D503";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.680909627824992 3.2425466316289766 0.79513011245250009 ;
-	setAttr ".r" -type "double3" -0.33835272955113144 88.199999999994972 -7.9106918069249366e-16 ;
+	setAttr ".t" -type "double3" 8.6603037129303662 2.7394795261337124 0.37041576951267802 ;
+	setAttr ".r" -type "double3" 2.0616472704490834 88.599999999994935 -8.1361827974868421e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "54C98E20-4D84-E5AC-96AA-5DB35D22B543";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 8.6469895595871638;
+	setAttr ".coi" 6.6170702008972571;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -124,23 +125,23 @@ createNode nurbsCurve -n "Pictoplasma_v1_0_2:pictoplasma_MainShape" -p "Pictopla
 		10.336116938577593 -2.3735284411929582e-14 0.0043221512969326137
 		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "528BF12B-44EC-23E1-2E4C-6B96838B4BBF";
+	rename -uid "8EBADA10-4B4F-BCFE-2466-5DABCBF9D4A9";
 	setAttr -s 22 ".lnk";
 	setAttr -s 22 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "8A29C58E-4138-CEE6-0126-9FB076EE1BCB";
+	rename -uid "5E03B7BF-4E1E-DE61-7E9C-0CAC694A5254";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "B3859E9F-494C-5A88-93C2-2F84B602EEAB";
+	rename -uid "A4ABE813-49AC-A4F6-11B5-46907B8904CE";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "AEF48D3A-4D27-0F00-C7CE-3483F18DA6F4";
+	rename -uid "CFA091EC-47F9-DEE2-B776-3298D60C3D48";
 	setAttr -s 6 ".dli[1:5]"  4 1 2 3 5;
 	setAttr -s 6 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "55BA67C0-46BD-9657-9BA4-DA99A3F102C2";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "CC794729-40C4-8714-6652-389AA01D472F";
+	rename -uid "F907A2AF-45DF-5999-0BB4-45927E19A333";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E8176253-45FD-06F9-0671-AD9C2E2E00D5";
 	setAttr ".g" yes;
@@ -235,7 +236,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "ABD30EDA-4BCD-5A72-E3C3-B88CAD2735E0";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 95 -ast 0 -aet 95 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 48 -ast 0 -aet 48 ";
 	setAttr ".st" 6;
 createNode materialInfo -n "Ultimate_Beefy_v1_0_2:char_body_materialInfo1";
 	rename -uid "8B5B5161-48A6-B76D-9D2A-DD8E3F3AFD98";
@@ -1180,20 +1181,21 @@ createNode shadingEngine -n "Ultimate_Handy_v1_0_2:Shdr_turuncu:Shdr_ball_turunc
 	setAttr ".ro" yes;
 createNode materialInfo -n "Ultimate_Handy_v1_0_2:materialInfo2";
 	rename -uid "E1D182A5-4F39-A451-577C-A89C2861ABD6";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "9BBFD4CA-4E86-7183-CF83-F7A639404146";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -44.047617297323995 -192.85713519368886 ;
+	setAttr ".tgi[0].vh" -type "double2" 102.38094831269902 44.047617297323995 ;
 createNode animCurveTA -n "CTRL_Pend_01_rotateX";
-	rename -uid "436EF38A-46F2-2921-0E25-DD968900D386";
-	setAttr ".tan" 1;
-	setAttr -s 5 ".ktv[0:4]"  0 -45 24 45 48 -45 72 45 96 -45;
-	setAttr -s 5 ".kot[4]"  5;
-	setAttr -s 5 ".kix[0:4]"  1.7975071191331977 1.5042402704552873 1.6016459024777538 
-		1.6301780756942905 1.8258095287831388;
-	setAttr -s 5 ".kiy[0:4]"  0 0 0 0 0;
-	setAttr -s 5 ".kox[0:4]"  1.7975071191331977 1.5042402704552873 1.6016459024777538 
-		1.6301780756942905 0;
-	setAttr -s 5 ".koy[0:4]"  0 0 0 0 0;
+	rename -uid "C47FDCBB-4EF1-C8FB-2AEA-5AA2A16C141F";
+	setAttr ".tan" 3;
+	setAttr -s 9 ".ktv[0:8]"  0 -45 10 -20 12 0 14 20 24 45 34 20 36 0
+		 38 -20 48 -45;
+	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
+		5;
 select -ne :time1;
-	setAttr ".o" 8;
-	setAttr ".unw" 8;
+	setAttr ".o" 37;
+	setAttr ".unw" 37;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1238,8 +1240,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 6 ".sol";
 connectAttr "CTRL_Pend_01_rotateX.o" "Ultimate_Pendulum_v1_0_0RN.phl[1]";
 connectAttr "Pictoplasma_v1_0_2:pictoplasma_Main.masterScale" "Pictoplasma_v1_0_2:pictoplasma_Main.sx"
 		 -l on;
