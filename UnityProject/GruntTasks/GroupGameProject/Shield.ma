@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Shield.ma
-//Last modified: Sun, Nov 30, 2025 06:45:17 PM
+//Last modified: Sun, Nov 30, 2025 07:18:50 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "2F293FAE-4036-1ABF-C165-99B01ACA7386";
+fileInfo "UUID" "FD0AAC47-408C-7080-601E-DE92E93F8B55";
 createNode transform -s -n "persp";
 	rename -uid "4CB0B0F5-44E1-DAE9-29C9-2C85D1485BD4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 71.793996140935889 9.6879502479371702 174.26248573954692 ;
-	setAttr ".r" -type "double3" -3.3383527233931596 -2852.9999999995421 0 ;
+	setAttr ".t" -type "double3" 101.40398918957393 21.625372657084689 154.20569906191974 ;
+	setAttr ".r" -type "double3" -6.9383527234154041 -2842.1999999999621 5.0315359512534817e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E8F86031-494C-CB97-11C0-86B9B9D3A7D2";
 	setAttr -k off ".v" no;
@@ -7319,12 +7319,11 @@ createNode standardSurface -n "TowerShieldHandle";
 createNode shadingEngine -n "standardSurface12SG";
 	rename -uid "551B9B7B-4734-4A85-0E6E-BEA6E88AFE4B";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo11";
 	rename -uid "1C2F8FE8-4D85-083E-CC58-DD98602F2BC7";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "42241180-4D79-DA90-11B1-66B49E52368C";
+	rename -uid "C1B11E96-42E4-1DAE-BFA3-A5B3B74B3822";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -759.52377934304627 292.00812393925787 ;
 	setAttr ".tgi[0].vh" -type "double2" -374.28719217299101 658.66731223563022 ;
