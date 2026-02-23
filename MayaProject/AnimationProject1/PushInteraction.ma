@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: PushInteraction.ma
-//Last modified: Sat, Feb 14, 2026 04:13:14 PM
+//Last modified: Sun, Feb 22, 2026 10:02:43 AM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Beefy_v1_0_2" -rfn "Ultimate_Beefy_v1_0_2RN" -op "v=0;"
 		 -typ "mayaAscii" "E:/Mason/GitRepos/UVU-DAGV-OMNIBUS/MayaProject/AnimationProject1/Rigs/Ultimate_Beefy_v1.0.2.ma";
@@ -10,30 +10,30 @@ requires maya "2025ff03";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOV" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter"
 		 -nodeType "aiAreaLight" "mtoa" "5.4.5";
-requires -nodeType "simpleSelector" -nodeType "renderSetupLayer" -nodeType "renderSetup"
-		 -nodeType "collection" -nodeType "lightItem" -nodeType "lightEditor" "renderSetup.py" "1.0";
+requires -nodeType "renderSetup" -nodeType "lightItem" -nodeType "lightEditor" "renderSetup.py" "1.0";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "EAB68E5E-4C2A-8306-C3FE-8DA4E7C812D4";
+fileInfo "UUID" "191FFB4A-42E4-A214-1936-6382462D17B1";
 createNode transform -s -n "persp";
 	rename -uid "E24BAE5D-4C75-6E28-1B23-CD99781A1E92";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 84.776716819541434 41.606074034299574 -77.593625249718826 ;
-	setAttr ".r" -type "double3" -23.738352730636102 -234.20000000004472 0 ;
+	setAttr ".t" -type "double3" 53.012599638922602 22.855569078623073 -36.708304252510146 ;
+	setAttr ".r" -type "double3" -18.938352730633905 -235.00000000004289 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7E639FB6-4BF8-60EF-75BB-AF89AA22BB55";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 150.2855728606736;
+	setAttr ".coi" 69.072778671576629;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -2.8350213653828149 -22.88105277328458 33.111603464485682 ;
+	setAttr ".tp" -type "double3" -2.8421709430404007e-14 -2.0490594130699513 0 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "487AE819-48B3-691A-85A2-03845B51CADC";
@@ -87,6 +87,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "pPlane1";
 	rename -uid "4F7794BD-484D-9F5E-28F0-5DA7D493C43A";
+	setAttr ".rlio[0]" 1 yes 0;
 	setAttr ".s" -type "double3" 84.049552509352992 84.049552509352992 84.049552509352992 ;
 createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	rename -uid "7C92D9CF-47F4-C048-4900-6B819404970D";
@@ -101,6 +102,7 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "pCube1";
 	rename -uid "F3B48B71-453C-C823-3F7F-E3A0E949594E";
+	setAttr ".rlio[0]" 1 yes 0;
 createNode mesh -n "pCubeShape1" -p "pCube1";
 	rename -uid "F460FBA4-4295-42AC-E0AA-1291BFE472DF";
 	setAttr -k off ".v";
@@ -434,15 +436,16 @@ createNode mesh -n "pPlaneShape3" -p "pPlane3";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "aiAreaLight1";
 	rename -uid "0A6BB9CC-4C85-A481-B4DA-3A80B61F843D";
+	setAttr ".rlio[0]" 1 yes 0;
 	setAttr ".t" -type "double3" 20.110034194793652 23.910622607850737 -27.00626771781117 ;
-	setAttr ".r" -type "double3" 6.1067007413535128 129.88542871038746 35.548946986629112 ;
+	setAttr ".r" -type "double3" 6.1067007413535128 129.88542871038749 35.548946986629112 ;
 	setAttr ".s" -type "double3" 2.0946292737915657 2.0946292737915657 2.0946292737915657 ;
 createNode aiAreaLight -n "aiAreaLightShape1" -p "aiAreaLight1";
 	rename -uid "E4590906-4463-77DC-C36E-04A4CD68F905";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr -k off ".v";
-	setAttr -s 4 ".rlio[2:3]" 1 yes 0 4 yes 0;
-	setAttr -s 3 ".rlio";
+	setAttr -s 4 ".rlio[0:3]" 3 yes 0 2 yes 0 1 
+		yes 0 4 yes 0;
 	setAttr ".csh" no;
 	setAttr ".rcsh" no;
 	setAttr ".sc" -type "float3" 1 0.949 0.949 ;
@@ -758,6 +761,7 @@ createNode mesh -n "pPlaneShape4" -p "pPlane4";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "aiAreaLight2";
 	rename -uid "78889CFA-479D-07EB-F667-68B64CEF0848";
+	setAttr ".rlio[0]" 1 yes 0;
 	setAttr ".t" -type "double3" 28.928211108867973 9.241638352931723 9.3347784283245812 ;
 	setAttr ".r" -type "double3" 221.11445854246574 99.640283368951728 232.17415695255053 ;
 	setAttr ".s" -type "double3" 2.0946292737915657 2.0946292737915657 2.0946292737915657 ;
@@ -765,8 +769,8 @@ createNode aiAreaLight -n "aiAreaLightShape2" -p "aiAreaLight2";
 	rename -uid "EFF91967-4A8B-A158-045B-7BA70899AC8C";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr -k off ".v";
-	setAttr -s 4 ".rlio[2:3]" 1 yes 0 4 yes 0;
-	setAttr -s 3 ".rlio";
+	setAttr -s 4 ".rlio[0:3]" 3 yes 0 2 yes 0 1 
+		yes 0 4 yes 0;
 	setAttr ".csh" no;
 	setAttr ".rcsh" no;
 	setAttr ".ai_exposure" 9.5;
@@ -789,6 +793,7 @@ createNode camera -n "cameraShape1" -p "camera1";
 	setAttr ".man" -type "string" "camera1_mask";
 createNode transform -n "aiAreaLight3";
 	rename -uid "29EF9D0C-453E-4D99-64BD-9C8E5B60D2D9";
+	setAttr ".rlio[0]" 1 yes 0;
 	setAttr ".t" -type "double3" -21.815187617943472 16.334231338735961 -35.913117004545718 ;
 	setAttr ".r" -type "double3" 10.857242880728972 228.53161275199875 704.53427625792767 ;
 	setAttr ".s" -type "double3" 2.0946292737915657 2.0946292737915657 2.0946292737915657 ;
@@ -796,8 +801,8 @@ createNode aiAreaLight -n "aiAreaLightShape3" -p "aiAreaLight3";
 	rename -uid "CB58FAEC-44C6-0F58-BBAE-77B7A976B39F";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr -k off ".v";
-	setAttr -s 4 ".rlio[2:3]" 1 yes 0 4 yes 0;
-	setAttr -s 3 ".rlio";
+	setAttr -s 4 ".rlio[0:3]" 3 yes 0 2 yes 0 1 
+		yes 0 4 yes 0;
 	setAttr ".csh" no;
 	setAttr ".rcsh" no;
 	setAttr ".ai_exposure" 15;
@@ -805,16 +810,16 @@ createNode aiAreaLight -n "aiAreaLightShape3" -p "aiAreaLight3";
 	setAttr ".ai_translator" -type "string" "quad";
 	setAttr ".aal" -type "attributeAlias" 4 "exposure" "aiExposure" "normalize" "aiNormalize" ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9E032C14-45A7-7613-C70E-3B8EB3C6E557";
+	rename -uid "D5C09D8D-4FFF-A3F7-0513-3AB554C5A15B";
 	setAttr -s 9 ".lnk";
 	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "506377B9-47C4-7B10-E1BE-70A03E55C5DC";
+	rename -uid "D5A9A101-43E3-8BDD-67BA-ED8CE3FCE700";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "0B002B9E-47ED-B61A-EB48-20963A5118AA";
+	rename -uid "18F01F3D-42A3-F1B4-589C-D98F9737CD9C";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "55CE73EC-472A-808E-C043-16A8844BD584";
+	rename -uid "F47CA3A3-4183-FE08-05AB-9EA6776D3F9C";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -822,10 +827,8 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "C2B7D1EC-4D65-3676-D101-768378927F2A";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6CAA808B-4D93-E62B-C8F9-8BBA3930CD84";
-	setAttr ".crl" 1;
-	setAttr -s 4 ".rlmi[1:4]"  1 2 3 4;
-	setAttr -s 5 ".rlmi";
+	rename -uid "42D8CA17-4028-D7BF-0687-928A77C83E22";
+	setAttr -s 5 ".rlmi[1:4]"  1 2 3 4;
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "91659FF5-44AB-2C79-D3D2-A5BC5D2E9A32";
 	setAttr ".g" yes;
@@ -1145,8 +1148,7 @@ createNode reference -n "Ultimate_Beefy_v1_0_2RN";
 		"Ultimate_Beefy_v1_0_2RN"
 		"Ultimate_Beefy_v1_0_2RN" 0
 		"Ultimate_Beefy_v1_0_2RN" 342
-		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC" "GlobalScale" 
-		" -k 1"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy" "renderLayerInfo[0]" " 1 1 0"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_ROOTCG|Ultimate_Beefy_v1_0_2:Beefy_ROOTC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_MainHipCG|Ultimate_Beefy_v1_0_2:Beefy_MainHipC" 
@@ -1215,8 +1217,12 @@ createNode reference -n "Ultimate_Beefy_v1_0_2RN";
 		2 "Ultimate_Beefy_v1_0_2:groupParts143" "inputRemoveComponent" " -type \"componentList\" 1 \"f[0:607]\""
 		
 		2 "Ultimate_Beefy_v1_0_2:groupParts143" "groupId" " 265"
-		3 "Ultimate_Beefy_v1_0_2:groupId143.groupId" "Ultimate_Beefy_v1_0_2:groupParts143.groupId" 
+		3 "Ultimate_Beefy_v1_0_2:groupId46.groupId" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_Mesh_Grp|Ultimate_Beefy_v1_0_2:Beefy_L_leg_Grp|Ultimate_Beefy_v1_0_2:Beefy_L_leg|Ultimate_Beefy_v1_0_2:Beefy_L_legShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
+		3 "Ultimate_Beefy_v1_0_2:char_body_blinn1SG.memberWireframeColor" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_Mesh_Grp|Ultimate_Beefy_v1_0_2:Beefy_L_leg_Grp|Ultimate_Beefy_v1_0_2:Beefy_L_leg|Ultimate_Beefy_v1_0_2:Beefy_L_legShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:BeefyExtraNodes|Ultimate_Beefy_v1_0_2:Beefy_ribbonBlend|Ultimate_Beefy_v1_0_2:Beefy_ribbonBlendShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_Mesh_Grp|Ultimate_Beefy_v1_0_2:Beefy_R_leg_Grp|Ultimate_Beefy_v1_0_2:Beefy_R_leg|Ultimate_Beefy_v1_0_2:Beefy_R_legShape.instObjGroups.objectGroups[0]" 
 		"Ultimate_Beefy_v1_0_2:char_body_blinn1SG.dagSetMembers" "-na"
 		3 "Ultimate_Beefy_v1_0_2:groupId143.message" "Ultimate_Beefy_v1_0_2:char_body_blinn1SG.groupNodes" 
@@ -1285,9 +1291,11 @@ createNode reference -n "Ultimate_Beefy_v1_0_2RN";
 		"Ultimate_Beefy_v1_0_2:char_body_blinn1SG.dagSetMembers" "-na"
 		3 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_Mesh_Grp|Ultimate_Beefy_v1_0_2:Beefy_pelvis|Ultimate_Beefy_v1_0_2:Beefy_pelvisShape.instObjGroups" 
 		"Ultimate_Beefy_v1_0_2:char_body_blinn1SG.dagSetMembers" "-na"
-		3 "Ultimate_Beefy_v1_0_2:groupId46.groupId" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_Mesh_Grp|Ultimate_Beefy_v1_0_2:Beefy_L_leg_Grp|Ultimate_Beefy_v1_0_2:Beefy_L_leg|Ultimate_Beefy_v1_0_2:Beefy_L_legShape.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "Ultimate_Beefy_v1_0_2:groupId46.groupId" "Ultimate_Beefy_v1_0_2:groupParts44.groupId" 
 		""
-		3 "Ultimate_Beefy_v1_0_2:char_body_blinn1SG.memberWireframeColor" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_Mesh_Grp|Ultimate_Beefy_v1_0_2:Beefy_L_leg_Grp|Ultimate_Beefy_v1_0_2:Beefy_L_leg|Ultimate_Beefy_v1_0_2:Beefy_L_legShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:BeefyExtraNodes|Ultimate_Beefy_v1_0_2:Beefy_ribbon|Ultimate_Beefy_v1_0_2:Beefy_ribbonShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "Ultimate_Beefy_v1_0_2:groupId143.groupId" "Ultimate_Beefy_v1_0_2:groupParts143.groupId" 
 		""
 		3 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_Mesh_Grp|Ultimate_Beefy_v1_0_2:Beefy_R_leg_Grp|Ultimate_Beefy_v1_0_2:Beefy_R_leg_ankle|Ultimate_Beefy_v1_0_2:Beefy_R_leg_ankleShape.instObjGroups" 
 		"Ultimate_Beefy_v1_0_2:char_body_blinn5SG.dagSetMembers" "-na"
@@ -1317,12 +1325,6 @@ createNode reference -n "Ultimate_Beefy_v1_0_2RN";
 		"Ultimate_Beefy_v1_0_2:char_body_blinn5SG.dagSetMembers" "-na"
 		3 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_Mesh_Grp|Ultimate_Beefy_v1_0_2:Beefy_L_arm_Grp|Ultimate_Beefy_v1_0_2:Beefy_L_elbow|Ultimate_Beefy_v1_0_2:Beefy_L_elbowShape.instObjGroups" 
 		"Ultimate_Beefy_v1_0_2:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:BeefyExtraNodes|Ultimate_Beefy_v1_0_2:Beefy_ribbonBlend|Ultimate_Beefy_v1_0_2:Beefy_ribbonBlendShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "Ultimate_Beefy_v1_0_2:groupId46.groupId" "Ultimate_Beefy_v1_0_2:groupParts44.groupId" 
-		""
-		3 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:BeefyExtraNodes|Ultimate_Beefy_v1_0_2:Beefy_ribbon|Ultimate_Beefy_v1_0_2:Beefy_ribbonShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "Ultimate_Beefy_v1_0_2:groupId143.groupId" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_Mesh_Grp|Ultimate_Beefy_v1_0_2:Beefy_R_leg_Grp|Ultimate_Beefy_v1_0_2:Beefy_R_leg|Ultimate_Beefy_v1_0_2:Beefy_R_legShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 "Ultimate_Beefy_v1_0_2:char_body_blinn1SG.memberWireframeColor" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_Mesh_Grp|Ultimate_Beefy_v1_0_2:Beefy_R_leg_Grp|Ultimate_Beefy_v1_0_2:Beefy_R_leg|Ultimate_Beefy_v1_0_2:Beefy_R_legShape.instObjGroups.objectGroups[0].objectGrpColor" 
@@ -1873,7 +1875,7 @@ createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	setAttr -s 3 ".aovs";
 	setAttr ".rndrdvc" 1;
 	setAttr ".version" -type "string" "5.3.5.2";
-	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=cameraShape1;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1 1;Background.Offset=0 0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1 1;Foreground.Offset=0 0;Foreground.Apply Color Management=1;";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=cameraShape1;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1  1;Background.Offset=0  0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1  1;Foreground.Offset=0  0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "73202E73-44F3-1531-3376-F28B690E87E3";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -1890,12 +1892,11 @@ createNode shadingEngine -n "blinn1SG";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-	setAttr -s 4 ".aovs";
+	setAttr -s 3 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "specular";
 	setAttr ".aovs[2].aov_name" -type "string" "shadow_matte";
-	setAttr ".aovs[3].aov_name" -type "string" "shadow";
-	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_specular" "aiCustomAOVs[1].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[2].aovName" "ai_aov_shadow" "aiCustomAOVs[3].aovName" ;
+	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_specular" "aiCustomAOVs[1]" "ai_aov_shadow_matte" "aiCustomAOVs[2]" "ai_aov_shadow" "aiCustomAOVs[3]" ;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "EE5C8A1D-4E34-DA5C-1831-3EB3E306E38D";
 createNode blinn -n "blinn2";
@@ -1909,12 +1910,11 @@ createNode shadingEngine -n "blinn2SG";
 	setAttr ".ihi" 0;
 	setAttr -s 48 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 4 ".aovs";
+	setAttr -s 3 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "specular";
 	setAttr ".aovs[2].aov_name" -type "string" "shadow_matte";
-	setAttr ".aovs[3].aov_name" -type "string" "shadow";
-	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_specular" "aiCustomAOVs[1].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[2].aovName" "ai_aov_shadow" "aiCustomAOVs[3].aovName" ;
+	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_specular" "aiCustomAOVs[1]" "ai_aov_shadow_matte" "aiCustomAOVs[2]" "ai_aov_shadow" "aiCustomAOVs[3]" ;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "F476FAFF-4B00-DD72-F71C-B48C2FA80833";
 createNode animCurveTL -n "Beefy_ROOTC_translateX";
@@ -2247,7 +2247,7 @@ createNode animCurveTA -n "Beefy_rWristIKC_rotateX";
 	rename -uid "9DA62CB4-4BE0-8BD7-3F81-7D8291E33449";
 	setAttr ".tan" 18;
 	setAttr -s 22 ".ktv[0:21]"  0 37.291073651644041 12 -99.744694713181005
-		 14 -99.744694713181005 16 -101.63759080541386 18 -11.676231747786774 22 -8.0547673795580739
+		 14 -99.744694713181005 16 -101.63759080541388 18 -11.676231747786774 22 -8.0547673795580739
 		 24 -86.181949120621567 26 -88.148932193758966 30 -88.148932193758966 46 -88.148932193758966
 		 72 -88.148932193758966 74 -88.148408343138584 78 -88.134788227008471 84 -87.656355533850032
 		 86 -88.888311517513785 90 -92.294632701274622 138 -92.294632701274622 140 -88.296923881727238
@@ -2478,6 +2478,7 @@ createNode animCurveTU -n "Beefy_rElbowIKC_Follow";
 	setAttr -s 5 ".ktv[0:4]"  0 0 14 0 18 0 138 0 150 0;
 createNode displayLayer -n "floor_layer";
 	rename -uid "C46AEB53-4832-DE9D-FAF1-95904436A120";
+	setAttr ".dt" 2;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 1;
 createNode animCurveTA -n "Beefy_rFinger2J3C_rotateX";
@@ -2922,12 +2923,11 @@ createNode shadingEngine -n "standardSurface2SG";
 	setAttr ".ihi" 0;
 	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 4 ".aovs";
+	setAttr -s 3 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "specular";
 	setAttr ".aovs[2].aov_name" -type "string" "shadow_matte";
-	setAttr ".aovs[3].aov_name" -type "string" "shadow";
-	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_specular" "aiCustomAOVs[1].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[2].aovName" "ai_aov_shadow" "aiCustomAOVs[3].aovName" ;
+	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_specular" "aiCustomAOVs[1]" "ai_aov_shadow_matte" "aiCustomAOVs[2]" "ai_aov_shadow" "aiCustomAOVs[3]" ;
 createNode materialInfo -n "materialInfo3";
 	rename -uid "543C99EF-46B8-55CC-713A-C988B2196579";
 createNode polyPlane -n "polyPlane2";
@@ -2941,12 +2941,11 @@ createNode shadingEngine -n "standardSurface3SG";
 	setAttr ".ihi" 0;
 	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 4 ".aovs";
+	setAttr -s 3 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "specular";
 	setAttr ".aovs[2].aov_name" -type "string" "shadow_matte";
-	setAttr ".aovs[3].aov_name" -type "string" "shadow";
-	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_specular" "aiCustomAOVs[1].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[2].aovName" "ai_aov_shadow" "aiCustomAOVs[3].aovName" ;
+	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_specular" "aiCustomAOVs[1]" "ai_aov_shadow_matte" "aiCustomAOVs[2]" "ai_aov_shadow" "aiCustomAOVs[3]" ;
 createNode materialInfo -n "materialInfo4";
 	rename -uid "D94B4DF6-4B64-8A00-A2C4-1DB72B44D624";
 createNode lambert -n "Box";
@@ -2957,12 +2956,11 @@ createNode shadingEngine -n "lambert2SG";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-	setAttr -s 4 ".aovs";
+	setAttr -s 3 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "specular";
 	setAttr ".aovs[2].aov_name" -type "string" "shadow_matte";
-	setAttr ".aovs[3].aov_name" -type "string" "shadow";
-	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_specular" "aiCustomAOVs[1].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[2].aovName" "ai_aov_shadow" "aiCustomAOVs[3].aovName" ;
+	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_specular" "aiCustomAOVs[1]" "ai_aov_shadow_matte" "aiCustomAOVs[2]" "ai_aov_shadow" "aiCustomAOVs[3]" ;
 createNode materialInfo -n "materialInfo5";
 	rename -uid "47D85B05-4155-CD72-35DB-C394E4889147";
 createNode polyBevel3 -n "polyBevel1";
@@ -3108,34 +3106,6 @@ createNode lightItem -n "aiAreaLightShape3__LEItem";
 	rename -uid "A232598A-4E1C-E20B-111E-67B5FA662BE0";
 createNode renderSetup -n "renderSetup";
 	rename -uid "9995396C-409C-C084-E946-CA8E5DB9D7D1";
-createNode renderSetupLayer -n "BeautyLayer";
-	rename -uid "CC0FA20D-4BA5-E02D-14B7-82A13E72850A";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode renderLayer -n "rs_BeautyLayer";
-	rename -uid "2F0FBC9F-4235-6AFA-8215-FF8675D6655C";
-	setAttr ".do" 1;
-createNode renderSetupLayer -n "DiffuseLayer";
-	rename -uid "E30514E7-468B-31A5-E35A-D6B2E30ED761";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode renderLayer -n "rs_DiffuseLayer";
-	rename -uid "5589B0A6-45F1-0676-C73E-4FA44D5F9342";
-	setAttr ".do" 2;
-createNode renderSetupLayer -n "SpecularLayer";
-	rename -uid "5FD1D7A5-4F22-C3B8-0927-5AA9A14AF5D1";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode renderLayer -n "rs_SpecularLayer";
-	rename -uid "EE0CE794-4CFF-8122-04C2-B3B83C8DFC48";
-	setAttr ".do" 3;
-createNode renderSetupLayer -n "ShadowLayer";
-	rename -uid "47F329AD-4584-6BC7-0F5F-22A25F680AF4";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode renderLayer -n "rs_ShadowLayer";
-	rename -uid "1E1B5C63-4C37-AA7B-71A4-9891B607D1D8";
-	setAttr ".do" 4;
 createNode aiAOV -n "aiAOV_diffuse";
 	rename -uid "B421653E-4763-5018-2B5E-72ABBF29B416";
 	setAttr ".aovn" -type "string" "diffuse";
@@ -3144,17 +3114,9 @@ createNode aiAOV -n "aiAOV_specular";
 	rename -uid "DF06DF5A-426E-4271-7FC5-BB9F836C0CE3";
 	setAttr ".aovn" -type "string" "specular";
 	setAttr ".aovt" 5;
-createNode collection -n "BeautyAOV";
-	rename -uid "6D151F59-45E8-F5F5-EBD2-F1B62FAEBDE0";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "collection1Selector";
-	rename -uid "7075EE54-4D44-A165-E8F9-7AA8F29D34FE";
-	setAttr ".ssl" -type "string" "|pPlane1\n|pCube1\n|Ultimate_Beefy_v1_0_2:Beefy\n|aiAreaLight1\n|aiAreaLight2\n|aiAreaLight3";
-createNode aiAOV -n "aiAOV_shadow";
-	rename -uid "0ADAB862-4CB2-AB78-B123-9BBC1D4BA8DE";
-	setAttr ".aovn" -type "string" "shadow";
-	setAttr ".aovt" 5;
+createNode aiAOV -n "aiAOV_shadow_matte";
+	rename -uid "FB5EA41D-41E5-1813-389E-FCB3171435D0";
+	setAttr ".aovn" -type "string" "shadow_matte";
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -3174,7 +3136,7 @@ select -ne :postProcessList1;
 select -ne :defaultRenderUtilityList1;
 	setAttr -s 130 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 6 ".r";
+	setAttr -s 2 ".r";
 select -ne :lightList1;
 	setAttr -s 3 ".l";
 select -ne :standardSurface1;
@@ -3193,7 +3155,7 @@ select -ne :initialShadingGroup;
 	setAttr ".aovs[1].aov_name" -type "string" "specular";
 	setAttr ".aovs[2].aov_name" -type "string" "shadow_matte";
 	setAttr ".aovs[3].aov_name" -type "string" "shadow";
-	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_specular" "aiCustomAOVs[1].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[2].aovName" "ai_aov_shadow" "aiCustomAOVs[3].aovName" ;
+	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_specular" "aiCustomAOVs[1].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[2]" "ai_aov_shadow" "aiCustomAOVs[3].aovName" ;
 select -ne :initialParticleSE;
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ro" yes;
@@ -3202,7 +3164,7 @@ select -ne :initialParticleSE;
 	setAttr ".aovs[1].aov_name" -type "string" "specular";
 	setAttr ".aovs[2].aov_name" -type "string" "shadow_matte";
 	setAttr ".aovs[3].aov_name" -type "string" "shadow";
-	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_specular" "aiCustomAOVs[1].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[2].aovName" "ai_aov_shadow" "aiCustomAOVs[3].aovName" ;
+	setAttr ".aal" -type "attributeAlias" 8 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_specular" "aiCustomAOVs[1].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[2]" "ai_aov_shadow" "aiCustomAOVs[3].aovName" ;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -3212,6 +3174,7 @@ select -ne :defaultRenderGlobals;
 	setAttr ".fs" 0;
 	setAttr ".ef" 192;
 	setAttr ".pff" yes;
+	setAttr ".ifp" -type "string" "<RenderPass>/<Scene>_<RenderPass>";
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
 	setAttr ".w" 1280;
@@ -3233,7 +3196,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 2 ".sol";
+	setAttr -s 4 ".sol";
 connectAttr "Beefy_MainC_GlobalScale.o" "Ultimate_Beefy_v1_0_2RN.phl[1]";
 connectAttr "Beefy_MainC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[2]";
 connectAttr "Beefy_MainC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[3]";
@@ -3482,7 +3445,6 @@ connectAttr "Ultimate_Beefy_v1_0_2RN.phl[245]" "blinn2SG.dsm" -na;
 connectAttr "Ultimate_Beefy_v1_0_2RN.phl[246]" "blinn2SG.dsm" -na;
 connectAttr "Ultimate_Beefy_v1_0_2RN.phl[247]" "blinn2SG.dsm" -na;
 connectAttr "floor_layer.di" "pPlane1.do";
-connectAttr "rs_BeautyLayer.ri" "pPlane1.rlio[0]";
 connectAttr "polyPlane1.out" "pPlaneShape1.i";
 connectAttr "floor_layer.di" "pCube1.do";
 connectAttr "pCube1_visibility.o" "pCube1.v";
@@ -3495,25 +3457,12 @@ connectAttr "pCube1_rotateZ.o" "pCube1.rz";
 connectAttr "pCube1_scaleX.o" "pCube1.sx";
 connectAttr "pCube1_scaleY.o" "pCube1.sy";
 connectAttr "pCube1_scaleZ.o" "pCube1.sz";
-connectAttr "rs_BeautyLayer.ri" "pCube1.rlio[0]";
 connectAttr "polySmoothFace1.out" "pCubeShape1.i";
 connectAttr "polyPlane2.out" "pPlaneShape2.i";
-connectAttr "rs_BeautyLayer.ri" "aiAreaLight1.rlio[0]";
 connectAttr "aiAreaLightShape1__LEItem.en" "aiAreaLightShape1.v";
-connectAttr "rs_SpecularLayer.ri" "aiAreaLightShape1.rlio[0]";
-connectAttr "rs_DiffuseLayer.ri" "aiAreaLightShape1.rlio[1]";
-connectAttr "rs_ShadowLayer.ri" "aiAreaLightShape1.rlio[3]";
 connectAttr "floor_layer.di" "pPlane4.do";
-connectAttr "rs_BeautyLayer.ri" "aiAreaLight2.rlio[0]";
 connectAttr "aiAreaLightShape2__LEItem.en" "aiAreaLightShape2.v";
-connectAttr "rs_SpecularLayer.ri" "aiAreaLightShape2.rlio[0]";
-connectAttr "rs_DiffuseLayer.ri" "aiAreaLightShape2.rlio[1]";
-connectAttr "rs_ShadowLayer.ri" "aiAreaLightShape2.rlio[3]";
-connectAttr "rs_BeautyLayer.ri" "aiAreaLight3.rlio[0]";
 connectAttr "aiAreaLightShape3__LEItem.en" "aiAreaLightShape3.v";
-connectAttr "rs_SpecularLayer.ri" "aiAreaLightShape3.rlio[0]";
-connectAttr "rs_DiffuseLayer.ri" "aiAreaLightShape3.rlio[1]";
-connectAttr "rs_ShadowLayer.ri" "aiAreaLightShape3.rlio[3]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
@@ -3532,7 +3481,7 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "aiAOV_diffuse.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "aiAOV_specular.msg" ":defaultArnoldRenderOptions.aovs" -na;
-connectAttr "aiAOV_shadow.msg" ":defaultArnoldRenderOptions.aovs" -na;
+connectAttr "aiAOV_shadow_matte.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "blinn1SG.msg" "materialInfo1.sg";
 connectAttr "blinn2.oc" "blinn2SG.ss";
 connectAttr "blinn2SG.msg" "materialInfo2.sg";
@@ -3595,34 +3544,12 @@ connectAttr "aiAreaLightShape2__LEItem.nxt" "aiAreaLightShape3__LEItem.prv";
 connectAttr "lightEditor.lit" "aiAreaLightShape3__LEItem.pls";
 connectAttr "lightEditor.en" "aiAreaLightShape3__LEItem.pen";
 connectAttr "lightEditor.nic" "aiAreaLightShape3__LEItem.pic";
-connectAttr "BeautyLayer.msg" "renderSetup.frl";
-connectAttr "ShadowLayer.msg" "renderSetup.lrl";
-connectAttr "rs_BeautyLayer.msg" "BeautyLayer.lrl";
-connectAttr "renderSetup.lit" "BeautyLayer.pls";
-connectAttr "BeautyAOV.msg" "BeautyLayer.cl";
-connectAttr "BeautyAOV.msg" "BeautyLayer.ch";
-connectAttr "renderLayerManager.rlmi[1]" "rs_BeautyLayer.rlid";
-connectAttr "rs_DiffuseLayer.msg" "DiffuseLayer.lrl";
-connectAttr "BeautyLayer.nxt" "DiffuseLayer.prv";
-connectAttr "renderSetup.lit" "DiffuseLayer.pls";
-connectAttr "renderLayerManager.rlmi[2]" "rs_DiffuseLayer.rlid";
-connectAttr "rs_SpecularLayer.msg" "SpecularLayer.lrl";
-connectAttr "DiffuseLayer.nxt" "SpecularLayer.prv";
-connectAttr "renderSetup.lit" "SpecularLayer.pls";
-connectAttr "renderLayerManager.rlmi[3]" "rs_SpecularLayer.rlid";
-connectAttr "rs_ShadowLayer.msg" "ShadowLayer.lrl";
-connectAttr "SpecularLayer.nxt" "ShadowLayer.prv";
-connectAttr "renderSetup.lit" "ShadowLayer.pls";
-connectAttr "renderLayerManager.rlmi[4]" "rs_ShadowLayer.rlid";
 connectAttr ":defaultArnoldDriver.msg" "aiAOV_diffuse.out[0].drvr";
 connectAttr ":defaultArnoldFilter.msg" "aiAOV_diffuse.out[0].ftr";
 connectAttr ":defaultArnoldDriver.msg" "aiAOV_specular.out[0].drvr";
 connectAttr ":defaultArnoldFilter.msg" "aiAOV_specular.out[0].ftr";
-connectAttr "collection1Selector.c" "BeautyAOV.sel";
-connectAttr "BeautyLayer.lit" "BeautyAOV.pls";
-connectAttr "BeautyLayer.nic" "BeautyAOV.pic";
-connectAttr ":defaultArnoldDriver.msg" "aiAOV_shadow.out[0].drvr";
-connectAttr ":defaultArnoldFilter.msg" "aiAOV_shadow.out[0].ftr";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_shadow_matte.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_shadow_matte.out[0].ftr";
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "blinn2SG.pa" ":renderPartition.st" -na;
 connectAttr "standardSurface2SG.pa" ":renderPartition.st" -na;
@@ -3633,10 +3560,6 @@ connectAttr "Floor.msg" ":defaultShaderList1.s" -na;
 connectAttr "Walls.msg" ":defaultShaderList1.s" -na;
 connectAttr "Box.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "rs_BeautyLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "rs_DiffuseLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "rs_SpecularLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "rs_ShadowLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "aiAreaLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "aiAreaLightShape2.ltd" ":lightList1.l" -na;
 connectAttr "aiAreaLightShape3.ltd" ":lightList1.l" -na;
