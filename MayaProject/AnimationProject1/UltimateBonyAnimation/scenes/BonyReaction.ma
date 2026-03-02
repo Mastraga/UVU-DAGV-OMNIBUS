@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: BonyReaction.ma
-//Last modified: Sun, Mar 01, 2026 01:04:28 AM
+//Last modified: Sun, Mar 01, 2026 11:48:28 AM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5" -rfn "Ultimate_Bony_v1_0_5RN" -op "v=0;"
 		 -typ "mayaAscii" "E:/Mason/GitRepos/UVU-DAGV-OMNIBUS/MayaProject/AnimationProject1/UltimateBonyAnimation//scenes/Ultimate_Bony_v1.0.5.ma";
@@ -10,14 +10,15 @@ requires maya "2025ff03";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOV" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter"
 		 -nodeType "aiSkyDomeLight" -nodeType "aiAreaLight" -nodeType "aiPhysicalSky" -nodeType "aiImagerDenoiserNoice"
-		 -nodeType "aiImagerDenoiserOptix" "mtoa" "5.4.5";
+		 -nodeType "aiImagerDenoiserOptix" -nodeType "aiImagerDenoiserOidn" "mtoa" "5.4.5";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "D48EA8C7-4BD7-6E5F-FEDE-3280C5A0DEFE";
+fileInfo "UUID" "4156A17B-427A-D1F8-C886-308D038820CF";
 createNode transform -s -n "persp";
 	rename -uid "10CDF00B-4C42-5686-01DA-BAB515E0A38B";
 	setAttr ".v" no;
@@ -1671,7 +1672,7 @@ createNode camera -n "cameraShape1" -p "camera1";
 createNode transform -n "aiAreaLight1";
 	rename -uid "465F3296-4A6D-EFF9-F9D1-40AC584298FF";
 	setAttr ".t" -type "double3" -2.0126501471716263 17.203304401433549 -16.775754484247315 ;
-	setAttr ".r" -type "double3" -2.5809864283274169 37.716992853612425 -1.5796171204374745 ;
+	setAttr ".r" -type "double3" -2.5809864283274169 37.716992853612425 -1.5796171204374747 ;
 	setAttr ".s" -type "double3" 1.9945848820412853 1.9945848820412853 1.9945848820412853 ;
 createNode aiAreaLight -n "aiAreaLightShape1" -p "aiAreaLight1";
 	rename -uid "5D1AE644-4441-8A42-B05B-5FB9254DB7AE";
@@ -1685,7 +1686,7 @@ createNode aiAreaLight -n "aiAreaLightShape1" -p "aiAreaLight1";
 createNode transform -n "aiAreaLight2";
 	rename -uid "22189C46-4415-07C9-1CC9-1FA81AE3D1A7";
 	setAttr ".t" -type "double3" 19.400307285206125 17.178200721059344 -17.480035313173346 ;
-	setAttr ".r" -type "double3" -2.5809864283274169 37.716992853612425 -1.5796171204374745 ;
+	setAttr ".r" -type "double3" -2.5809864283274169 37.716992853612425 -1.5796171204374747 ;
 	setAttr ".s" -type "double3" 1.9945848820412853 1.9945848820412853 1.9945848820412853 ;
 createNode aiAreaLight -n "aiAreaLightShape2" -p "aiAreaLight2";
 	rename -uid "5758F625-4119-E476-EEF4-9F9FF22B79C6";
@@ -1945,28 +1946,11 @@ createNode mesh -n "pCylinderShape1" -p "pCylinder1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 22 ".pt";
-	setAttr ".pt[141]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[142]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[143]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[144]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[145]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[146]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[147]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[148]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[149]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[150]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[151]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[152]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[153]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[154]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[155]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[156]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[157]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[158]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[159]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[160]" -type "float3" 0 0.42501876 0 ;
-	setAttr ".pt[161]" -type "float3" 0 0.42501876 0 ;
+	setAttr -s 21 ".pt[141:161]" -type "float3"  0 0.42501876 0 0 0.42501876 
+		0 0 0.42501876 0 0 0.42501876 0 0 0.42501876 0 0 0.42501876 0 0 0.42501876 0 0 0.42501876 
+		0 0 0.42501876 0 0 0.42501876 0 0 0.42501876 0 0 0.42501876 0 0 0.42501876 0 0 0.42501876 
+		0 0 0.42501876 0 0 0.42501876 0 0 0.42501876 0 0 0.42501876 0 0 0.42501876 0 0 0.42501876 
+		0 0 0.42501876 0;
 createNode transform -n "pCylinder2";
 	rename -uid "29081B99-427A-01F0-0237-37A9F7D8CBC2";
 	setAttr ".t" -type "double3" 10.886301809805714 2.6620457870753542 -5.3312406681293876 ;
@@ -1983,28 +1967,11 @@ createNode mesh -n "pCylinderShape2" -p "pCylinder2";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 22 ".pt";
-	setAttr ".pt[61]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[62]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[63]" -type "float3" 0 0.47680429 -6.8787248e-17 ;
-	setAttr ".pt[64]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[65]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[66]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[67]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[68]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[69]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[70]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[71]" -type "float3" 0 0.47680429 -6.8787248e-17 ;
-	setAttr ".pt[72]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[73]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[74]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[75]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[76]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[77]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[78]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[79]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[80]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[81]" -type "float3" 0 0.47680429 -6.8787248e-17 ;
+	setAttr -s 21 ".pt[61:81]" -type "float3"  0 0.47680429 0 0 0.47680429 
+		0 0 0.47680429 -6.8787248e-17 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 
+		0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 -6.8787248e-17 0 0.47680429 
+		0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 
+		0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 -6.8787248e-17;
 createNode transform -n "pCylinder4";
 	rename -uid "5EDC5C5C-4AF7-6650-FF98-259797132F88";
 	setAttr ".t" -type "double3" 10.886301809805714 2.6620457870753542 -5.3312406681293876 ;
@@ -2075,28 +2042,11 @@ createNode mesh -n "pCylinderShape4" -p "pCylinder4";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 22 ".pt";
-	setAttr ".pt[61]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[62]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[63]" -type "float3" 0 0.47680429 -6.8787248e-17 ;
-	setAttr ".pt[64]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[65]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[66]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[67]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[68]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[69]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[70]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[71]" -type "float3" 0 0.47680429 -6.8787248e-17 ;
-	setAttr ".pt[72]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[73]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[74]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[75]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[76]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[77]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[78]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[79]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[80]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[81]" -type "float3" 0 0.47680429 -6.8787248e-17 ;
+	setAttr -s 21 ".pt[61:81]" -type "float3"  0 0.47680429 0 0 0.47680429 
+		0 0 0.47680429 -6.8787248e-17 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 
+		0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 -6.8787248e-17 0 0.47680429 
+		0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 
+		0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 -6.8787248e-17;
 	setAttr -s 82 ".vt[0:81]"  0.95106506 -1 -0.30901718 0.80902481 -1 -0.58778572
 		 0.58778763 -1 -0.80901718 0.30902481 -1 -0.95105743 7.6293945e-06 -1 -1.000000953674
 		 -0.30900955 -1 -0.95105743 -0.58778 -1 -0.80901718 -0.80901718 -1 -0.58778572 -0.95105362 -1 -0.30901718
@@ -2419,28 +2369,11 @@ createNode mesh -n "pCylinderShape5" -p "pCylinder5";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 22 ".pt";
-	setAttr ".pt[61]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[62]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[63]" -type "float3" 0 0.47680429 -6.8787248e-17 ;
-	setAttr ".pt[64]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[65]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[66]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[67]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[68]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[69]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[70]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[71]" -type "float3" 0 0.47680429 -6.8787248e-17 ;
-	setAttr ".pt[72]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[73]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[74]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[75]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[76]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[77]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[78]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[79]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[80]" -type "float3" 0 0.47680429 0 ;
-	setAttr ".pt[81]" -type "float3" 0 0.47680429 -6.8787248e-17 ;
+	setAttr -s 21 ".pt[61:81]" -type "float3"  0 0.47680429 0 0 0.47680429 
+		0 0 0.47680429 -6.8787248e-17 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 
+		0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 -6.8787248e-17 0 0.47680429 
+		0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 
+		0 0 0.47680429 0 0 0.47680429 0 0 0.47680429 -6.8787248e-17;
 	setAttr -s 82 ".vt[0:81]"  0.95106506 -1 -0.30901718 0.80902481 -1 -0.58778572
 		 0.58778763 -1 -0.80901718 0.30902481 -1 -0.95105743 7.6293945e-06 -1 -1.000000953674
 		 -0.30900955 -1 -0.95105743 -0.58778 -1 -0.80901718 -0.80901718 -1 -0.58778572 -0.95105362 -1 -0.30901718
@@ -2721,16 +2654,16 @@ createNode mesh -n "pCylinderShape6" -p "pCylinder6";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "AD3B9A24-4D38-BAFC-D29F-078908630DFE";
+	rename -uid "742570C5-4A8D-7F26-043A-C0820BD95D14";
 	setAttr -s 9 ".lnk";
 	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "7E3BCEFD-4A0D-8F5C-DADD-5CA53EEF89A4";
+	rename -uid "D683A882-4BAB-18CE-4476-FEB222878EEE";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "C979DC98-4D72-9575-60C7-B5BC2DCD5902";
+	rename -uid "979FD5C4-403B-9D6E-5CDF-09942DEB3D2F";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "BDEC8C6D-4C5F-B235-361C-FA983C83DE1C";
+	rename -uid "369DA7B2-41EA-13CA-452D-DEBBFA89E0CD";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -2738,7 +2671,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "EAD3A5E4-42FD-9912-8AE6-38BEE1114204";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "374193FF-4F49-F1B8-B3E9-7B8EDBD99907";
+	rename -uid "E5BFA66A-41CC-E700-BEDD-07BB0A220159";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "84637B83-4162-635D-A506-FAABA599D56F";
 	setAttr ".g" yes;
@@ -3087,26 +3020,56 @@ createNode reference -n "Ultimate_Bony_v1_0_5RN";
 		2 "Ultimate_Bony_v1_0_5:groupParts177" "inputRemoveComponent" " -type \"componentList\" 1 \"f[0:279]\""
 		
 		2 "Ultimate_Bony_v1_0_5:groupParts177" "groupId" " 267"
-		3 "Ultimate_Bony_v1_0_5:groupId174.groupId" "Ultimate_Bony_v1_0_5:groupParts170.groupId" 
+		3 "Ultimate_Bony_v1_0_5:groupId176.groupId" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__R_arm_Grp|Ultimate_Bony_v1_0_5:Bony_R_arm|Ultimate_Bony_v1_0_5:Bony_R_armShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:BonyExtraNodes|Ultimate_Bony_v1_0_5:Bony_ribbonBlend|Ultimate_Bony_v1_0_5:Bony_ribbonBlendShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
+		3 "Ultimate_Bony_v1_0_5:char_body_blinn1SG.memberWireframeColor" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__R_arm_Grp|Ultimate_Bony_v1_0_5:Bony_R_arm|Ultimate_Bony_v1_0_5:Bony_R_armShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Ultimate_Bony_v1_0_5:groupId177.groupId" "Ultimate_Bony_v1_0_5:groupParts177.groupId" 
+		""
+		3 "Ultimate_Bony_v1_0_5:groupId174.groupId" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__L_arm_Grp|Ultimate_Bony_v1_0_5:Bony_L_arm|Ultimate_Bony_v1_0_5:Bony_L_armShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "Ultimate_Bony_v1_0_5:char_body_blinn1SG.memberWireframeColor" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__L_arm_Grp|Ultimate_Bony_v1_0_5:Bony_L_arm|Ultimate_Bony_v1_0_5:Bony_L_armShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
 		3 "Ultimate_Bony_v1_0_5:groupId175.groupId" "Ultimate_Bony_v1_0_5:groupParts173.groupId" 
 		""
 		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:BonyExtraNodes|Ultimate_Bony_v1_0_5:Bony_ribbon|Ultimate_Bony_v1_0_5:Bony_ribbonShape.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__R_arm_Grp|Ultimate_Bony_v1_0_5:Bony_R_wrist|Ultimate_Bony_v1_0_5:Bony_R_wristShape.instObjGroups" 
+		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__R_arm_Grp|Ultimate_Bony_v1_0_5:Bony_R_elbow|Ultimate_Bony_v1_0_5:Bony_R_elbowShape.instObjGroups" 
+		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__R_arm_Grp|Ultimate_Bony_v1_0_5:Bony_R_shoulder|Ultimate_Bony_v1_0_5:Bony_R_shoulderShape.instObjGroups" 
+		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_R_leg_Grp|Ultimate_Bony_v1_0_5:Bony_R_but|Ultimate_Bony_v1_0_5:Bony_R_butShape.instObjGroups" 
+		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_R_leg_Grp|Ultimate_Bony_v1_0_5:Bony_R_knee|Ultimate_Bony_v1_0_5:Bony_R_kneeShape.instObjGroups" 
+		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_R_leg_Grp|Ultimate_Bony_v1_0_5:Bony_R_ankle|Ultimate_Bony_v1_0_5:Bony_R_ankleShape.instObjGroups" 
+		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__L_arm_Grp|Ultimate_Bony_v1_0_5:Bony_L_wrist|Ultimate_Bony_v1_0_5:Bony_L_wristShape.instObjGroups" 
+		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__L_arm_Grp|Ultimate_Bony_v1_0_5:Bony_L_elbow|Ultimate_Bony_v1_0_5:Bony_L_elbowShape.instObjGroups" 
+		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__L_arm_Grp|Ultimate_Bony_v1_0_5:Bony_L_shoulder|Ultimate_Bony_v1_0_5:Bony_L_shoulderShape.instObjGroups" 
+		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg_Grp|Ultimate_Bony_v1_0_5:Bony_L_but|Ultimate_Bony_v1_0_5:Bony_L_butShape.instObjGroups" 
+		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg_Grp|Ultimate_Bony_v1_0_5:Bony_L_knee|Ultimate_Bony_v1_0_5:Bony_L_kneeShape.instObjGroups" 
+		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg_Grp|Ultimate_Bony_v1_0_5:Bony_L_ankle|Ultimate_Bony_v1_0_5:Bony_L_ankleShape.instObjGroups" 
+		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_body_Grp|Ultimate_Bony_v1_0_5:Bony_neck|Ultimate_Bony_v1_0_5:Bony_neckShape.instObjGroups" 
+		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
+		3 "Ultimate_Bony_v1_0_5:groupId174.groupId" "Ultimate_Bony_v1_0_5:groupParts170.groupId" 
+		""
+		3 "Ultimate_Bony_v1_0_5:groupId176.groupId" "Ultimate_Bony_v1_0_5:groupParts176.groupId" 
+		""
 		3 "Ultimate_Bony_v1_0_5:groupId177.groupId" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_R_leg_Grp|Ultimate_Bony_v1_0_5:Bony_R_leg|Ultimate_Bony_v1_0_5:Bony_R_legShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 "Ultimate_Bony_v1_0_5:char_body_blinn1SG.memberWireframeColor" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_R_leg_Grp|Ultimate_Bony_v1_0_5:Bony_R_leg|Ultimate_Bony_v1_0_5:Bony_R_legShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		3 "Ultimate_Bony_v1_0_5:groupId176.groupId" "Ultimate_Bony_v1_0_5:groupParts176.groupId" 
-		""
-		3 "Ultimate_Bony_v1_0_5:groupId177.groupId" "Ultimate_Bony_v1_0_5:groupParts177.groupId" 
-		""
-		3 "Ultimate_Bony_v1_0_5:groupId175.groupId" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg|Ultimate_Bony_v1_0_5:Bony_L_legShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "Ultimate_Bony_v1_0_5:char_body_blinn1SG.memberWireframeColor" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg|Ultimate_Bony_v1_0_5:Bony_L_legShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
+		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT|Ultimate_Bony_v1_0_5:BonyExtraNodes|Ultimate_Bony_v1_0_5:Bony_ribbonBlend|Ultimate_Bony_v1_0_5:Bony_ribbonBlendShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__R_arm_Grp|Ultimate_Bony_v1_0_5:Bony_R_arm|Ultimate_Bony_v1_0_5:Bony_R_armShape.instObjGroups.objectGroups[0]" 
 		"Ultimate_Bony_v1_0_5:char_body_blinn1SG.dagSetMembers" "-na"
 		3 "Ultimate_Bony_v1_0_5:groupId176.message" "Ultimate_Bony_v1_0_5:char_body_blinn1SG.groupNodes" 
@@ -3181,39 +3144,9 @@ createNode reference -n "Ultimate_Bony_v1_0_5RN";
 		"Ultimate_Bony_v1_0_5:char_body_blinn1SG.dagSetMembers" "-na"
 		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_body_Grp|Ultimate_Bony_v1_0_5:Bony_spine1|Ultimate_Bony_v1_0_5:Bony_spineShape1.instObjGroups" 
 		"Ultimate_Bony_v1_0_5:char_body_blinn1SG.dagSetMembers" "-na"
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__R_arm_Grp|Ultimate_Bony_v1_0_5:Bony_R_wrist|Ultimate_Bony_v1_0_5:Bony_R_wristShape.instObjGroups" 
-		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__R_arm_Grp|Ultimate_Bony_v1_0_5:Bony_R_elbow|Ultimate_Bony_v1_0_5:Bony_R_elbowShape.instObjGroups" 
-		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__R_arm_Grp|Ultimate_Bony_v1_0_5:Bony_R_shoulder|Ultimate_Bony_v1_0_5:Bony_R_shoulderShape.instObjGroups" 
-		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_R_leg_Grp|Ultimate_Bony_v1_0_5:Bony_R_but|Ultimate_Bony_v1_0_5:Bony_R_butShape.instObjGroups" 
-		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_R_leg_Grp|Ultimate_Bony_v1_0_5:Bony_R_knee|Ultimate_Bony_v1_0_5:Bony_R_kneeShape.instObjGroups" 
-		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_R_leg_Grp|Ultimate_Bony_v1_0_5:Bony_R_ankle|Ultimate_Bony_v1_0_5:Bony_R_ankleShape.instObjGroups" 
-		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__L_arm_Grp|Ultimate_Bony_v1_0_5:Bony_L_wrist|Ultimate_Bony_v1_0_5:Bony_L_wristShape.instObjGroups" 
-		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__L_arm_Grp|Ultimate_Bony_v1_0_5:Bony_L_elbow|Ultimate_Bony_v1_0_5:Bony_L_elbowShape.instObjGroups" 
-		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__L_arm_Grp|Ultimate_Bony_v1_0_5:Bony_L_shoulder|Ultimate_Bony_v1_0_5:Bony_L_shoulderShape.instObjGroups" 
-		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg_Grp|Ultimate_Bony_v1_0_5:Bony_L_but|Ultimate_Bony_v1_0_5:Bony_L_butShape.instObjGroups" 
-		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg_Grp|Ultimate_Bony_v1_0_5:Bony_L_knee|Ultimate_Bony_v1_0_5:Bony_L_kneeShape.instObjGroups" 
-		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg_Grp|Ultimate_Bony_v1_0_5:Bony_L_ankle|Ultimate_Bony_v1_0_5:Bony_L_ankleShape.instObjGroups" 
-		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_body_Grp|Ultimate_Bony_v1_0_5:Bony_neck|Ultimate_Bony_v1_0_5:Bony_neckShape.instObjGroups" 
-		"Ultimate_Bony_v1_0_5:char_body_blinn5SG.dagSetMembers" "-na"
-		3 "Ultimate_Bony_v1_0_5:groupId176.groupId" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__R_arm_Grp|Ultimate_Bony_v1_0_5:Bony_R_arm|Ultimate_Bony_v1_0_5:Bony_R_armShape.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "Ultimate_Bony_v1_0_5:groupId175.groupId" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg|Ultimate_Bony_v1_0_5:Bony_L_legShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 "Ultimate_Bony_v1_0_5:char_body_blinn1SG.memberWireframeColor" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__R_arm_Grp|Ultimate_Bony_v1_0_5:Bony_R_arm|Ultimate_Bony_v1_0_5:Bony_R_armShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "Ultimate_Bony_v1_0_5:groupId174.groupId" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__L_arm_Grp|Ultimate_Bony_v1_0_5:Bony_L_arm|Ultimate_Bony_v1_0_5:Bony_L_armShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "Ultimate_Bony_v1_0_5:char_body_blinn1SG.memberWireframeColor" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony__L_arm_Grp|Ultimate_Bony_v1_0_5:Bony_L_arm|Ultimate_Bony_v1_0_5:Bony_L_armShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 "Ultimate_Bony_v1_0_5:char_body_blinn1SG.memberWireframeColor" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Mesh_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg_Grp|Ultimate_Bony_v1_0_5:Bony_L_leg|Ultimate_Bony_v1_0_5:Bony_L_legShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		5 4 "Ultimate_Bony_v1_0_5RN" "|Ultimate_Bony_v1_0_5:Bony|Ultimate_Bony_v1_0_5:Bony_Main_CNT.GlobalScale" 
 		"Ultimate_Bony_v1_0_5RN.placeHolderList[1]" ""
@@ -3776,7 +3709,7 @@ createNode shadingEngine -n "standardSurface2SG";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "shadow_matte";
 	setAttr ".aovs[2].aov_name" -type "string" "specular";
-	setAttr ".aal" -type "attributeAlias" 6 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[1].aovName" "ai_aov_specular" "aiCustomAOVs[2].aovName" ;
+	setAttr ".aal" -type "attributeAlias" 6 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_shadow_matte" "aiCustomAOVs[1]" "ai_aov_specular" "aiCustomAOVs[2]" ;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "ACF9BF16-4A6D-6814-F91F-028E1C0AC0C7";
 createNode animCurveTL -n "Bony_Main_CNT_translateX";
@@ -7297,7 +7230,7 @@ createNode shadingEngine -n "WindowSillTopSG";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "shadow_matte";
 	setAttr ".aovs[2].aov_name" -type "string" "specular";
-	setAttr ".aal" -type "attributeAlias" 6 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[1].aovName" "ai_aov_specular" "aiCustomAOVs[2].aovName" ;
+	setAttr ".aal" -type "attributeAlias" 6 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_shadow_matte" "aiCustomAOVs[1]" "ai_aov_specular" "aiCustomAOVs[2]" ;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "CDF0754F-4D83-CA8A-F123-11B9BEDE9A41";
 createNode standardSurface -n "M_WindowFrame";
@@ -7313,7 +7246,7 @@ createNode shadingEngine -n "WindowSG";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "shadow_matte";
 	setAttr ".aovs[2].aov_name" -type "string" "specular";
-	setAttr ".aal" -type "attributeAlias" 6 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[1].aovName" "ai_aov_specular" "aiCustomAOVs[2].aovName" ;
+	setAttr ".aal" -type "attributeAlias" 6 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_shadow_matte" "aiCustomAOVs[1]" "ai_aov_specular" "aiCustomAOVs[2]" ;
 createNode materialInfo -n "materialInfo3";
 	rename -uid "51AB0CF2-4102-4525-A1FB-FD826978A549";
 createNode standardSurface -n "M_WindowGlass";
@@ -7329,7 +7262,7 @@ createNode shadingEngine -n "WindowSG1";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "shadow_matte";
 	setAttr ".aovs[2].aov_name" -type "string" "specular";
-	setAttr ".aal" -type "attributeAlias" 6 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[1].aovName" "ai_aov_specular" "aiCustomAOVs[2].aovName" ;
+	setAttr ".aal" -type "attributeAlias" 6 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_shadow_matte" "aiCustomAOVs[1]" "ai_aov_specular" "aiCustomAOVs[2]" ;
 createNode materialInfo -n "materialInfo4";
 	rename -uid "3034EE1D-4F6F-CC60-3844-C29EF2064419";
 createNode groupId -n "groupId1";
@@ -7406,6 +7339,7 @@ createNode aiImagerDenoiserNoice -n "aiImagerDenoiserNoice1";
 	rename -uid "EB82C509-4711-2665-E778-4DBFF0C6DFC0";
 createNode aiImagerDenoiserOptix -n "aiImagerDenoiserOptix1";
 	rename -uid "028CC2C5-4D2E-EDC6-FC62-3FB52F7B3C45";
+	setAttr ".enable" no;
 createNode file -n "file1";
 	rename -uid "DD5879BE-4E3E-3623-EDA6-72B943C3E88E";
 	setAttr ".ftn" -type "string" "E:/Mason/GitRepos/UVU-DAGV-OMNIBUS/MayaProject/AnimationProject1/UltimateBonyAnimation//sourceimages/WindowSillTop_M_WindowSill_BaseColor.png";
@@ -7525,28 +7459,15 @@ createNode polyExtrudeFace -n "polyExtrudeFace3";
 createNode polyTweak -n "polyTweak1";
 	rename -uid "3A1915D4-41AC-4739-8D4A-9CBF172E931F";
 	setAttr ".uopa" yes;
-	setAttr -s 23 ".tk";
-	setAttr ".tk[41]" -type "float3" 0.48841134 0.52096158 -0.15869395 ;
-	setAttr ".tk[42]" -type "float3" 0.41546723 0.52096158 -0.30185479 ;
-	setAttr ".tk[43]" -type "float3" 0 0.52096158 -9.122403e-16 ;
-	setAttr ".tk[44]" -type "float3" 0.30185479 0.52096158 -0.41546723 ;
-	setAttr ".tk[45]" -type "float3" 0.1586944 0.52096158 -0.48841134 ;
-	setAttr ".tk[46]" -type "float3" 0 0.52096158 -0.51354563 ;
-	setAttr ".tk[47]" -type "float3" -0.1586944 0.52096158 -0.48841134 ;
-	setAttr ".tk[48]" -type "float3" -0.30185479 0.52096158 -0.41546723 ;
-	setAttr ".tk[49]" -type "float3" -0.41546723 0.52096158 -0.30185479 ;
-	setAttr ".tk[50]" -type "float3" -0.48841053 0.52096158 -0.15869395 ;
-	setAttr ".tk[51]" -type "float3" -0.51354563 0.52096158 -9.122403e-16 ;
-	setAttr ".tk[52]" -type "float3" -0.48841053 0.52096158 0.1586944 ;
-	setAttr ".tk[53]" -type "float3" -0.41546723 0.52096158 0.30185479 ;
-	setAttr ".tk[54]" -type "float3" -0.30185479 0.52096158 0.41546723 ;
-	setAttr ".tk[55]" -type "float3" -0.1586944 0.52096158 0.48841104 ;
-	setAttr ".tk[56]" -type "float3" 0 0.52096158 0.51354563 ;
-	setAttr ".tk[57]" -type "float3" 0.1586944 0.52096158 0.48841104 ;
-	setAttr ".tk[58]" -type "float3" 0.30185479 0.52096158 0.41546723 ;
-	setAttr ".tk[59]" -type "float3" 0.41546723 0.52096158 0.30185434 ;
-	setAttr ".tk[60]" -type "float3" 0.48841134 0.52096158 0.1586944 ;
-	setAttr ".tk[61]" -type "float3" 0.51354563 0.52096158 -9.122403e-16 ;
+	setAttr -s 21 ".tk[41:61]" -type "float3"  0.48841134 0.52096158 -0.15869395
+		 0.41546723 0.52096158 -0.30185479 0 0.52096158 -9.122403e-16 0.30185479 0.52096158
+		 -0.41546723 0.1586944 0.52096158 -0.48841134 0 0.52096158 -0.51354563 -0.1586944
+		 0.52096158 -0.48841134 -0.30185479 0.52096158 -0.41546723 -0.41546723 0.52096158
+		 -0.30185479 -0.48841053 0.52096158 -0.15869395 -0.51354563 0.52096158 -9.122403e-16
+		 -0.48841053 0.52096158 0.1586944 -0.41546723 0.52096158 0.30185479 -0.30185479 0.52096158
+		 0.41546723 -0.1586944 0.52096158 0.48841104 0 0.52096158 0.51354563 0.1586944 0.52096158
+		 0.48841104 0.30185479 0.52096158 0.41546723 0.41546723 0.52096158 0.30185434 0.48841134
+		 0.52096158 0.1586944 0.51354563 0.52096158 -9.122403e-16;
 createNode polyExtrudeFace -n "polyExtrudeFace4";
 	rename -uid "7378CA44-4C26-CEC4-1093-369FF5409108";
 	setAttr ".ics" -type "componentList" 1 "f[40:59]";
@@ -7562,28 +7483,11 @@ createNode polyExtrudeFace -n "polyExtrudeFace4";
 createNode polyTweak -n "polyTweak2";
 	rename -uid "5F7CDD78-4843-CBA8-E23F-309182B93441";
 	setAttr ".uopa" yes;
-	setAttr -s 22 ".tk";
-	setAttr ".tk[61]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[62]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[63]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[64]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[65]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[66]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[67]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[68]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[69]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[70]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[71]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[72]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[73]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[74]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[75]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[76]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[77]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[78]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[79]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[80]" -type "float3" 0 1.3013912 0 ;
-	setAttr ".tk[81]" -type "float3" 0 1.3013912 0 ;
+	setAttr -s 21 ".tk[61:81]" -type "float3"  0 1.30139124 0 0 1.30139124
+		 0 0 1.30139124 0 0 1.30139124 0 0 1.30139124 0 0 1.30139124 0 0 1.30139124 0 0 1.30139124
+		 0 0 1.30139124 0 0 1.30139124 0 0 1.30139124 0 0 1.30139124 0 0 1.30139124 0 0 1.30139124
+		 0 0 1.30139124 0 0 1.30139124 0 0 1.30139124 0 0 1.30139124 0 0 1.30139124 0 0 1.30139124
+		 0 0 1.30139124 0;
 createNode polyExtrudeFace -n "polyExtrudeFace5";
 	rename -uid "81626E4A-4E1E-46EE-7939-2FB1E290ECB9";
 	setAttr ".ics" -type "componentList" 1 "f[40:59]";
@@ -7599,28 +7503,16 @@ createNode polyExtrudeFace -n "polyExtrudeFace5";
 createNode polyTweak -n "polyTweak3";
 	rename -uid "54313774-45AC-76FE-CDA6-E1871B61C99D";
 	setAttr ".uopa" yes;
-	setAttr -s 22 ".tk";
-	setAttr ".tk[81]" -type "float3" -0.83742726 1.1613859 0.27209616 ;
-	setAttr ".tk[82]" -type "float3" -0.71235842 1.1613859 0.51755917 ;
-	setAttr ".tk[83]" -type "float3" 5.5481138e-07 1.1613859 1.0334167e-15 ;
-	setAttr ".tk[84]" -type "float3" -0.51755863 1.1613859 0.71235842 ;
-	setAttr ".tk[85]" -type "float3" -0.27209559 1.1613859 0.83742785 ;
-	setAttr ".tk[86]" -type "float3" 5.5481138e-07 1.1613859 0.88052285 ;
-	setAttr ".tk[87]" -type "float3" 0.27209672 1.1613859 0.83742785 ;
-	setAttr ".tk[88]" -type "float3" 0.51755965 1.1613859 0.71235842 ;
-	setAttr ".tk[89]" -type "float3" 0.71235955 1.1613859 0.51755917 ;
-	setAttr ".tk[90]" -type "float3" 0.83742726 1.1613859 0.27209616 ;
-	setAttr ".tk[91]" -type "float3" 0.88052285 1.1613859 1.0334167e-15 ;
-	setAttr ".tk[92]" -type "float3" 0.83742726 1.1613859 -0.27209672 ;
-	setAttr ".tk[93]" -type "float3" 0.71235955 1.1613859 -0.51755917 ;
-	setAttr ".tk[94]" -type "float3" 0.51755965 1.1613859 -0.71235889 ;
-	setAttr ".tk[95]" -type "float3" 0.27209672 1.1613859 -0.83742726 ;
-	setAttr ".tk[96]" -type "float3" 5.5481138e-07 1.1613859 -0.88052285 ;
-	setAttr ".tk[97]" -type "float3" -0.27209559 1.1613859 -0.83742726 ;
-	setAttr ".tk[98]" -type "float3" -0.51755863 1.1613859 -0.71235889 ;
-	setAttr ".tk[99]" -type "float3" -0.71235842 1.1613859 -0.51755863 ;
-	setAttr ".tk[100]" -type "float3" -0.83742726 1.1613859 -0.27209672 ;
-	setAttr ".tk[101]" -type "float3" -0.88052285 1.1613859 1.0334167e-15 ;
+	setAttr -s 21 ".tk[81:101]" -type "float3"  -0.83742726 1.16138589 0.27209616
+		 -0.71235842 1.16138589 0.51755917 5.5481138e-07 1.16138589 1.0334167e-15 -0.51755863
+		 1.16138589 0.71235842 -0.27209559 1.16138589 0.83742785 5.5481138e-07 1.16138589
+		 0.88052285 0.27209672 1.16138589 0.83742785 0.51755965 1.16138589 0.71235842 0.71235955
+		 1.16138589 0.51755917 0.83742726 1.16138589 0.27209616 0.88052285 1.16138589 1.0334167e-15
+		 0.83742726 1.16138589 -0.27209672 0.71235955 1.16138589 -0.51755917 0.51755965 1.16138589
+		 -0.71235889 0.27209672 1.16138589 -0.83742726 5.5481138e-07 1.16138589 -0.88052285
+		 -0.27209559 1.16138589 -0.83742726 -0.51755863 1.16138589 -0.71235889 -0.71235842
+		 1.16138589 -0.51755863 -0.83742726 1.16138589 -0.27209672 -0.88052285 1.16138589
+		 1.0334167e-15;
 createNode polyExtrudeFace -n "polyExtrudeFace6";
 	rename -uid "3A6B57D0-4059-CF0C-00B5-56B0A9804228";
 	setAttr ".ics" -type "componentList" 1 "f[40:59]";
@@ -7636,28 +7528,11 @@ createNode polyExtrudeFace -n "polyExtrudeFace6";
 createNode polyTweak -n "polyTweak4";
 	rename -uid "395EC100-4856-1494-636C-EE88793EB910";
 	setAttr ".uopa" yes;
-	setAttr -s 22 ".tk";
-	setAttr ".tk[101]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[102]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[103]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[104]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[105]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[106]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[107]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[108]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[109]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[110]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[111]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[112]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[113]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[114]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[115]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[116]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[117]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[118]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[119]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[120]" -type "float3" 0 0.43376485 0 ;
-	setAttr ".tk[121]" -type "float3" 0 0.43376485 0 ;
+	setAttr -s 21 ".tk[101:121]" -type "float3"  0 0.43376485 0 0 0.43376485
+		 0 0 0.43376485 0 0 0.43376485 0 0 0.43376485 0 0 0.43376485 0 0 0.43376485 0 0 0.43376485
+		 0 0 0.43376485 0 0 0.43376485 0 0 0.43376485 0 0 0.43376485 0 0 0.43376485 0 0 0.43376485
+		 0 0 0.43376485 0 0 0.43376485 0 0 0.43376485 0 0 0.43376485 0 0 0.43376485 0 0 0.43376485
+		 0 0 0.43376485 0;
 createNode polyExtrudeFace -n "polyExtrudeFace7";
 	rename -uid "1CF153D8-4F4E-5F4A-9A3E-099B52CFD4FB";
 	setAttr ".ics" -type "componentList" 1 "f[40:59]";
@@ -7673,28 +7548,16 @@ createNode polyExtrudeFace -n "polyExtrudeFace7";
 createNode polyTweak -n "polyTweak5";
 	rename -uid "96EB332C-470E-334A-285F-D096FB3917F2";
 	setAttr ".uopa" yes;
-	setAttr -s 22 ".tk";
-	setAttr ".tk[121]" -type "float3" -0.21131189 -8.9406967e-08 0.068658911 ;
-	setAttr ".tk[122]" -type "float3" -0.1797526 -8.9406967e-08 0.13059822 ;
-	setAttr ".tk[123]" -type "float3" 3.3473293e-07 -8.9406967e-08 1.6736647e-07 ;
-	setAttr ".tk[124]" -type "float3" -0.13059905 -8.9406967e-08 0.17975242 ;
-	setAttr ".tk[125]" -type "float3" -0.068658747 -8.9406967e-08 0.21131171 ;
-	setAttr ".tk[126]" -type "float3" 3.3473293e-07 -8.9406967e-08 0.22218652 ;
-	setAttr ".tk[127]" -type "float3" 0.06865941 -8.9406967e-08 0.21131171 ;
-	setAttr ".tk[128]" -type "float3" 0.1305984 -8.9406967e-08 0.17975242 ;
-	setAttr ".tk[129]" -type "float3" 0.17975324 -8.9406967e-08 0.13059822 ;
-	setAttr ".tk[130]" -type "float3" 0.21131189 -8.9406967e-08 0.068658911 ;
-	setAttr ".tk[131]" -type "float3" 0.222186 -8.9406967e-08 1.6736647e-07 ;
-	setAttr ".tk[132]" -type "float3" 0.21131189 -8.9406967e-08 -0.068659246 ;
-	setAttr ".tk[133]" -type "float3" 0.17975324 -8.9406967e-08 -0.13059789 ;
-	setAttr ".tk[134]" -type "float3" 0.1305984 -8.9406967e-08 -0.17975278 ;
-	setAttr ".tk[135]" -type "float3" 0.06865941 -8.9406967e-08 -0.21131171 ;
-	setAttr ".tk[136]" -type "float3" 3.3473293e-07 -8.9406967e-08 -0.22218652 ;
-	setAttr ".tk[137]" -type "float3" -0.068658747 -8.9406967e-08 -0.21131171 ;
-	setAttr ".tk[138]" -type "float3" -0.13059905 -8.9406967e-08 -0.17975278 ;
-	setAttr ".tk[139]" -type "float3" -0.1797526 -8.9406967e-08 -0.13059789 ;
-	setAttr ".tk[140]" -type "float3" -0.21131189 -8.9406967e-08 -0.068659246 ;
-	setAttr ".tk[141]" -type "float3" -0.222186 -8.9406967e-08 1.6736647e-07 ;
+	setAttr -s 21 ".tk[121:141]" -type "float3"  -0.21131189 -8.9406967e-08
+		 0.068658911 -0.1797526 -8.9406967e-08 0.13059822 3.3473293e-07 -8.9406967e-08 1.6736647e-07
+		 -0.13059905 -8.9406967e-08 0.17975242 -0.068658747 -8.9406967e-08 0.21131171 3.3473293e-07
+		 -8.9406967e-08 0.22218652 0.06865941 -8.9406967e-08 0.21131171 0.1305984 -8.9406967e-08
+		 0.17975242 0.17975324 -8.9406967e-08 0.13059822 0.21131189 -8.9406967e-08 0.068658911
+		 0.222186 -8.9406967e-08 1.6736647e-07 0.21131189 -8.9406967e-08 -0.068659246 0.17975324
+		 -8.9406967e-08 -0.13059789 0.1305984 -8.9406967e-08 -0.17975278 0.06865941 -8.9406967e-08
+		 -0.21131171 3.3473293e-07 -8.9406967e-08 -0.22218652 -0.068658747 -8.9406967e-08
+		 -0.21131171 -0.13059905 -8.9406967e-08 -0.17975278 -0.1797526 -8.9406967e-08 -0.13059789
+		 -0.21131189 -8.9406967e-08 -0.068659246 -0.222186 -8.9406967e-08 1.6736647e-07;
 createNode polyCylinder -n "polyCylinder2";
 	rename -uid "DC85804C-4407-3231-A7C1-4E92571D6722";
 	setAttr ".sc" 1;
@@ -7726,28 +7589,13 @@ createNode polyExtrudeFace -n "polyExtrudeFace9";
 createNode polyTweak -n "polyTweak6";
 	rename -uid "31F36545-4131-0903-4684-38A102307F8C";
 	setAttr ".uopa" yes;
-	setAttr -s 22 ".tk";
-	setAttr ".tk[41]" -type "float3" -0.42643222 0 0.13855551 ;
-	setAttr ".tk[42]" -type "float3" -0.36274484 0 0.26354837 ;
-	setAttr ".tk[43]" -type "float3" -1.7638658e-06 0 -8.017571e-08 ;
-	setAttr ".tk[44]" -type "float3" -0.26354933 0 0.36274308 ;
-	setAttr ".tk[45]" -type "float3" -0.13855737 0 0.42643031 ;
-	setAttr ".tk[46]" -type "float3" -1.7638658e-06 0 0.44837546 ;
-	setAttr ".tk[47]" -type "float3" 0.13855383 0 0.42643031 ;
-	setAttr ".tk[48]" -type "float3" 0.26354754 0 0.36274308 ;
-	setAttr ".tk[49]" -type "float3" 0.36274311 0 0.26354837 ;
-	setAttr ".tk[50]" -type "float3" 0.42642874 0 0.13855551 ;
-	setAttr ".tk[51]" -type "float3" 0.44837338 0 -8.017571e-08 ;
-	setAttr ".tk[52]" -type "float3" 0.42642874 0 -0.13855568 ;
-	setAttr ".tk[53]" -type "float3" 0.36274311 0 -0.26354828 ;
-	setAttr ".tk[54]" -type "float3" 0.26354754 0 -0.36274341 ;
-	setAttr ".tk[55]" -type "float3" 0.13855383 0 -0.42643028 ;
-	setAttr ".tk[56]" -type "float3" -1.7638658e-06 0 -0.44837543 ;
-	setAttr ".tk[57]" -type "float3" -0.13855737 0 -0.42643028 ;
-	setAttr ".tk[58]" -type "float3" -0.26354933 0 -0.36274341 ;
-	setAttr ".tk[59]" -type "float3" -0.36274484 0 -0.26354828 ;
-	setAttr ".tk[60]" -type "float3" -0.42643046 0 -0.13855568 ;
-	setAttr ".tk[61]" -type "float3" -0.44837686 0 -8.017571e-08 ;
+	setAttr -s 21 ".tk[41:61]" -type "float3"  -0.42643222 0 0.13855551 -0.36274484
+		 0 0.26354837 -1.7638658e-06 0 -8.017571e-08 -0.26354933 0 0.36274308 -0.13855737
+		 0 0.42643031 -1.7638658e-06 0 0.44837546 0.13855383 0 0.42643031 0.26354754 0 0.36274308
+		 0.36274311 0 0.26354837 0.42642874 0 0.13855551 0.44837338 0 -8.017571e-08 0.42642874
+		 0 -0.13855568 0.36274311 0 -0.26354828 0.26354754 0 -0.36274341 0.13855383 0 -0.42643028
+		 -1.7638658e-06 0 -0.44837543 -0.13855737 0 -0.42643028 -0.26354933 0 -0.36274341
+		 -0.36274484 0 -0.26354828 -0.42643046 0 -0.13855568 -0.44837686 0 -8.017571e-08;
 createNode standardSurface -n "Red";
 	rename -uid "CBCC1004-4150-FA39-EA33-618E8CADD23F";
 	setAttr ".bc" -type "float3" 0.61930001 0.19419999 0.236 ;
@@ -7761,7 +7609,7 @@ createNode shadingEngine -n "standardSurface3SG";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "shadow_matte";
 	setAttr ".aovs[2].aov_name" -type "string" "specular";
-	setAttr ".aal" -type "attributeAlias" 6 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_shadow_matte" "aiCustomAOVs[1].aovName" "ai_aov_specular" "aiCustomAOVs[2].aovName" ;
+	setAttr ".aal" -type "attributeAlias" 6 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_shadow_matte" "aiCustomAOVs[1]" "ai_aov_specular" "aiCustomAOVs[2]" ;
 createNode materialInfo -n "materialInfo5";
 	rename -uid "4DF0F696-442E-7657-6FEF-4B88184B39DB";
 createNode polySplit -n "polySplit7";
@@ -7773,7 +7621,7 @@ createNode polySplit -n "polySplit7";
 createNode polyTweak -n "polyTweak7";
 	rename -uid "B05507D6-4002-8630-E4C7-F5A321E1BDDD";
 	setAttr ".uopa" yes;
-	setAttr -s 7 ".tk";
+	setAttr -s 6 ".tk";
 	setAttr ".tk[0]" -type "float3" 0 0 0.29127866 ;
 	setAttr ".tk[1]" -type "float3" 0 0 0.29127866 ;
 	setAttr ".tk[6]" -type "float3" 0 0.014962073 0 ;
@@ -7815,11 +7663,8 @@ createNode polySplit -n "polySplit8";
 createNode polyTweak -n "polyTweak8";
 	rename -uid "2E5743D2-46BA-6E75-C886-F986CD1E1D77";
 	setAttr ".uopa" yes;
-	setAttr -s 5 ".tk";
-	setAttr ".tk[18]" -type "float3" 0 -0.020189768 0 ;
-	setAttr ".tk[19]" -type "float3" 0 -0.020189768 0 ;
-	setAttr ".tk[20]" -type "float3" 0 -0.020189768 0 ;
-	setAttr ".tk[21]" -type "float3" 0 -0.020189768 0 ;
+	setAttr -s 4 ".tk[18:21]" -type "float3"  0 -0.020189768 0 0 -0.020189768
+		 0 0 -0.020189768 0 0 -0.020189768 0;
 createNode polyBevel3 -n "polyBevel2";
 	rename -uid "231DFA06-4651-F3DB-34C8-12B3876F7CA1";
 	setAttr ".uopa" yes;
@@ -7838,9 +7683,8 @@ createNode polyBevel3 -n "polyBevel2";
 createNode polyTweak -n "polyTweak9";
 	rename -uid "AF6516D6-4108-F21C-536E-F89F3D08A146";
 	setAttr ".uopa" yes;
-	setAttr -s 3 ".tk";
-	setAttr ".tk[4]" -type "float3" 0 -0.0038384376 0 ;
-	setAttr ".tk[5]" -type "float3" 0 -0.0038384376 0 ;
+	setAttr -s 2 ".tk[4:5]" -type "float3"  0 -0.0038384376 0 0 -0.0038384376
+		 0;
 createNode aiAOV -n "aiAOV_diffuse";
 	rename -uid "FDEC7A55-4A63-1951-31C5-CEA6D38129A6";
 	setAttr ".aovn" -type "string" "diffuse";
@@ -7901,28 +7745,16 @@ createNode polyExtrudeFace -n "polyExtrudeFace12";
 createNode polyTweak -n "polyTweak10";
 	rename -uid "92189E89-44F8-3C0B-7C3B-04B0808F815F";
 	setAttr ".uopa" yes;
-	setAttr -s 22 ".tk";
-	setAttr ".tk[41]" -type "float3" -0.37148002 7.4505806e-09 0.12070106 ;
-	setAttr ".tk[42]" -type "float3" -0.31599951 7.4505806e-09 0.22958712 ;
-	setAttr ".tk[43]" -type "float3" -4.6562768e-08 7.4505806e-09 -6.9844134e-08 ;
-	setAttr ".tk[44]" -type "float3" -0.22958723 7.4505806e-09 0.31599948 ;
-	setAttr ".tk[45]" -type "float3" -0.12070116 7.4505806e-09 0.37147987 ;
-	setAttr ".tk[46]" -type "float3" -4.6562768e-08 7.4505806e-09 0.39059666 ;
-	setAttr ".tk[47]" -type "float3" 0.12070107 7.4505806e-09 0.37147987 ;
-	setAttr ".tk[48]" -type "float3" 0.22958642 7.4505806e-09 0.31599948 ;
-	setAttr ".tk[49]" -type "float3" 0.31599948 7.4505806e-09 0.22958712 ;
-	setAttr ".tk[50]" -type "float3" 0.3714799 7.4505806e-09 0.12070106 ;
-	setAttr ".tk[51]" -type "float3" 0.39059669 7.4505806e-09 -6.9844134e-08 ;
-	setAttr ".tk[52]" -type "float3" 0.3714799 7.4505806e-09 -0.1207012 ;
-	setAttr ".tk[53]" -type "float3" 0.31599948 7.4505806e-09 -0.22958726 ;
-	setAttr ".tk[54]" -type "float3" 0.22958642 7.4505806e-09 -0.31599954 ;
-	setAttr ".tk[55]" -type "float3" 0.12070107 7.4505806e-09 -0.37147969 ;
-	setAttr ".tk[56]" -type "float3" -4.6562768e-08 7.4505806e-09 -0.39059687 ;
-	setAttr ".tk[57]" -type "float3" -0.12070116 7.4505806e-09 -0.37147969 ;
-	setAttr ".tk[58]" -type "float3" -0.22958723 7.4505806e-09 -0.31599954 ;
-	setAttr ".tk[59]" -type "float3" -0.31599951 7.4505806e-09 -0.22958726 ;
-	setAttr ".tk[60]" -type "float3" -0.37148002 7.4505806e-09 -0.1207012 ;
-	setAttr ".tk[61]" -type "float3" -0.39059687 7.4505806e-09 -6.9844134e-08 ;
+	setAttr -s 21 ".tk[41:61]" -type "float3"  -0.37148002 7.4505806e-09
+		 0.12070106 -0.31599951 7.4505806e-09 0.22958712 -4.6562768e-08 7.4505806e-09 -6.9844134e-08
+		 -0.22958723 7.4505806e-09 0.31599948 -0.12070116 7.4505806e-09 0.37147987 -4.6562768e-08
+		 7.4505806e-09 0.39059666 0.12070107 7.4505806e-09 0.37147987 0.22958642 7.4505806e-09
+		 0.31599948 0.31599948 7.4505806e-09 0.22958712 0.3714799 7.4505806e-09 0.12070106
+		 0.39059669 7.4505806e-09 -6.9844134e-08 0.3714799 7.4505806e-09 -0.1207012 0.31599948
+		 7.4505806e-09 -0.22958726 0.22958642 7.4505806e-09 -0.31599954 0.12070107 7.4505806e-09
+		 -0.37147969 -4.6562768e-08 7.4505806e-09 -0.39059687 -0.12070116 7.4505806e-09 -0.37147969
+		 -0.22958723 7.4505806e-09 -0.31599954 -0.31599951 7.4505806e-09 -0.22958726 -0.37148002
+		 7.4505806e-09 -0.1207012 -0.39059687 7.4505806e-09 -6.9844134e-08;
 createNode polyExtrudeFace -n "polyExtrudeFace13";
 	rename -uid "BEBE4ABC-499E-AFFD-DFD3-EFADFCFB79C7";
 	setAttr ".ics" -type "componentList" 20 "f[1]" "f[3]" "f[5]" "f[7]" "f[9]" "f[11]" "f[13]" "f[15]" "f[17]" "f[19]" "f[61]" "f[63]" "f[65]" "f[67]" "f[69]" "f[71]" "f[73]" "f[75]" "f[77]" "f[79]";
@@ -7938,28 +7770,11 @@ createNode polyExtrudeFace -n "polyExtrudeFace13";
 createNode polyTweak -n "polyTweak11";
 	rename -uid "DA934682-4CA1-A2FB-87CF-5CBA60236E26";
 	setAttr ".uopa" yes;
-	setAttr -s 27 ".tk";
-	setAttr ".tk[61]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[62]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[63]" -type "float3" 0 -0.84043127 1.496079e-16 ;
-	setAttr ".tk[64]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[65]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[66]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[67]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[68]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[69]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[70]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[71]" -type "float3" 0 -0.84043127 1.496079e-16 ;
-	setAttr ".tk[72]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[73]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[74]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[75]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[76]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[77]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[78]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[79]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[80]" -type "float3" 0 -0.84043127 0 ;
-	setAttr ".tk[81]" -type "float3" 0 -0.84043127 1.496079e-16 ;
+	setAttr -s 21 ".tk[61:81]" -type "float3"  0 -0.84043127 0 0 -0.84043127
+		 0 0 -0.84043127 1.496079e-16 0 -0.84043127 0 0 -0.84043127 0 0 -0.84043127 0 0 -0.84043127
+		 0 0 -0.84043127 0 0 -0.84043127 0 0 -0.84043127 0 0 -0.84043127 1.496079e-16 0 -0.84043127
+		 0 0 -0.84043127 0 0 -0.84043127 0 0 -0.84043127 0 0 -0.84043127 0 0 -0.84043127 0
+		 0 -0.84043127 0 0 -0.84043127 0 0 -0.84043127 0 0 -0.84043127 1.496079e-16;
 createNode animCurveTL -n "pCylinder6_translateX";
 	rename -uid "2932D153-4516-78F3-AA1E-49BCB1D6E066";
 	setAttr ".tan" 18;
@@ -8126,8 +7941,11 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[30].x" 60;
 	setAttr ".tgi[0].ni[30].y" 352.85714721679688;
 	setAttr ".tgi[0].ni[30].nvs" 1923;
+createNode aiImagerDenoiserOidn -n "aiImagerDenoiserOidn1";
+	rename -uid "0E211CC6-4C12-0AA2-FE91-C9AD2805E01F";
 select -ne :time1;
-	setAttr ".o" 0;
+	setAttr ".o" 99;
+	setAttr ".unw" 99;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -8179,7 +7997,7 @@ select -ne :defaultRenderGlobals;
 	setAttr ".fs" 0;
 	setAttr ".ef" 224;
 	setAttr ".pff" yes;
-	setAttr ".ifp" -type "string" "<RenderPass>/<Scene>_<RenderPass>";
+	setAttr ".ifp" -type "string" "<RenderPass>2/<Scene>_<RenderPass>";
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
 	setAttr ".w" 1280;
@@ -8497,7 +8315,7 @@ relationship "shadowLink" ":lightLinker1" "WindowSG1.message" ":defaultLightSet.
 relationship "shadowLink" ":lightLinker1" "standardSurface3SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "aiImagerDenoiserOptix1.msg" ":defaultArnoldRenderOptions.imagers" -na
+connectAttr "aiImagerDenoiserOidn1.msg" ":defaultArnoldRenderOptions.imagers" -na
 		;
 connectAttr "aiAOV_diffuse.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "aiAOV_shadow_matte.msg" ":defaultArnoldRenderOptions.aovs" -na;

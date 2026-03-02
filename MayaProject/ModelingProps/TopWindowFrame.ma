@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: TopWindowFrame.ma
-//Last modified: Sat, Feb 28, 2026 10:14:51 PM
+//Last modified: Sun, Mar 01, 2026 04:56:58 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "EC7D938F-4791-5482-DEE5-B992A3F9E2C1";
+fileInfo "UUID" "72A4326F-43EC-D758-620A-45999DA43CD4";
 createNode transform -s -n "persp";
 	rename -uid "C418BDA3-4BE6-FAD2-0EEB-70949DBFD80A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.0207932335569563 4.6280532850766587 -4.6055587000388343 ;
-	setAttr ".r" -type "double3" -6.3383527303858447 474.19999999952563 0 ;
+	setAttr ".t" -type "double3" 9.3304263250212252 3.473339480649277 5.6424819956952961 ;
+	setAttr ".r" -type "double3" -1.5383527303504529 -300.99999999999466 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "0285B7B7-4030-1940-3FCE-F99A744CF2AF";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 9.4438574044489307;
+	setAttr ".coi" 10.979579800199286;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -111,20 +111,20 @@ createNode mesh -n "WindowShape" -p "Window";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "22647280-4279-1A8C-42CF-26B0EBA1F7D0";
+	rename -uid "B22BC0ED-4B6C-EB3A-0E79-8B84EA125173";
 	setAttr -s 5 ".lnk";
 	setAttr -s 5 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "59A72BF0-4933-5795-38A5-E5A7F7EE85CA";
+	rename -uid "AC6DFBE8-403C-B1B8-8D5B-858DB7E48018";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "851D270F-417A-4382-AD9E-3E83DDD1CC90";
+	rename -uid "DC0E4155-4173-5A14-50DC-12BF26D63A22";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0831C2E6-4315-0E05-EB1D-F098CA820582";
+	rename -uid "6BD11DD0-4FB9-FFC9-BB36-8D86AB843C53";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "1928A14B-4DF9-FF77-E516-F495DA45D8AD";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "3074A1EA-4253-890C-5BE4-7495D2C49ABA";
+	rename -uid "5C46463A-4575-DBF3-7205-17A9939DC380";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "958A847A-4D86-828B-F881-589EE4DB65A4";
 	setAttr ".g" yes;
@@ -2011,7 +2011,6 @@ select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
