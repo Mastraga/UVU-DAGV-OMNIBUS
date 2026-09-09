@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
-//Name: Assignement2.ma
-//Last modified: Wed, Sep 09, 2026 04:52:59 PM
+//Name: Assignment3.ma
+//Last modified: Wed, Sep 09, 2026 04:53:55 PM
 //Codeset: 1252
 requires maya "2027";
 requires "mtoa" "5.6.2";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "4613148A-4E3D-E527-8324-E986EA6274AE";
+fileInfo "UUID" "8B8E0DEE-49BD-99CE-0C41-1FB0759E099D";
 createNode transform -s -n "persp";
 	rename -uid "67D0DE7F-4E40-57F0-4169-148BF75B2C43";
 	setAttr ".v" no;
@@ -97300,4 +97300,4 @@ connectAttr "base_color_texture.msg" ":defaultTextureList1.tx" -na;
 connectAttr "base_color_texture_ncl1_1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "base_color_texture_ncl1_2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
-// End of Assignement2.ma
+// End of Assignment3.ma
