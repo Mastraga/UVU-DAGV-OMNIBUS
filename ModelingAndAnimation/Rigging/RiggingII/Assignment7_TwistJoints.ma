@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Assignment7_TwistJoints.ma
-//Last modified: Tue, Oct 06, 2026 03:17:05 PM
+//Last modified: Tue, Oct 06, 2026 05:10:56 PM
 //Codeset: 1252
 requires maya "2027";
 requires "mtoa" "5.6.2";
@@ -11,34 +11,34 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "A9B19184-49D3-880B-4C0E-23836B9B99D4";
+fileInfo "UUID" "A28874A5-454E-6E1A-B649-5AA4D4C6DA80";
 createNode transform -s -n "persp";
 	rename -uid "67D0DE7F-4E40-57F0-4169-148BF75B2C43";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 406.86199590687613 1159.715958913027 165.93981450835514 ;
-	setAttr ".r" -type "double3" 1742.6616480830994 -6802.6000000293398 0 ;
+	setAttr ".t" -type "double3" 713.1499196035295 1188.1063962898033 1206.6456726170522 ;
+	setAttr ".r" -type "double3" 1778.6616480885052 -7166.9999999911743 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CA086A93-4112-8BDF-D60F-67B2AF23D862";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 1;
-	setAttr ".coi" 717.81385787319437;
+	setAttr ".coi" 1581.7384708604075;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 242.17453991184868 602.42962511329904 -7.6362507909057911 ;
+	setAttr ".tp" -type "double3" -80.125799888113008 609.13677463055467 -28.244107122993395 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "4DEC5650-4EF6-9F43-46CF-B49896C75D35";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 91.241324125809797 1000.1000000000001 -47.112983018094567 ;
+	setAttr ".t" -type "double3" -173.20002125471262 1000.1000000000001 -39.58311185727279 ;
 	setAttr ".r" -type "double3" -90 0 0 ;
 createNode camera -s -n "topShape" -p "top";
 	rename -uid "FEEFE4BA-4EDA-480B-0250-849BEE9178CC";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1000000000001;
-	setAttr ".ow" 457.36999960305758;
+	setAttr ".ow" 144.87521937503436;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -552,45 +552,6 @@ createNode pointConstraint -n "L_arm_01_FK_jnt1_pointConstraint1" -p "L_arm_01_I
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 80.125823974609375 609.13665771484375 -28.243906021118164 ;
-	setAttr -k on ".w0";
-createNode parentConstraint -n "L_clav_FK_jnt_parentConstraint1" -p "L_clav_FK_jnt";
-	rename -uid "76252059-47A6-8A8F-6981-DF88EB7FA1D4";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_clav_FK_ctrlW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 2.6645352591003757e-15 1.7763568394002505e-14 
-		-1.1368683772161603e-13 ;
-	setAttr ".tg[0].tor" -type "double3" 0 1.2132853246549673e-20 0 ;
-	setAttr ".lr" -type "double3" 0 6.3611093629270335e-15 0 ;
-	setAttr ".rst" -type "double3" 100.81495240025082 -30.79215779682518 5.7699930987197243 ;
-	setAttr ".rsrr" -type "double3" 0 6.3611093629270335e-15 0 ;
-	setAttr ".int" 2;
-	setAttr -k on ".w0";
-createNode scaleConstraint -n "L_clav_FK_jnt_scaleConstraint1" -p "L_clav_FK_jnt";
-	rename -uid "E6E18640-4F91-4B46-681E-229A5DE2F149";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_clav_FK_ctrlW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
 	setAttr -k on ".w0";
 createNode joint -n "L_arm_01_RK_jnt" -p "L_clav_FK_jnt";
 	rename -uid "7FB1D8C4-4256-28EA-0272-9DB0739C8528";
@@ -2048,6 +2009,105 @@ createNode scaleConstraint -n "L_arm_02_RK_jnt_scaleConstraint1" -p "L_arm_02_RK
 	setAttr -s 2 ".tg";
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
+createNode joint -n "L_upper_arm_twist_01_jnt" -p "L_arm_01_RK_jnt";
+	rename -uid "B565259E-4AF3-E95E-C142-1E98388CC3E2";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 31;
+	setAttr ".s" -type "double3" 1 0.99999999999999956 1.0000000000000004 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr -k on ".dla";
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" 0.00027328448565559169 -0.0003151116186188092 -0.15723281371792333 ;
+	setAttr -k on ".jox";
+	setAttr -k on ".joy";
+	setAttr -k on ".joz";
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 0.99736679638011538 -0.032085070910109932 -0.065038617014498659 0
+		 0.065072119943830983 2.1684043449710089e-19 0.99788056359767607 0 -0.032017068642851899 -0.99948514157274659 0.0020878435826689962 0
+		 80.125827391404442 609.13654607690648 -28.244013732687151 1;
+	setAttr ".radi" 10;
+createNode joint -n "L_upper_arm_twist_01_corrective_jnt" -p "L_upper_arm_twist_01_jnt";
+	rename -uid "580D3754-417E-6F98-02AA-9B8EAAF9DB06";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 31;
+	setAttr ".t" -type "double3" -7.1054273576010019e-15 3.5527136788005009e-15 0 ;
+	setAttr ".r" -type "double3" 0 0.00031586038671715965 0.15723281221553168 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999956 1.0000000000000004 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr -k on ".dla";
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" 0.00027328448565559185 -0.00031511161861881223 -0.1572328137179225 ;
+	setAttr -k on ".jox";
+	setAttr -k on ".joy";
+	setAttr -k on ".joz";
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 0.99736679638011538 -0.032085070910109932 -0.065038617014498659 0
+		 0.065072119943830983 2.1684043449710089e-19 0.99788056359767607 0 -0.032017068642851899 -0.99948514157274659 0.0020878435826689962 0
+		 80.125827391404442 609.13654607690648 -28.244013732687151 1;
+	setAttr ".radi" 10;
+createNode parentConstraint -n "L_upper_arm_twist_01_jnt_parentConstraint1" -p "L_upper_arm_twist_01_jnt";
+	rename -uid "CEDF4A38-41C1-9883-2BA1-72AEBA83C588";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_upper_arm_twist_aim_locW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" -0.00027241871887132197 0.00031586038671715965 0.15723281221553168 ;
+	setAttr ".rst" -type "double3" 0 3.5527136788005009e-15 0 ;
+	setAttr ".rsrr" -type "double3" -0.00027241871887132197 0.00031586038671715965 0.15723281221553168 ;
+	setAttr -k on ".w0";
+createNode joint -n "L_upper_arm_twist_02_jnt" -p "L_arm_01_RK_jnt";
+	rename -uid "72D0E534-4A72-9C70-E633-EA8D964565BD";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 31;
+	setAttr ".s" -type "double3" 1 0.99999999999999956 1.0000000000000004 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr -k on ".dla";
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" 0.00027328448565559169 -0.00031511161861880936 -0.15723281371792333 ;
+	setAttr -k on ".jox";
+	setAttr -k on ".joy";
+	setAttr -k on ".joz";
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 0.99736679638011538 -0.032085070910109932 -0.065038617014498659 0
+		 0.065072119943830983 2.1684043449710089e-19 0.99788056359767607 0 -0.032017068642851899 -0.99948514157274659 0.0020878435826689962 0
+		 80.125827391404442 609.13654607690648 -28.244013732687151 1;
+	setAttr ".radi" 10;
+createNode parentConstraint -n "L_upper_arm_twist_02_jnt_parentConstraint1" -p "L_upper_arm_twist_02_jnt";
+	rename -uid "62832C3C-4200-D877-1BEE-048C2D34939E";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_upper_arm_twist_mid_locW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" -0.00027241871887132197 0.00031586038671715982 0.15723281221553168 ;
+	setAttr ".rst" -type "double3" 47.588039547302273 -2.4849580810837324e-06 3.5398670661379583e-09 ;
+	setAttr ".rsrr" -type "double3" -0.00027241871887132197 0.00031586038671715982 0.15723281221553168 ;
+	setAttr -k on ".w0";
 createNode parentConstraint -n "L_arm_01_RK_jnt_parentConstraint1" -p "L_arm_01_RK_jnt";
 	rename -uid "7FB87426-48A1-88D6-CD90-B1902BCC9874";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_arm_01_FK_jntW0" -dv 1 -min 0 -at "double";
@@ -2098,6 +2158,45 @@ createNode scaleConstraint -n "L_arm_01_RK_jnt_scaleConstraint1" -p "L_arm_01_RK
 	setAttr -s 2 ".tg";
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
+createNode parentConstraint -n "L_clav_FK_jnt_parentConstraint1" -p "L_clav_FK_jnt";
+	rename -uid "76252059-47A6-8A8F-6981-DF88EB7FA1D4";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_clav_FK_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 2.6645352591003757e-15 1.7763568394002505e-14 
+		-1.1368683772161603e-13 ;
+	setAttr ".tg[0].tor" -type "double3" 0 1.2132853246549673e-20 0 ;
+	setAttr ".lr" -type "double3" 0 6.3611093629270335e-15 0 ;
+	setAttr ".rst" -type "double3" 100.81495240025082 -30.79215779682518 5.7699930987197243 ;
+	setAttr ".rsrr" -type "double3" 0 6.3611093629270335e-15 0 ;
+	setAttr ".int" 2;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "L_clav_FK_jnt_scaleConstraint1" -p "L_clav_FK_jnt";
+	rename -uid "E6E18640-4F91-4B46-681E-229A5DE2F149";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_clav_FK_ctrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
 createNode joint -n "R_clav_FK_jnt" -p "Spine_03_FK_jnt";
 	rename -uid "72DDFD43-4F2D-28CD-BE43-6680CCDEE31B";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -3707,6 +3806,84 @@ createNode scaleConstraint -n "R_arm_03_RK_jnt_scaleConstraint1" -p "R_arm_03_RK
 	setAttr -s 2 ".tg";
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
+createNode joint -n "R_Forearm_Twist_02_jnt" -p "R_arm_02_RK_jnt";
+	rename -uid "5A98A72D-491A-A124-3F70-1F8650D5C10E";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 31;
+	setAttr ".s" -type "double3" 1 0.99999999999999911 1.0000000000000013 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr -k on ".dla";
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" -1.9459214101754786e-07 1.8860430300083543e-06 -5.8906384340868136 ;
+	setAttr -k on ".jox";
+	setAttr -k on ".joy";
+	setAttr -k on ".joz";
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 0.99595131169783679 -0.031728170790064347 0.084108905031955825 0
+		 -0.083999357395619215 0.004772311140662339 0.99645438079397275 0 -0.032017068642851899 -0.99948514157274659 0.0020878435826689962 0
+		 175.05000328702209 606.08285617490787 -34.434050481352926 1;
+	setAttr ".radi" 5;
+createNode parentConstraint -n "R_Forearm_Twist_02_jnt_parentConstraint1" -p "R_Forearm_Twist_02_jnt";
+	rename -uid "E6C2AAB9-4AA7-F3E9-9AC6-0C921F1364CC";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Forearm_Twist_Aim_LocW0" -dv 1 
+		-min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 1.9776295054454398e-05 -3.6305593936061186e-06 1.89395341222956 ;
+	setAttr ".rst" -type "double3" -119.18349662001111 8.327191556907664 -3.2620846468489617e-06 ;
+	setAttr ".rsrr" -type "double3" 1.9776295054454398e-05 -3.6305593936061186e-06 1.89395341222956 ;
+	setAttr -k on ".w0";
+createNode joint -n "R_Forearm_Twist_01_jnt" -p "R_arm_02_RK_jnt";
+	rename -uid "8D009C8B-42BF-385B-39B6-B0A8447DB3FA";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 31;
+	setAttr ".s" -type "double3" 1 0.99999999999999911 1.0000000000000013 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr -k on ".dla";
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" -1.9459214099269978e-07 1.8860430300083543e-06 -5.8906384340868136 ;
+	setAttr -k on ".jox";
+	setAttr -k on ".joy";
+	setAttr -k on ".joz";
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 0.99595131169783679 -0.031728170790064347 0.084108905031955825 0
+		 -0.083999357395619215 0.004772311140662339 0.99645438079397275 0 -0.032017068642851899 -0.99948514157274659 0.0020878435826689962 0
+		 175.05000328702209 606.08285617490787 -34.434050481352926 1;
+	setAttr ".radi" 5;
+createNode parentConstraint -n "R_Forearm_Twist_01_jnt_parentConstraint1" -p "R_Forearm_Twist_01_jnt";
+	rename -uid "317B465E-4537-91E5-84A0-129DADA921B9";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Forearm_Twist_Mid_LocW0" -dv 1 
+		-min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 1.9802187765377022e-05 -3.4865695599100907e-06 1.4770615670657079 ;
+	setAttr ".rst" -type "double3" -59.591748158166382 4.1635952304792596 -1.4421648302231915e-06 ;
+	setAttr ".rsrr" -type "double3" 1.9802187765377022e-05 -3.4865695599100907e-06 1.4770615670657079 ;
+	setAttr -k on ".w0";
 createNode parentConstraint -n "R_arm_02_RK_jnt_parentConstraint1" -p "R_arm_02_RK_jnt";
 	rename -uid "E036C335-4E6D-74C7-8E76-9C861EA61474";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_arm_02_FK_jntW0" -dv 1 -min 0 -at "double";
@@ -3755,6 +3932,105 @@ createNode scaleConstraint -n "R_arm_02_RK_jnt_scaleConstraint1" -p "R_arm_02_RK
 	setAttr -s 2 ".tg";
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
+createNode joint -n "R_upper_arm_twist_01_jnt" -p "R_arm_01_RK_jnt";
+	rename -uid "72926428-458E-3865-9C3C-EA92B31F05B6";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 31;
+	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999922 1.0000000000000004 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr -k on ".dla";
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" 2.0296560682970748e-05 -3.3077867109236719e-07 1.0601697219023862 ;
+	setAttr -k on ".jox";
+	setAttr -k on ".joy";
+	setAttr -k on ".joz";
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 0.99736679638011538 -0.032085070910109932 -0.065038617014498659 0
+		 0.065072119943830983 2.1684043449710089e-19 0.99788056359767607 0 -0.032017068642851899 -0.99948514157274659 0.0020878435826689962 0
+		 80.125827391404442 609.13654607690648 -28.244013732687151 1;
+	setAttr ".radi" 5;
+createNode joint -n "R_upper_arm_twist_01_corrective_jnt" -p "R_upper_arm_twist_01_jnt";
+	rename -uid "3941CA9F-40E5-665F-D557-3FA7C3DAA668";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 31;
+	setAttr ".t" -type "double3" 7.1054273576010019e-15 3.5527136788005009e-15 -1.1368683772161603e-13 ;
+	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999922 1.0000000000000004 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr -k on ".dla";
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" 2.0289612385292705e-05 -3.7547072775940385e-07 1.0601697219022534 ;
+	setAttr -k on ".jox";
+	setAttr -k on ".joy";
+	setAttr -k on ".joz";
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 0.99736679638011538 -0.032085070910109932 -0.065038617014498659 0
+		 0.065072119943830983 2.1684043449710089e-19 0.99788056359767607 0 -0.032017068642851899 -0.99948514157274659 0.0020878435826689962 0
+		 80.125827391404442 609.13654607690648 -28.244013732687151 1;
+	setAttr ".radi" 5;
+createNode parentConstraint -n "R_upper_arm_twist_01_jnt_parentConstraint1" -p "R_upper_arm_twist_01_jnt";
+	rename -uid "F418D5FB-4026-7F8D-3978-3D89A1380C98";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Upper_Arm_Twist_Aim_LocW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" -2.0293086236752684e-05 -3.7553501199310531e-07 -1.0601697219023198 ;
+	setAttr ".rst" -type "double3" 1.4210854715202004e-14 -3.5527136788005009e-15 -1.1368683772161603e-13 ;
+	setAttr ".rsrr" -type "double3" -2.0293086236752684e-05 -3.7553501199310531e-07 
+		-1.0601697219023198 ;
+	setAttr -k on ".w0";
+createNode joint -n "R_upper_arm_twist_02_jnt" -p "R_arm_01_RK_jnt";
+	rename -uid "130C17BA-4485-7A77-C057-02A0A2BBEDC4";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 31;
+	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999922 1.0000000000000004 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr -k on ".dla";
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" 2.0296560682970748e-05 -2.3696978997167319e-23 1.0601697219023858 ;
+	setAttr -k on ".jox";
+	setAttr -k on ".joy";
+	setAttr -k on ".joz";
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 0.99736679638011538 -0.032085070910109932 -0.065038617014498659 0
+		 0.065072119943830983 2.1684043449710089e-19 0.99788056359767607 0 -0.032017068642851899 -0.99948514157274659 0.0020878435826689962 0
+		 80.125827391404442 609.13654607690648 -28.244013732687151 1;
+	setAttr ".radi" 5;
+createNode parentConstraint -n "R_upper_arm_twist_02_jnt_parentConstraint1" -p "R_upper_arm_twist_02_jnt";
+	rename -uid "8914BA79-4264-90AF-0C86-5CA143CDC3C0";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Upper_Arm_Twist_Mid_LocW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" -2.0179291431720242e-05 2.1786630926364643e-06 6.1620867438933109 ;
+	setAttr ".rst" -type "double3" -47.587406318914859 -3.5436155343404607e-08 4.4470084503700491e-08 ;
+	setAttr ".rsrr" -type "double3" -2.0179291431720242e-05 2.1786630926364643e-06 6.1620867438933109 ;
+	setAttr -k on ".w0";
 createNode parentConstraint -n "R_arm_01_RK_jnt_parentConstraint1" -p "R_arm_01_RK_jnt";
 	rename -uid "4DC99620-4453-7757-BB6B-24ADB7836960";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_arm_01_FK_jntW0" -dv 1 -min 0 -at "double";
@@ -82651,6 +82927,10 @@ createNode transform -n "R_clav_FK_ctrl" -p "R_clav_FK_ctrl_grp";
 		1 -at "double";
 	addAttr -ci true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 1 -at "double";
 	setAttr -l on -k off ".v";
+	setAttr ".r" -type "double3" -7.0166872995305242e-15 4.2964818209728544e-31 7.0167092985003901e-15 ;
+	setAttr -av ".rx";
+	setAttr -av ".ry";
+	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" 5.3290705182007514e-15 1.4210854715202004e-14 0 ;
 	setAttr ".sp" -type "double3" 5.3290705182007514e-15 1.4210854715202004e-14 0 ;
 	setAttr -k on ".FollowTranslate";
@@ -88083,7 +88363,6 @@ createNode scaleConstraint -n "L_leg_PV_ctrl_grp_scaleConstraint1" -p "L_leg_PV_
 	setAttr -k on ".w4";
 createNode transform -n "Deformers" -p "Hubert";
 	rename -uid "E3D88625-4BB6-A7AA-C21B-3B8F8090E9D5";
-	setAttr ".v" no;
 createNode transform -n "IK_Distance_Loc_Grp" -p "Deformers";
 	rename -uid "E76345D5-4336-5811-3C12-3592DF286D35";
 createNode transform -n "L_Arm_IK_Dist_01_Loc" -p "IK_Distance_Loc_Grp";
@@ -88256,9 +88535,9 @@ createNode parentConstraint -n "R_Leg_IK_Dist_02_Loc_parentConstraint1" -p "R_Le
 	setAttr -k on ".w0";
 createNode transform -n "Limb_Twist_Locator_Group" -p "Deformers";
 	rename -uid "ECA06794-426A-F514-5E95-BF8A45E29E30";
-createNode transform -n "L_Arm_Twist_Aim_Loc_Grp" -p "Limb_Twist_Locator_Group";
+createNode transform -n "L_Forearm_Twist_Aim_Loc_Grp" -p "Limb_Twist_Locator_Group";
 	rename -uid "E79DA7D3-43A4-9F74-EACF-E08FACA2A386";
-createNode transform -n "L_Arm_Twist_Aim_Loc" -p "L_Arm_Twist_Aim_Loc_Grp";
+createNode transform -n "L_Arm_Twist_Aim_Loc" -p "L_Forearm_Twist_Aim_Loc_Grp";
 	rename -uid "7F7AF7C8-47CE-893E-7405-04801F2659ED";
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
 createNode locator -n "L_Arm_Twist_Aim_LocShape" -p "L_Arm_Twist_Aim_Loc";
@@ -88300,14 +88579,14 @@ createNode pointConstraint -n "L_Arm_Twist_Aim_Loc_pointConstraint1" -p "L_Arm_T
 	setAttr ".o" -type "double3" 0.039507684523186981 -0.0029081446930945276 -0.0016432892489319784 ;
 	setAttr ".rst" -type "double3" 0 0 -1.1368683772161603e-13 ;
 	setAttr -k on ".w0";
-createNode transform -n "L_Arm_Twist_Target_Loc" -p "L_Arm_Twist_Aim_Loc_Grp";
+createNode transform -n "L_Arm_Twist_Target_Loc" -p "L_Forearm_Twist_Aim_Loc_Grp";
 	rename -uid "A012F282-4045-C908-3D47-CF9BD2B0A550";
 	setAttr ".t" -type "double3" -119.18315152583905 0 0 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
 createNode locator -n "L_Arm_Twist_Target_LocShape" -p "L_Arm_Twist_Target_Loc";
 	rename -uid "5A6562F0-409C-D222-C1C1-EF818D8CD3DC";
 	setAttr -k off ".v";
-createNode transform -n "L_Arm_Twist_Up_Loc" -p "L_Arm_Twist_Aim_Loc_Grp";
+createNode transform -n "L_Arm_Twist_Up_Loc" -p "L_Forearm_Twist_Aim_Loc_Grp";
 	rename -uid "7E7773F0-4FF9-525D-AD2F-96ABC2D24994";
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
 createNode locator -n "L_Arm_Twist_Up_LocShape" -p "L_Arm_Twist_Up_Loc";
@@ -88335,7 +88614,7 @@ createNode parentConstraint -n "L_Arm_Twist_Up_Loc_parentConstraint1" -p "L_Arm_
 	setAttr ".rst" -type "double3" 5.6843418860808015e-14 27.166741408102173 1.1368683772161603e-13 ;
 	setAttr ".rsrr" -type "double3" 6.3611093629270335e-15 2.0690185772110119e-33 -3.7272125173400587e-17 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1" -p "L_Arm_Twist_Aim_Loc_Grp";
+createNode parentConstraint -n "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1" -p "L_Forearm_Twist_Aim_Loc_Grp";
 	rename -uid "974DD549-49A7-FF78-E7F1-A3BB4609A4F2";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_arm_02_RK_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -88357,7 +88636,7 @@ createNode parentConstraint -n "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1" -p "L
 	setAttr ".rst" -type "double3" 293.79027782259379 602.30176759721587 -24.40935031011508 ;
 	setAttr ".rsrr" -type "double3" 89.879723146662784 -4.6991540608410221 -1.8244979356812567 ;
 	setAttr -k on ".w0";
-createNode transform -n "L_Arm_Twist_Mid_Loc" -p "L_Arm_Twist_Aim_Loc_Grp";
+createNode transform -n "L_Arm_Twist_Mid_Loc" -p "L_Forearm_Twist_Aim_Loc_Grp";
 	rename -uid "7D7362DA-4228-D0E8-9C83-CB86093F6278";
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
 createNode locator -n "L_Arm_Twist_Mid_LocShape" -p "L_Arm_Twist_Mid_Loc";
@@ -88385,7 +88664,7 @@ createNode pointConstraint -n "L_Arm_Twist_Mid_Loc_pointConstraint1" -p "L_Arm_T
 	setAttr ".rst" -type "double3" -59.571835056706476 -0.0016615462459483865 -0.00062914245143019798 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
-createNode scaleConstraint -n "L_Arm_Twist_Aim_Loc_Grp_scaleConstraint1" -p "L_Arm_Twist_Aim_Loc_Grp";
+createNode scaleConstraint -n "L_Arm_Twist_Aim_Loc_Grp_scaleConstraint1" -p "L_Forearm_Twist_Aim_Loc_Grp";
 	rename -uid "2225D315-435F-0890-5ED4-6EAF125F0586";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_arm_02_RK_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -88401,7 +88680,7 @@ createNode scaleConstraint -n "L_Arm_Twist_Aim_Loc_Grp_scaleConstraint1" -p "L_A
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
-createNode transform -n "L_upper_arm_twist_aim_grp";
+createNode transform -n "L_upper_arm_twist_aim_grp" -p "Limb_Twist_Locator_Group";
 	rename -uid "86B2CFE9-47D9-044B-EA7A-9EB14549168F";
 createNode transform -n "L_upper_arm_twist_aim_loc_grp" -p "L_upper_arm_twist_aim_grp";
 	rename -uid "0A865693-4666-B9D2-E171-A79D78D35027";
@@ -88474,10 +88753,37 @@ createNode parentConstraint -n "L_upper_arm_twist_up_loc_parentConstraint1" -p "
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 64.107342488150735 57.27204683891064 -1.1786741275374197 ;
 	setAttr ".tg[0].tor" -type "double3" 179.06730149255779 0.61652750577196858 37.185869877367125 ;
-	setAttr ".lr" -type "double3" 6.9880637804688132e-11 5.3202032687844305e-11 1.7811106219440081e-13 ;
+	setAttr ".lr" -type "double3" -1.3545849967927138e-07 -1.0277963904303344e-07 -2.1922915158826941e-10 ;
 	setAttr ".rst" -type "double3" 90.000000000000028 -75.835234527689295 -4.5474735088646412e-13 ;
 	setAttr ".rsrr" -type "double3" 1.1927080055488188e-15 -3.47873168285072e-16 -1.2722218725854067e-14 ;
 	setAttr -k on ".w0";
+createNode transform -n "L_upper_arm_twist_mid_loc" -p "L_upper_arm_twist_aim_loc_grp";
+	rename -uid "B674A097-4F49-5175-5722-41A83D6786F5";
+createNode locator -n "L_upper_arm_twist_mid_locShape" -p "L_upper_arm_twist_mid_loc";
+	rename -uid "D8BED194-470D-1736-7E02-12A464F37331";
+	setAttr -k off ".v";
+createNode pointConstraint -n "L_upper_arm_twist_mid_loc_pointConstraint1" -p "L_upper_arm_twist_mid_loc";
+	rename -uid "594F2A04-434B-E255-3B5B-A2ACEED4A232";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_upper_arm_twist_aim_locW0" -dv 
+		1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "L_upper_arm_twist_target_locW1" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr ".rst" -type "double3" 47.588039547302266 -2.4849580881891598e-06 3.5398670661379583e-09 ;
+	setAttr -k on ".w0";
+	setAttr -k on ".w1";
 createNode parentConstraint -n "L_upper_arm_twist_aim_loc_grp_parentConstraint1" 
 		-p "L_upper_arm_twist_aim_loc_grp";
 	rename -uid "527B7509-4618-DD92-B5D4-6BA82BD95248";
@@ -88528,7 +88834,7 @@ createNode joint -n "L_upper_arm_twist_IK_01_jnt" -p "L_upper_arm_twist_IK_jnt_g
 	setAttr ".ove" yes;
 	setAttr ".ovc" 14;
 	setAttr ".t" -type "double3" -7.9936057773011271e-15 -1.4210854715202004e-14 1.1368683772161603e-13 ;
-	setAttr ".r" -type "double3" 0.0040541152223054072 0.069119438641216432 -0.15860509754206728 ;
+	setAttr ".r" -type "double3" 0.0040539450971113474 0.06911943863953797 -0.15860509753820282 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999956 1.0000000000000004 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -88547,7 +88853,7 @@ createNode joint -n "L_upper_arm_twist_IK_01_jnt" -p "L_upper_arm_twist_IK_jnt_g
 createNode joint -n "L_upper_arm_twist_IK_02_jnt" -p "L_upper_arm_twist_IK_01_jnt";
 	rename -uid "F47C96A1-4DC4-EAD1-41B9-20A60C640207";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
-	setAttr ".t" -type "double3" 56.196734856215016 -6.5745077190373979e-14 -1.6395944677497703e-13 ;
+	setAttr ".t" -type "double3" 60 -6.5745077190373979e-14 -1.6395944677497703e-13 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999911 1.0000000000000009 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -88567,7 +88873,7 @@ createNode ikEffector -n "effector9" -p "L_upper_arm_twist_IK_01_jnt";
 	setAttr ".hd" yes;
 createNode transform -n "L_upper_arm_twist_PV_loc" -p "L_upper_arm_twist_IK_grp";
 	rename -uid "1ED75798-4778-4F16-AACC-80A07F2EA554";
-	setAttr ".t" -type "double3" 80.125823974609375 654.59774432163442 -97.329437255859375 ;
+	setAttr ".t" -type "double3" 80.125823974609375 650 -97.329437255859375 ;
 createNode locator -n "L_upper_arm_twist_PV_locShape" -p "L_upper_arm_twist_PV_loc";
 	rename -uid "37F6E90B-484E-94A3-512A-B0B44EB6542A";
 	setAttr -k off ".v";
@@ -88626,15 +88932,442 @@ createNode parentConstraint -n "L_upper_arm_twist_IK_grp_parentConstraint1" -p "
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -5.7708287740155084 28.244022045349357 609.13653834336355 ;
-	setAttr ".tg[0].tor" -type "double3" -89.999999999880785 -7.6788051896657284e-05 
-		-8.2543805348963298e-05 ;
-	setAttr ".lr" -type "double3" 6.3611093629270351e-15 -9.5416640443905519e-15 -3.1805546814635183e-15 ;
+	setAttr ".tg[0].tor" -type "double3" -89.999999999880799 -7.6788051896657284e-05 
+		-8.2543805348963311e-05 ;
+	setAttr ".lr" -type "double3" -9.5416640443905503e-15 -6.3611093629270335e-15 5.2966875576601921e-31 ;
 	setAttr ".rst" -type "double3" 0 0 3.5527136788005009e-15 ;
 	setAttr ".rsrr" -type "double3" 6.3611093629270351e-15 -9.5416640443905519e-15 -3.1805546814635183e-15 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "L_upper_arm_twist_IK_grp_scaleConstraint1" -p "L_upper_arm_twist_IK_grp";
 	rename -uid "25223153-4068-2B95-7A10-819C2C1FE2B8";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_clav_FK_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "R_Forearm_Twist_Aim_Loc_grp" -p "Limb_Twist_Locator_Group";
+	rename -uid "0952D1E5-4E6F-56E7-F909-54A2C8E31D8D";
+createNode transform -n "R_Forearm_Twist_Aim_Loc" -p "R_Forearm_Twist_Aim_Loc_grp";
+	rename -uid "6E8AFA74-477A-A075-1032-C3B988366CF5";
+createNode locator -n "R_Forearm_Twist_Aim_LocShape" -p "R_Forearm_Twist_Aim_Loc";
+	rename -uid "DFB2300E-4BED-DAAE-E123-2BB3B5FE3CC0";
+	setAttr -k off ".v";
+createNode aimConstraint -n "R_Forearm_Twist_Aim_Loc_aimConstraint1" -p "R_Forearm_Twist_Aim_Loc";
+	rename -uid "322DE47F-4A50-DE53-36BE-E088D17D3E3C";
+	addAttr -dcb 0 -ci true -sn "w0" -ln "R_Forearm_Twist_Target_LocW0" -dv 1 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".u" -type "double3" 0 -1 0 ;
+	setAttr ".wut" 1;
+	setAttr -k on ".w0";
+createNode pointConstraint -n "R_Forearm_Twist_Aim_Loc_pointConstraint1" -p "R_Forearm_Twist_Aim_Loc";
+	rename -uid "5FF44780-46A9-48C8-F85B-DFAB9DB4735F";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_hand_FK_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" 1.9172999259353674e-06 0.00040335390261247994 7.9580786405131221e-13 ;
+	setAttr -k on ".w0";
+createNode transform -n "R_Forearm_Twist_Target_Loc" -p "R_Forearm_Twist_Aim_Loc_grp";
+	rename -uid "80AA3ED3-417E-52A4-119F-95AEE08FAB22";
+	setAttr ".t" -type "double3" 119.46139942671743 1.7389606678384599 1.1644132110345123e-13 ;
+createNode locator -n "R_Forearm_Twist_Target_LocShape" -p "R_Forearm_Twist_Target_Loc";
+	rename -uid "2EE01F1E-49B8-F18F-61BC-2BB96D9805F2";
+	setAttr -k off ".v";
+createNode transform -n "R_Forearm_Twist_Up_Loc" -p "R_Forearm_Twist_Aim_Loc_grp";
+	rename -uid "6E3605AD-448F-F9DA-9BFB-08A29D1C58CE";
+createNode locator -n "R_Forearm_Twist_Up_LocShape" -p "R_Forearm_Twist_Up_Loc";
+	rename -uid "56170094-4CFC-E2E5-865B-AFB2ED5848B6";
+	setAttr -k off ".v";
+createNode parentConstraint -n "R_Forearm_Twist_Up_Loc_parentConstraint1" -p "R_Forearm_Twist_Up_Loc";
+	rename -uid "CB3A3A26-46F2-4496-58B4-C48CAB454094";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_hand_FK_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -2.1134163226465148 3.5753977272179327e-06 
+		12.598886418539458 ;
+	setAttr ".tg[0].tor" -type "double3" -89.999990874189706 -5.8906318943282967 -0.00015972007051115133 ;
+	setAttr ".lr" -type "double3" -8.2817815419654972e-16 -8.388008827886714e-16 -5.8906384340871298 ;
+	setAttr ".rst" -type "double3" -5.6843418860808015e-14 -24.999999999999996 0 ;
+	setAttr ".rsrr" -type "double3" -8.2817815419654972e-16 -8.388008827886714e-16 3.180554681463516e-15 ;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1" -p
+		 "R_Forearm_Twist_Aim_Loc_grp";
+	rename -uid "6406D933-42BB-3A4E-05F7-03987A46F3F1";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_arm_02_RK_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -119.1835324960241 8.3267897970808065 -3.2622252774672233e-06 ;
+	setAttr ".tg[0].tor" -type "double3" 1.9861928457590715e-05 -1.4566749699651224e-06 
+		-4.8304687121849641 ;
+	setAttr ".lr" -type "double3" -90.120047351888019 4.8248678932155729 1.8245865733563715 ;
+	setAttr ".rst" -type "double3" -293.75082787740257 602.30190077445081 -24.409444207660616 ;
+	setAttr ".rsrr" -type "double3" -90.120047351888019 4.8248678932155729 1.8245865733563715 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "R_Forearm_Twist_Aim_Loc_grp_scaleConstraint1" -p "R_Forearm_Twist_Aim_Loc_grp";
+	rename -uid "4B375E66-45F2-00F5-824E-F6BA09C0C94E";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_arm_02_RK_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "R_Forearm_Twist_Mid_Loc" -p "R_Forearm_Twist_Aim_Loc_grp";
+	rename -uid "D9BE0FA0-4D3F-89BA-9B45-2F96C8166405";
+	addAttr -ci true -k true -sn "blendParent1" -ln "blendParent1" -dv 1 -smn 0 -smx 
+		1 -at "double";
+	setAttr -k on ".blendParent1";
+createNode locator -n "R_Forearm_Twist_Mid_LocShape" -p "R_Forearm_Twist_Mid_Loc";
+	rename -uid "F641C7B8-4FFA-14E0-E7C5-2491C85360BD";
+	setAttr -k off ".v";
+createNode parentConstraint -n "R_Forearm_Twist_Mid_Loc_parentConstraint1" -p "R_Forearm_Twist_Mid_Loc";
+	rename -uid "FF45DF3A-491B-E894-BAFC-149BAAA38D17";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Forearm_Twist_Aim_LocW0" -dv 1 
+		-min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "R_Forearm_Twist_Target_LocW1" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr ".lr" -type "double3" 0 0 0.41689184516387573 ;
+	setAttr ".rst" -type "double3" 59.730700672008652 0.86968201087053387 2.2737367544323206e-13 ;
+	setAttr ".rsrr" -type "double3" 0 0 0.41689184516387573 ;
+	setAttr -k on ".w0";
+	setAttr -k on ".w1";
+createNode transform -n "R_upper_arm_twist_aim_grp" -p "Limb_Twist_Locator_Group";
+	rename -uid "98840BDA-41A1-2A78-ED73-B8BC603CD5B8";
+createNode transform -n "R_upper_arm_twist_IK_jnt_grp" -p "R_upper_arm_twist_aim_grp";
+	rename -uid "9E3E298A-4BBC-C0A1-BF43-DDB02877CBAE";
+createNode ikHandle -n "R_upper_arm_twist_IK_handle" -p "R_upper_arm_twist_IK_jnt_grp";
+	rename -uid "F85FF921-43E8-624F-43EE-D79496B4D7D5";
+	setAttr ".roc" yes;
+createNode pointConstraint -n "R_upper_arm_twist_IK_handle_pointConstraint1" -p "R_upper_arm_twist_IK_handle";
+	rename -uid "2175248F-48B2-A77C-9A4A-1FA2E5DFD714";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_arm_02_RK_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" -174.91917437228568 606.08373389247902 -36.190178907280618 ;
+	setAttr -k on ".w0";
+createNode poleVectorConstraint -n "R_upper_arm_twist_IK_handle_poleVectorConstraint1" 
+		-p "R_upper_arm_twist_IK_handle";
+	rename -uid "26734BFD-4FC2-4C8C-DC0A-AD935152617E";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_upper_arm_twist_PV_locW0" -dv 1 
+		-min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" -1.1983127308212715e-06 40.863225369445217 0 ;
+	setAttr -k on ".w0";
+createNode transform -n "R_upper_arm_twist_IK_grp" -p "R_upper_arm_twist_IK_jnt_grp";
+	rename -uid "89E6E980-49D6-64FC-23FF-FBA5F41DB76F";
+	setAttr ".t" -type "double3" -80.12579988811305 609.13677463055467 -97.329437255859375 ;
+	setAttr ".r" -type "double3" -90.999735539097543 -147.1925642757445 1.8447021271874349 ;
+	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999922 1.0000000000000004 ;
+createNode joint -n "R_Upper_Arm_Twist_IK_01_jnt" -p "R_upper_arm_twist_IK_grp";
+	rename -uid "F4462958-43E6-B2E6-B052-0787F3AB41E3";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 14;
+	setAttr ".t" -type "double3" -5.773159728050814e-15 0 1.1368683772161603e-13 ;
+	setAttr ".r" -type "double3" 8.5377363259540449e-07 3.2718782312743411e-06 -4.7828278791865135e-07 ;
+	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999922 1.0000000000000004 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr -k on ".dla";
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" -6.1623246953355564e-15 9.2434870430033422e-15 -1.5902773407317578e-14 ;
+	setAttr -k on ".jox";
+	setAttr -k on ".joy";
+	setAttr -k on ".joz";
+	setAttr ".is" -type "double3" 0.99999999999999978 1 1.0000000000000004 ;
+	setAttr ".bps" -type "matrix" 0.99736679638011538 -0.032085070910109932 -0.065038617014498659 0
+		 0.065072119943830983 2.1684043449710089e-19 0.99788056359767607 0 -0.032017068642851899 -0.99948514157274659 0.0020878435826689962 0
+		 80.125827391404442 609.13654607690648 -28.244013732687151 1;
+	setAttr ".radi" 15;
+createNode joint -n "R_Upper_Arm_Twist_IK_02_jnt" -p "R_Upper_Arm_Twist_IK_01_jnt";
+	rename -uid "886E1864-40AE-4B69-583A-4B8A601ACF97";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 59.999999999999993 1.2789769243681803e-13 -2.2737367544323206e-13 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999911 1.0000000000000013 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr -k on ".dla";
+	setAttr ".jot" -type "string" "xzy";
+	setAttr -k on ".jox";
+	setAttr -k on ".joy";
+	setAttr -k on ".joz";
+	setAttr -av ".is" -type "double3" 0.99999999999999978 0.99999999999999911 1.0000000000000004 ;
+	setAttr -av ".is";
+	setAttr ".bps" -type "matrix" 0.99595131169783679 -0.031728170790064347 0.084108905031955825 0
+		 -0.083999357395619215 0.004772311140662339 0.99645438079397275 0 -0.032017068642851899 -0.99948514157274659 0.0020878435826689962 0
+		 175.05000328702209 606.08285617490787 -34.434050481352926 1;
+	setAttr ".radi" 15;
+createNode ikEffector -n "effector10" -p "R_Upper_Arm_Twist_IK_01_jnt";
+	rename -uid "F32C2229-4E9C-E7C0-0EEB-0A93F9882E33";
+	setAttr ".v" no;
+	setAttr ".hd" yes;
+createNode transform -n "R_upper_arm_twist_PV_loc" -p "R_upper_arm_twist_IK_jnt_grp";
+	rename -uid "915A2E66-4E45-3785-7A66-829866BA3E1F";
+	setAttr ".t" -type "double3" -80.125801086425781 650 -97.329437255859375 ;
+createNode locator -n "R_upper_arm_twist_PV_locShape" -p "R_upper_arm_twist_PV_loc";
+	rename -uid "A53E0E6A-4A00-957B-762F-A49DEF5F76E8";
+	setAttr -k off ".v";
+createNode parentConstraint -n "R_upper_arm_twist_IK_jnt_grp_parentConstraint1" -p
+		 "R_upper_arm_twist_IK_jnt_grp";
+	rename -uid "80A6625F-4C3A-52BC-E9AA-F88F8A716F25";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_clav_FK_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 5.7682343901580628 -28.24399166241691 -609.13701748752271 ;
+	setAttr ".tg[0].tor" -type "double3" 90.000000002599123 0.00017366403414234986 8.2543805356361893e-05 ;
+	setAttr ".lr" -type "double3" -3.1805546814635168e-15 1.7655625192200634e-31 6.3611093629270335e-15 ;
+	setAttr ".rst" -type "double3" 0 -1.1368683772161603e-13 0 ;
+	setAttr ".rsrr" -type "double3" -3.1805546814635168e-15 1.7655625192200634e-31 6.3611093629270335e-15 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "R_upper_arm_twist_IK_jnt_grp_scaleConstraint1" -p "R_upper_arm_twist_IK_jnt_grp";
+	rename -uid "26D8C450-42C8-0D4A-A2E6-9CB79412D443";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_clav_FK_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "R_Upper_Arm_Twist_Aim_Grp" -p "R_upper_arm_twist_aim_grp";
+	rename -uid "3978C48A-4D42-45A2-97FB-8F9541C726E0";
+createNode transform -n "R_Upper_Arm_Twist_Aim_Loc" -p "R_Upper_Arm_Twist_Aim_Grp";
+	rename -uid "FFB4A42D-4730-965B-E787-D2A4C3163AEC";
+createNode locator -n "R_Upper_Arm_Twist_Aim_LocShape" -p "R_Upper_Arm_Twist_Aim_Loc";
+	rename -uid "A7B7CCE2-46EA-41BC-4350-FE9CA968EE6C";
+	setAttr -k off ".v";
+	setAttr ".los" -type "double3" 5 5 5 ;
+createNode aimConstraint -n "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1" -p "R_Upper_Arm_Twist_Aim_Loc";
+	rename -uid "E3921052-4A76-CD69-6B39-1A87D7E0C7F1";
+	addAttr -dcb 0 -ci true -sn "w0" -ln "R_Upper_Arm_Twist_Target_LocW0" -dv 1 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".a" -type "double3" -1 0 0 ;
+	setAttr ".wut" 1;
+	setAttr -k on ".w0";
+createNode transform -n "R_Upper_Arm_Twist_Target_Loc" -p "R_Upper_Arm_Twist_Aim_Grp";
+	rename -uid "5E58B10B-43C0-0BA8-887D-E28F6F941925";
+createNode locator -n "R_Upper_Arm_Twist_Target_LocShape" -p "R_Upper_Arm_Twist_Target_Loc";
+	rename -uid "194EEE47-4B3C-39C9-FCDB-F6BAA803E3EB";
+	setAttr -k off ".v";
+createNode parentConstraint -n "R_Upper_Arm_Twist_Target_Loc_parentConstraint1" -p
+		 "R_Upper_Arm_Twist_Target_Loc";
+	rename -uid "AC96D406-43B3-D7CD-EF66-58AD181F4994";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_arm_02_RK_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 0 -1.896054960625908e-06 14.444512931592168 ;
+	setAttr ".rst" -type "double3" -95.174812637829717 -7.0872303581381857e-08 8.8940396381076425e-08 ;
+	setAttr ".rsrr" -type "double3" 0 -1.896054960625908e-06 14.444512931592168 ;
+	setAttr -k on ".w0";
+createNode transform -n "R_Upper_Arm_Twist_Up_Loc" -p "R_Upper_Arm_Twist_Aim_Grp";
+	rename -uid "2A3DE65E-4A7C-1CFC-F657-489674EFA560";
+createNode locator -n "R_Upper_Arm_Twist_Up_LocShape" -p "R_Upper_Arm_Twist_Up_Loc";
+	rename -uid "78DB274E-408B-8130-75BF-77B609BB975F";
+	setAttr -k off ".v";
+createNode parentConstraint -n "R_Upper_Arm_Twist_Up_Loc_parentConstraint1" -p "R_Upper_Arm_Twist_Up_Loc";
+	rename -uid "EFF82676-45D8-8E63-C3A7-378865CC0964";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Upper_Arm_Twist_IK_01_jntW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 67.083848187173572 -59.412528121309848 -1.1939611573998263 ;
+	setAttr ".tg[0].tor" -type "double3" -0.91220936234301375 -0.60991851929128393 142.40762535814591 ;
+	setAttr ".lr" -type "double3" 1.9878466759146985e-16 9.9392333795734948e-17 -6.3614976142309247e-15 ;
+	setAttr ".rst" -type "double3" -95.174812174518706 74.999999999999943 4.5474735088646412e-13 ;
+	setAttr ".rsrr" -type "double3" 1.9878466759146985e-16 9.9392333795734948e-17 -6.3614976142309247e-15 ;
+	setAttr -k on ".w0";
+createNode transform -n "R_Upper_Arm_Twist_Mid_Loc" -p "R_Upper_Arm_Twist_Aim_Grp";
+	rename -uid "36B0376C-485A-6200-4928-129C5248BC31";
+createNode locator -n "R_Upper_Arm_Twist_Mid_LocShape" -p "R_Upper_Arm_Twist_Mid_Loc";
+	rename -uid "F3212BCD-4126-075A-90FB-D0855AC1C25C";
+	setAttr -k off ".v";
+	setAttr ".los" -type "double3" 5 5 5 ;
+createNode parentConstraint -n "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1" -p "R_Upper_Arm_Twist_Mid_Loc";
+	rename -uid "B8D8EC23-4D5C-AEB0-B1D2-E185E9DC1818";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_Upper_Arm_Twist_Aim_LocW0" -dv 
+		1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "R_Upper_Arm_Twist_Target_LocW1" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr ".lr" -type "double3" 5.9829694543456513e-08 -9.4802748031295402e-07 7.2222564657960815 ;
+	setAttr ".rst" -type "double3" -47.587406318914866 -3.5436151790690928e-08 4.4470084503700491e-08 ;
+	setAttr ".rsrr" -type "double3" 5.9829694543456513e-08 -9.4802748031295402e-07 7.2222564657960815 ;
+	setAttr -k on ".w0";
+	setAttr -k on ".w1";
+createNode parentConstraint -n "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1" -p "R_Upper_Arm_Twist_Aim_Grp";
+	rename -uid "704FBF7F-4F44-2D36-F293-6B8E69BF52F6";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_arm_01_RK_jntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -7.1054273576010019e-15 0 0 ;
+	setAttr ".tg[0].tor" -type "double3" 6.0132361946419642e-15 1.8744772951789378e-15 
+		7.9513867036587919e-16 ;
+	setAttr ".lr" -type "double3" -90.120061362489579 -4.789155323491098 1.844706006794784 ;
+	setAttr ".rst" -type "double3" -80.12579988811305 609.13677463055467 -28.244107122993402 ;
+	setAttr ".rsrr" -type "double3" -90.120061362489579 -4.789155323491098 1.844706006794784 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "R_Upper_Arm_Twist_Aim_Grp_scaleConstraint1" -p "R_Upper_Arm_Twist_Aim_Grp";
+	rename -uid "021E278F-4E59-CBD2-3683-8D96B8BC2100";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_arm_01_RK_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
 	setAttr -k off ".tx";
@@ -88661,7 +89394,7 @@ createNode UsdDefaultSettings -n "UsdDefaultRenderSettings1";
 	setAttr ".asp" -type "string" "UsdDefaultRenderSettings,/Render/SceneRenderSettings";
 lockNode -l 1 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "A12A517B-4B55-90D1-D924-3CBB6CADDCAC";
+	rename -uid "BFC9B140-47B9-5BAC-089E-D1992E985546";
 	setAttr -s 5 ".lnk";
 	setAttr -s 5 ".slnk";
 createNode UsdDefaultSettings -n "UsdDefaultRenderSettings2";
@@ -88671,11 +89404,11 @@ createNode UsdDefaultSettings -n "UsdDefaultRenderSettings2";
 	setAttr ".asp" -type "string" "UsdDefaultRenderSettings,/Render/SceneRenderSettings";
 lockNode -l 1 ;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "B087024E-466F-95D3-D831-ACA2F4FB0249";
+	rename -uid "BB07D2D6-4712-93CD-8562-1EA31FBB6D55";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "5438BAEC-4A9F-2832-D7CB-288DCADD61F4";
+	rename -uid "F13DFB2C-4842-1332-0832-23B1B30644F3";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "4CB3072A-4D61-A1EC-0FD3-1A89B317CFE7";
+	rename -uid "6F21FF68-462F-7883-333E-36A89C7DA1AF";
 	setAttr ".cdl" 3;
 	setAttr -s 4 ".dli[1:3]"  1 2 3;
 	setAttr -s 4 ".dli";
@@ -88683,7 +89416,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "A0AD0310-4F67-420A-CF71-0C8A6A3F7BFD";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "50961641-4392-4049-D3BA-B6980BDC1117";
+	rename -uid "8BCCB4DD-4575-860B-B81C-2D94AF46107C";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "26488019-46ED-891F-918E-6397904992F2";
 	setAttr ".g" yes;
@@ -88751,17 +89484,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 0\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 459\n            -height 334\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n"
 		+ "            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n"
 		+ "            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 0\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n"
-		+ "            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n"
+		+ "            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 459\n            -height 333\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n"
 		+ "            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n"
 		+ "            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n"
-		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 459\n            -height 333\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n"
 		+ "            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1021\n            -height 714\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 758\n            -height 714\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
 		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n"
 		+ "            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n"
 		+ "            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n"
@@ -88785,8 +89518,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"motionMakerEditorPanel\" (localizedPanelLabel(\"MotionMaker Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"MotionMaker Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.png\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap true\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1021\\n    -height 714\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1021\\n    -height 714\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 758\\n    -height 714\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 758\\n    -height 714\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -89820,356 +90553,313 @@ createNode unitConversion -n "unitConversion26";
 createNode unitConversion -n "unitConversion29";
 	rename -uid "35CA698B-4177-B4F5-CE77-45889E8B73B1";
 	setAttr ".cf" 57.295779513082323;
+createNode multiplyDivide -n "L_upper_arm_IK_twist_md";
+	rename -uid "00D907DB-498C-69C4-1852-01AD6F7CE7DF";
+	setAttr ".i2" -type "float3" 0.5 1 1 ;
+createNode unitConversion -n "unitConversion30";
+	rename -uid "49B76C67-46A5-B1C8-18EB-4BA7964F9AAB";
+	setAttr ".cf" 57.295779513082323;
+createNode unitConversion -n "unitConversion31";
+	rename -uid "E668D511-4BE0-C1F0-F818-1C8A80D89787";
+	setAttr ".cf" 0.017453292519943295;
+createNode multiplyDivide -n "L_upper_arm_IK_twist_corrective_MD";
+	rename -uid "BCCF0BF2-4D89-861C-9A09-A29CFBF9BF7A";
+	setAttr ".i2" -type "float3" 0.1 1 1 ;
+createNode unitConversion -n "unitConversion32";
+	rename -uid "2C1DA70E-484D-EB2B-149D-318371EB1374";
+	setAttr ".cf" 57.295779513082323;
+createNode unitConversion -n "unitConversion33";
+	rename -uid "09E667D4-4366-FBA9-29FA-14BBB0FEB087";
+	setAttr ".cf" 0.017453292519943295;
+createNode multiplyDivide -n "R_Forearm_Twist_MD";
+	rename -uid "E1714DE9-4F71-071A-DDC4-ADB3416ADE38";
+	setAttr ".i2" -type "float3" 0.5 1 1 ;
+createNode unitConversion -n "unitConversion34";
+	rename -uid "0D2626F0-4E44-AE34-1B13-80937F8C0755";
+	setAttr ".cf" 57.295779513082323;
+createNode unitConversion -n "unitConversion35";
+	rename -uid "E6602D0D-45CC-C2D3-2B17-BCAE593654ED";
+	setAttr ".cf" 0.017453292519943295;
+createNode pairBlend -n "pairBlend1";
+	rename -uid "4C9D0D60-464C-F8B5-1310-45A17C933AEF";
+	setAttr ".txm" 2;
+	setAttr ".tym" 2;
+	setAttr ".tzm" 2;
+createNode multiplyDivide -n "R_Upper_Arm_Twist_MD";
+	rename -uid "63C65ADD-449E-7ADA-4120-8982FF640E44";
+	setAttr ".i2" -type "float3" 0.5 1 1 ;
+createNode unitConversion -n "unitConversion36";
+	rename -uid "1D07F128-478F-4E32-122A-588901AE5DBD";
+	setAttr ".cf" 57.295779513082323;
+createNode unitConversion -n "unitConversion37";
+	rename -uid "8B692684-4604-2F2C-9AA6-50B108A2CD5E";
+	setAttr ".cf" 0.017453292519943295;
+createNode multiplyDivide -n "R_upper_arm_twist_corrective_MD";
+	rename -uid "581F9BE5-4CA6-F386-125D-EF93C688E110";
+	setAttr ".i2" -type "float3" 0.1 1 1 ;
+createNode unitConversion -n "unitConversion38";
+	rename -uid "1DE2D480-47C2-7129-6421-56A4675C8863";
+	setAttr ".cf" 57.295779513082323;
+createNode unitConversion -n "unitConversion39";
+	rename -uid "B687FD73-4341-B954-B628-E69454E2739A";
+	setAttr ".cf" 0.017453292519943295;
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "ABBA3C62-46D4-717A-C0BA-F18B12CA451C";
+	rename -uid "8930E8BF-4FE3-D278-356D-5AA34890EBA6";
 	setAttr -s 2 ".tgi";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -3870.3753040805495 7439.285418675071 ;
-	setAttr ".tgi[0].vh" -type "double2" -1373.6721065873246 8115.4758679961542 ;
+	setAttr ".tgi[0].vl" -type "double2" -3875.1829961972126 7435.7139902455356 ;
+	setAttr ".tgi[0].vh" -type "double2" -1365.2929860411712 8115.4758679961296 ;
 	setAttr -s 79 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" -1147.946533203125;
-	setAttr ".tgi[0].ni[0].y" 8223.3251953125;
+	setAttr ".tgi[0].ni[0].x" -533.66082763671875;
+	setAttr ".tgi[0].ni[0].y" 8157.61083984375;
 	setAttr ".tgi[0].ni[0].nvs" 18304;
-	setAttr ".tgi[0].ni[1].x" -2719.375;
-	setAttr ".tgi[0].ni[1].y" 8283.3251953125;
+	setAttr ".tgi[0].ni[1].x" -397.14285278320312;
+	setAttr ".tgi[0].ni[1].y" 5960;
 	setAttr ".tgi[0].ni[1].nvs" 18304;
-	setAttr ".tgi[0].ni[2].x" -698.5714111328125;
-	setAttr ".tgi[0].ni[2].y" 6688.5712890625;
+	setAttr ".tgi[0].ni[2].x" -1147.946533203125;
+	setAttr ".tgi[0].ni[2].y" 8223.3251953125;
 	setAttr ".tgi[0].ni[2].nvs" 18304;
-	setAttr ".tgi[0].ni[3].x" -2366.427001953125;
-	setAttr ".tgi[0].ni[3].y" 6519.55517578125;
-	setAttr ".tgi[0].ni[3].nvs" 18305;
-	setAttr ".tgi[0].ni[4].x" -3397.996826171875;
-	setAttr ".tgi[0].ni[4].y" 8039.7158203125;
+	setAttr ".tgi[0].ni[3].x" -1007.1428833007812;
+	setAttr ".tgi[0].ni[3].y" 7057.14306640625;
+	setAttr ".tgi[0].ni[3].nvs" 18304;
+	setAttr ".tgi[0].ni[4].x" -2997.142822265625;
+	setAttr ".tgi[0].ni[4].y" 6098.5712890625;
 	setAttr ".tgi[0].ni[4].nvs" 18304;
-	setAttr ".tgi[0].ni[5].x" -704.28570556640625;
-	setAttr ".tgi[0].ni[5].y" 6131.4287109375;
+	setAttr ".tgi[0].ni[5].x" -391.42855834960938;
+	setAttr ".tgi[0].ni[5].y" 6662.85693359375;
 	setAttr ".tgi[0].ni[5].nvs" 18304;
-	setAttr ".tgi[0].ni[6].x" -1007.1428833007812;
-	setAttr ".tgi[0].ni[6].y" 7158.5712890625;
+	setAttr ".tgi[0].ni[6].x" -1620;
+	setAttr ".tgi[0].ni[6].y" 6514.28564453125;
 	setAttr ".tgi[0].ni[6].nvs" 18304;
-	setAttr ".tgi[0].ni[7].x" -397.14285278320312;
-	setAttr ".tgi[0].ni[7].y" 5960;
+	setAttr ".tgi[0].ni[7].x" -3710.8037109375;
+	setAttr ".tgi[0].ni[7].y" 8266.1826171875;
 	setAttr ".tgi[0].ni[7].nvs" 18304;
-	setAttr ".tgi[0].ni[8].x" -1011.4285888671875;
-	setAttr ".tgi[0].ni[8].y" 6081.4287109375;
-	setAttr ".tgi[0].ni[8].nvs" 18304;
-	setAttr ".tgi[0].ni[9].x" -2709.30029296875;
-	setAttr ".tgi[0].ni[9].y" 5990.85498046875;
+	setAttr ".tgi[0].ni[8].x" -1956.34619140625;
+	setAttr ".tgi[0].ni[8].y" 6542.1591796875;
+	setAttr ".tgi[0].ni[8].nvs" 18306;
+	setAttr ".tgi[0].ni[9].x" -1322.857177734375;
+	setAttr ".tgi[0].ni[9].y" 6094.28564453125;
 	setAttr ".tgi[0].ni[9].nvs" 18304;
-	setAttr ".tgi[0].ni[10].x" -700;
-	setAttr ".tgi[0].ni[10].y" 7144.28564453125;
+	setAttr ".tgi[0].ni[10].x" -3252.857177734375;
+	setAttr ".tgi[0].ni[10].y" 6612.85693359375;
 	setAttr ".tgi[0].ni[10].nvs" 18304;
-	setAttr ".tgi[0].ni[11].x" -2997.142822265625;
-	setAttr ".tgi[0].ni[11].y" 6098.5712890625;
+	setAttr ".tgi[0].ni[11].x" -2272.857177734375;
+	setAttr ".tgi[0].ni[11].y" 6540;
 	setAttr ".tgi[0].ni[11].nvs" 18304;
-	setAttr ".tgi[0].ni[12].x" -2974.2685546875;
-	setAttr ".tgi[0].ni[12].y" 6385.841796875;
+	setAttr ".tgi[0].ni[12].x" -1690;
+	setAttr ".tgi[0].ni[12].y" 6040;
 	setAttr ".tgi[0].ni[12].nvs" 18304;
-	setAttr ".tgi[0].ni[13].x" -391.42855834960938;
-	setAttr ".tgi[0].ni[13].y" 6662.85693359375;
+	setAttr ".tgi[0].ni[13].x" -1011.4285888671875;
+	setAttr ".tgi[0].ni[13].y" 6081.4287109375;
 	setAttr ".tgi[0].ni[13].nvs" 18304;
-	setAttr ".tgi[0].ni[14].x" -1620;
-	setAttr ".tgi[0].ni[14].y" 6514.28564453125;
+	setAttr ".tgi[0].ni[14].x" -3260;
+	setAttr ".tgi[0].ni[14].y" 7087.14306640625;
 	setAttr ".tgi[0].ni[14].nvs" 18304;
-	setAttr ".tgi[0].ni[15].x" -3560;
-	setAttr ".tgi[0].ni[15].y" 6562.85693359375;
+	setAttr ".tgi[0].ni[15].x" -2709.30029296875;
+	setAttr ".tgi[0].ni[15].y" 5889.42626953125;
 	setAttr ".tgi[0].ni[15].nvs" 18304;
-	setAttr ".tgi[0].ni[16].x" -1147.946533203125;
-	setAttr ".tgi[0].ni[16].y" 8121.89697265625;
+	setAttr ".tgi[0].ni[16].x" -2272.857177734375;
+	setAttr ".tgi[0].ni[16].y" 6698.5712890625;
 	setAttr ".tgi[0].ni[16].nvs" 18304;
-	setAttr ".tgi[0].ni[17].x" -84.285713195800781;
-	setAttr ".tgi[0].ni[17].y" 6691.4287109375;
+	setAttr ".tgi[0].ni[17].x" -392.85714721679688;
+	setAttr ".tgi[0].ni[17].y" 7118.5712890625;
 	setAttr ".tgi[0].ni[17].nvs" 18304;
-	setAttr ".tgi[0].ni[18].x" -1005.7142944335938;
-	setAttr ".tgi[0].ni[18].y" 6707.14306640625;
+	setAttr ".tgi[0].ni[18].x" -698.5714111328125;
+	setAttr ".tgi[0].ni[18].y" 6688.5712890625;
 	setAttr ".tgi[0].ni[18].nvs" 18304;
-	setAttr ".tgi[0].ni[19].x" -2709.30029296875;
-	setAttr ".tgi[0].ni[19].y" 5889.42626953125;
+	setAttr ".tgi[0].ni[19].x" -2945.71435546875;
+	setAttr ".tgi[0].ni[19].y" 6648.5712890625;
 	setAttr ".tgi[0].ni[19].nvs" 18304;
-	setAttr ".tgi[0].ni[20].x" -2272.857177734375;
-	setAttr ".tgi[0].ni[20].y" 6540;
+	setAttr ".tgi[0].ni[20].x" -3874.28564453125;
+	setAttr ".tgi[0].ni[20].y" 7010;
 	setAttr ".tgi[0].ni[20].nvs" 18304;
-	setAttr ".tgi[0].ni[21].x" -1455.08935546875;
-	setAttr ".tgi[0].ni[21].y" 8179.03955078125;
+	setAttr ".tgi[0].ni[21].x" -3567.142822265625;
+	setAttr ".tgi[0].ni[21].y" 7060;
 	setAttr ".tgi[0].ni[21].nvs" 18304;
-	setAttr ".tgi[0].ni[22].x" -2008.5714111328125;
-	setAttr ".tgi[0].ni[22].y" 6277.14306640625;
+	setAttr ".tgi[0].ni[22].x" -3189.215087890625;
+	setAttr ".tgi[0].ni[22].y" 6830.11669921875;
 	setAttr ".tgi[0].ni[22].nvs" 18304;
-	setAttr ".tgi[0].ni[23].x" -392.85714721679688;
-	setAttr ".tgi[0].ni[23].y" 7118.5712890625;
-	setAttr ".tgi[0].ni[23].nvs" 18304;
-	setAttr ".tgi[0].ni[24].x" -3189.215087890625;
-	setAttr ".tgi[0].ni[24].y" 6830.11669921875;
-	setAttr ".tgi[0].ni[24].nvs" 18304;
-	setAttr ".tgi[0].ni[25].x" -1965.7142333984375;
-	setAttr ".tgi[0].ni[25].y" 6530;
+	setAttr ".tgi[0].ni[23].x" -2330.355712890625;
+	setAttr ".tgi[0].ni[23].y" 8121.2001953125;
+	setAttr ".tgi[0].ni[23].nvs" 18305;
+	setAttr ".tgi[0].ni[24].x" -2860.6435546875;
+	setAttr ".tgi[0].ni[24].y" 6883.57470703125;
+	setAttr ".tgi[0].ni[24].nvs" 18305;
+	setAttr ".tgi[0].ni[25].x" -397.14285278320312;
+	setAttr ".tgi[0].ni[25].y" 6061.4287109375;
 	setAttr ".tgi[0].ni[25].nvs" 18304;
-	setAttr ".tgi[0].ni[26].x" -2669.517822265625;
-	setAttr ".tgi[0].ni[26].y" 7938.06787109375;
-	setAttr ".tgi[0].ni[26].nvs" 18306;
-	setAttr ".tgi[0].ni[27].x" -3052.232177734375;
-	setAttr ".tgi[0].ni[27].y" 8313.3251953125;
-	setAttr ".tgi[0].ni[27].nvs" 18304;
-	setAttr ".tgi[0].ni[28].x" -1322.857177734375;
-	setAttr ".tgi[0].ni[28].y" 6094.28564453125;
+	setAttr ".tgi[0].ni[26].x" -3304.28564453125;
+	setAttr ".tgi[0].ni[26].y" 5980;
+	setAttr ".tgi[0].ni[26].nvs" 18304;
+	setAttr ".tgi[0].ni[27].x" -2487.147705078125;
+	setAttr ".tgi[0].ni[27].y" 7009.85302734375;
+	setAttr ".tgi[0].ni[27].nvs" 18306;
+	setAttr ".tgi[0].ni[28].x" -700;
+	setAttr ".tgi[0].ni[28].y" 7144.28564453125;
 	setAttr ".tgi[0].ni[28].nvs" 18304;
-	setAttr ".tgi[0].ni[29].x" -840.80364990234375;
-	setAttr ".tgi[0].ni[29].y" 8146.1826171875;
+	setAttr ".tgi[0].ni[29].x" -1005.7142944335938;
+	setAttr ".tgi[0].ni[29].y" 6605.71435546875;
 	setAttr ".tgi[0].ni[29].nvs" 18304;
-	setAttr ".tgi[0].ni[30].x" -3403.660888671875;
-	setAttr ".tgi[0].ni[30].y" 8297.611328125;
+	setAttr ".tgi[0].ni[30].x" -1455.08935546875;
+	setAttr ".tgi[0].ni[30].y" 8179.03955078125;
 	setAttr ".tgi[0].ni[30].nvs" 18304;
-	setAttr ".tgi[0].ni[31].x" -2412.232177734375;
-	setAttr ".tgi[0].ni[31].y" 8197.611328125;
+	setAttr ".tgi[0].ni[31].x" -1147.946533203125;
+	setAttr ".tgi[0].ni[31].y" 8121.89697265625;
 	setAttr ".tgi[0].ni[31].nvs" 18304;
-	setAttr ".tgi[0].ni[32].x" -1005.7142944335938;
-	setAttr ".tgi[0].ni[32].y" 6605.71435546875;
+	setAttr ".tgi[0].ni[32].x" -2719.375;
+	setAttr ".tgi[0].ni[32].y" 8384.75390625;
 	setAttr ".tgi[0].ni[32].nvs" 18304;
-	setAttr ".tgi[0].ni[33].x" -3710.8037109375;
-	setAttr ".tgi[0].ni[33].y" 8266.1826171875;
+	setAttr ".tgi[0].ni[33].x" -2277.142822265625;
+	setAttr ".tgi[0].ni[33].y" 7032.85693359375;
 	setAttr ".tgi[0].ni[33].nvs" 18304;
-	setAttr ".tgi[0].ni[34].x" -1789.3751220703125;
-	setAttr ".tgi[0].ni[34].y" 8154.75390625;
-	setAttr ".tgi[0].ni[34].nvs" 18304;
-	setAttr ".tgi[0].ni[35].x" -1007.1428833007812;
-	setAttr ".tgi[0].ni[35].y" 7057.14306640625;
+	setAttr ".tgi[0].ni[34].x" -2366.427001953125;
+	setAttr ".tgi[0].ni[34].y" 6519.55517578125;
+	setAttr ".tgi[0].ni[34].nvs" 18305;
+	setAttr ".tgi[0].ni[35].x" -2412.232177734375;
+	setAttr ".tgi[0].ni[35].y" 8197.611328125;
 	setAttr ".tgi[0].ni[35].nvs" 18304;
-	setAttr ".tgi[0].ni[36].x" -1690;
-	setAttr ".tgi[0].ni[36].y" 6040;
+	setAttr ".tgi[0].ni[36].x" -2584.28564453125;
+	setAttr ".tgi[0].ni[36].y" 7050;
 	setAttr ".tgi[0].ni[36].nvs" 18304;
-	setAttr ".tgi[0].ni[37].x" -2165.93017578125;
-	setAttr ".tgi[0].ni[37].y" 5946.29541015625;
-	setAttr ".tgi[0].ni[37].nvs" 18306;
-	setAttr ".tgi[0].ni[38].x" -47.142856597900391;
-	setAttr ".tgi[0].ni[38].y" 6047.14306640625;
-	setAttr ".tgi[0].ni[38].nvs" 18304;
-	setAttr ".tgi[0].ni[39].x" -2102.232177734375;
-	setAttr ".tgi[0].ni[39].y" 8133.3251953125;
+	setAttr ".tgi[0].ni[37].x" -2008.5714111328125;
+	setAttr ".tgi[0].ni[37].y" 6074.28564453125;
+	setAttr ".tgi[0].ni[37].nvs" 18304;
+	setAttr ".tgi[0].ni[38].x" -2669.517822265625;
+	setAttr ".tgi[0].ni[38].y" 7938.06787109375;
+	setAttr ".tgi[0].ni[38].nvs" 18306;
+	setAttr ".tgi[0].ni[39].x" -2974.2685546875;
+	setAttr ".tgi[0].ni[39].y" 6385.841796875;
 	setAttr ".tgi[0].ni[39].nvs" 18304;
-	setAttr ".tgi[0].ni[40].x" -533.66082763671875;
-	setAttr ".tgi[0].ni[40].y" 8157.61083984375;
+	setAttr ".tgi[0].ni[40].x" -2709.30029296875;
+	setAttr ".tgi[0].ni[40].y" 5990.85498046875;
 	setAttr ".tgi[0].ni[40].nvs" 18304;
-	setAttr ".tgi[0].ni[41].x" -2272.857177734375;
-	setAttr ".tgi[0].ni[41].y" 6698.5712890625;
+	setAttr ".tgi[0].ni[41].x" -85.714286804199219;
+	setAttr ".tgi[0].ni[41].y" 7147.14306640625;
 	setAttr ".tgi[0].ni[41].nvs" 18304;
-	setAttr ".tgi[0].ni[42].x" -226.51795959472656;
-	setAttr ".tgi[0].ni[42].y" 8106.1826171875;
-	setAttr ".tgi[0].ni[42].nvs" 18304;
-	setAttr ".tgi[0].ni[43].x" -2487.147705078125;
-	setAttr ".tgi[0].ni[43].y" 7009.85302734375;
-	setAttr ".tgi[0].ni[43].nvs" 18306;
-	setAttr ".tgi[0].ni[44].x" -1849.6185302734375;
-	setAttr ".tgi[0].ni[44].y" 5901.70263671875;
-	setAttr ".tgi[0].ni[44].nvs" 18306;
-	setAttr ".tgi[0].ni[45].x" -2277.142822265625;
-	setAttr ".tgi[0].ni[45].y" 7032.85693359375;
+	setAttr ".tgi[0].ni[42].x" -2209.37646484375;
+	setAttr ".tgi[0].ni[42].y" 6973.57470703125;
+	setAttr ".tgi[0].ni[42].nvs" 18306;
+	setAttr ".tgi[0].ni[43].x" -2600;
+	setAttr ".tgi[0].ni[43].y" 6665.71435546875;
+	setAttr ".tgi[0].ni[43].nvs" 18304;
+	setAttr ".tgi[0].ni[44].x" -2340;
+	setAttr ".tgi[0].ni[44].y" 6262.85693359375;
+	setAttr ".tgi[0].ni[44].nvs" 18304;
+	setAttr ".tgi[0].ni[45].x" -2008.5714111328125;
+	setAttr ".tgi[0].ni[45].y" 6277.14306640625;
 	setAttr ".tgi[0].ni[45].nvs" 18304;
-	setAttr ".tgi[0].ni[46].x" -1930;
-	setAttr ".tgi[0].ni[46].y" 7002.85693359375;
+	setAttr ".tgi[0].ni[46].x" -704.28570556640625;
+	setAttr ".tgi[0].ni[46].y" 6030;
 	setAttr ".tgi[0].ni[46].nvs" 18304;
-	setAttr ".tgi[0].ni[47].x" -3567.142822265625;
-	setAttr ".tgi[0].ni[47].y" 7060;
+	setAttr ".tgi[0].ni[47].x" -1930;
+	setAttr ".tgi[0].ni[47].y" 7002.85693359375;
 	setAttr ".tgi[0].ni[47].nvs" 18304;
-	setAttr ".tgi[0].ni[48].x" -3304.28564453125;
-	setAttr ".tgi[0].ni[48].y" 5980;
+	setAttr ".tgi[0].ni[48].x" -2102.232177734375;
+	setAttr ".tgi[0].ni[48].y" 8133.3251953125;
 	setAttr ".tgi[0].ni[48].nvs" 18304;
-	setAttr ".tgi[0].ni[49].x" -1956.34619140625;
-	setAttr ".tgi[0].ni[49].y" 6542.1591796875;
-	setAttr ".tgi[0].ni[49].nvs" 18306;
-	setAttr ".tgi[0].ni[50].x" -3260;
-	setAttr ".tgi[0].ni[50].y" 7087.14306640625;
-	setAttr ".tgi[0].ni[50].nvs" 18304;
-	setAttr ".tgi[0].ni[51].x" -2008.5714111328125;
-	setAttr ".tgi[0].ni[51].y" 6074.28564453125;
+	setAttr ".tgi[0].ni[49].x" -2912.857177734375;
+	setAttr ".tgi[0].ni[49].y" 7097.14306640625;
+	setAttr ".tgi[0].ni[49].nvs" 18304;
+	setAttr ".tgi[0].ni[50].x" -2165.93017578125;
+	setAttr ".tgi[0].ni[50].y" 5946.29541015625;
+	setAttr ".tgi[0].ni[50].nvs" 18306;
+	setAttr ".tgi[0].ni[51].x" -3397.996826171875;
+	setAttr ".tgi[0].ni[51].y" 8039.7158203125;
 	setAttr ".tgi[0].ni[51].nvs" 18304;
-	setAttr ".tgi[0].ni[52].x" -3189.215087890625;
-	setAttr ".tgi[0].ni[52].y" 6931.54541015625;
-	setAttr ".tgi[0].ni[52].nvs" 18304;
-	setAttr ".tgi[0].ni[53].x" -3065.1396484375;
-	setAttr ".tgi[0].ni[53].y" 8009.7158203125;
-	setAttr ".tgi[0].ni[53].nvs" 18305;
-	setAttr ".tgi[0].ni[54].x" -3153.008544921875;
-	setAttr ".tgi[0].ni[54].y" 7523.74169921875;
-	setAttr ".tgi[0].ni[54].nvs" 1923;
-	setAttr ".tgi[0].ni[55].x" -2330.355712890625;
-	setAttr ".tgi[0].ni[55].y" 8121.2001953125;
-	setAttr ".tgi[0].ni[55].nvs" 18305;
-	setAttr ".tgi[0].ni[56].x" -704.28570556640625;
-	setAttr ".tgi[0].ni[56].y" 6030;
+	setAttr ".tgi[0].ni[52].x" -2666.170166015625;
+	setAttr ".tgi[0].ni[52].y" 6455.1318359375;
+	setAttr ".tgi[0].ni[52].nvs" 18305;
+	setAttr ".tgi[0].ni[53].x" -2584.28564453125;
+	setAttr ".tgi[0].ni[53].y" 7151.4287109375;
+	setAttr ".tgi[0].ni[53].nvs" 18304;
+	setAttr ".tgi[0].ni[54].x" -1005.7142944335938;
+	setAttr ".tgi[0].ni[54].y" 6707.14306640625;
+	setAttr ".tgi[0].ni[54].nvs" 18304;
+	setAttr ".tgi[0].ni[55].x" -3397.996826171875;
+	setAttr ".tgi[0].ni[55].y" 7938.287109375;
+	setAttr ".tgi[0].ni[55].nvs" 18304;
+	setAttr ".tgi[0].ni[56].x" -1312.857177734375;
+	setAttr ".tgi[0].ni[56].y" 6558.5712890625;
 	setAttr ".tgi[0].ni[56].nvs" 18304;
-	setAttr ".tgi[0].ni[57].x" -2974.2685546875;
-	setAttr ".tgi[0].ni[57].y" 6487.27001953125;
-	setAttr ".tgi[0].ni[57].nvs" 18304;
-	setAttr ".tgi[0].ni[58].x" -2584.28564453125;
-	setAttr ".tgi[0].ni[58].y" 7050;
+	setAttr ".tgi[0].ni[57].x" -3153.008544921875;
+	setAttr ".tgi[0].ni[57].y" 7523.74169921875;
+	setAttr ".tgi[0].ni[57].nvs" 1923;
+	setAttr ".tgi[0].ni[58].x" -3560;
+	setAttr ".tgi[0].ni[58].y" 6562.85693359375;
 	setAttr ".tgi[0].ni[58].nvs" 18304;
-	setAttr ".tgi[0].ni[59].x" -1621.4285888671875;
-	setAttr ".tgi[0].ni[59].y" 7012.85693359375;
+	setAttr ".tgi[0].ni[59].x" -47.142856597900391;
+	setAttr ".tgi[0].ni[59].y" 6047.14306640625;
 	setAttr ".tgi[0].ni[59].nvs" 18304;
-	setAttr ".tgi[0].ni[60].x" -3874.28564453125;
-	setAttr ".tgi[0].ni[60].y" 7010;
-	setAttr ".tgi[0].ni[60].nvs" 18304;
-	setAttr ".tgi[0].ni[61].x" -2912.857177734375;
-	setAttr ".tgi[0].ni[61].y" 7097.14306640625;
+	setAttr ".tgi[0].ni[60].x" -1849.6185302734375;
+	setAttr ".tgi[0].ni[60].y" 5901.70263671875;
+	setAttr ".tgi[0].ni[60].nvs" 18306;
+	setAttr ".tgi[0].ni[61].x" -2690;
+	setAttr ".tgi[0].ni[61].y" 6205.71435546875;
 	setAttr ".tgi[0].ni[61].nvs" 18304;
-	setAttr ".tgi[0].ni[62].x" -2340;
-	setAttr ".tgi[0].ni[62].y" 6262.85693359375;
+	setAttr ".tgi[0].ni[62].x" -840.80364990234375;
+	setAttr ".tgi[0].ni[62].y" 8146.1826171875;
 	setAttr ".tgi[0].ni[62].nvs" 18304;
-	setAttr ".tgi[0].ni[63].x" -2600;
-	setAttr ".tgi[0].ni[63].y" 6665.71435546875;
+	setAttr ".tgi[0].ni[63].x" -4017.946533203125;
+	setAttr ".tgi[0].ni[63].y" 8147.61083984375;
 	setAttr ".tgi[0].ni[63].nvs" 18304;
-	setAttr ".tgi[0].ni[64].x" -2666.170166015625;
-	setAttr ".tgi[0].ni[64].y" 6455.1318359375;
-	setAttr ".tgi[0].ni[64].nvs" 18305;
-	setAttr ".tgi[0].ni[65].x" -4017.946533203125;
-	setAttr ".tgi[0].ni[65].y" 8147.61083984375;
-	setAttr ".tgi[0].ni[65].nvs" 18304;
-	setAttr ".tgi[0].ni[66].x" -2690;
-	setAttr ".tgi[0].ni[66].y" 6205.71435546875;
+	setAttr ".tgi[0].ni[64].x" -1007.1428833007812;
+	setAttr ".tgi[0].ni[64].y" 7158.5712890625;
+	setAttr ".tgi[0].ni[64].nvs" 18304;
+	setAttr ".tgi[0].ni[65].x" -2448.96435546875;
+	setAttr ".tgi[0].ni[65].y" 5932.62744140625;
+	setAttr ".tgi[0].ni[65].nvs" 18306;
+	setAttr ".tgi[0].ni[66].x" -226.51795959472656;
+	setAttr ".tgi[0].ni[66].y" 8106.1826171875;
 	setAttr ".tgi[0].ni[66].nvs" 18304;
-	setAttr ".tgi[0].ni[67].x" -397.14285278320312;
-	setAttr ".tgi[0].ni[67].y" 6061.4287109375;
-	setAttr ".tgi[0].ni[67].nvs" 18304;
-	setAttr ".tgi[0].ni[68].x" -2584.28564453125;
-	setAttr ".tgi[0].ni[68].y" 7151.4287109375;
+	setAttr ".tgi[0].ni[67].x" -3065.1396484375;
+	setAttr ".tgi[0].ni[67].y" 8009.7158203125;
+	setAttr ".tgi[0].ni[67].nvs" 18305;
+	setAttr ".tgi[0].ni[68].x" -3403.660888671875;
+	setAttr ".tgi[0].ni[68].y" 8297.611328125;
 	setAttr ".tgi[0].ni[68].nvs" 18304;
-	setAttr ".tgi[0].ni[69].x" -2719.375;
-	setAttr ".tgi[0].ni[69].y" 8384.75390625;
+	setAttr ".tgi[0].ni[69].x" -3052.232177734375;
+	setAttr ".tgi[0].ni[69].y" 8313.3251953125;
 	setAttr ".tgi[0].ni[69].nvs" 18304;
-	setAttr ".tgi[0].ni[70].x" -3397.996826171875;
-	setAttr ".tgi[0].ni[70].y" 7938.287109375;
+	setAttr ".tgi[0].ni[70].x" -1621.4285888671875;
+	setAttr ".tgi[0].ni[70].y" 7012.85693359375;
 	setAttr ".tgi[0].ni[70].nvs" 18304;
-	setAttr ".tgi[0].ni[71].x" -2448.96435546875;
-	setAttr ".tgi[0].ni[71].y" 5932.62744140625;
-	setAttr ".tgi[0].ni[71].nvs" 18306;
-	setAttr ".tgi[0].ni[72].x" -1312.857177734375;
-	setAttr ".tgi[0].ni[72].y" 6558.5712890625;
+	setAttr ".tgi[0].ni[71].x" -3189.215087890625;
+	setAttr ".tgi[0].ni[71].y" 6931.54541015625;
+	setAttr ".tgi[0].ni[71].nvs" 18304;
+	setAttr ".tgi[0].ni[72].x" -2974.2685546875;
+	setAttr ".tgi[0].ni[72].y" 6487.27001953125;
 	setAttr ".tgi[0].ni[72].nvs" 18304;
-	setAttr ".tgi[0].ni[73].x" -2945.71435546875;
-	setAttr ".tgi[0].ni[73].y" 6648.5712890625;
+	setAttr ".tgi[0].ni[73].x" -1965.7142333984375;
+	setAttr ".tgi[0].ni[73].y" 6530;
 	setAttr ".tgi[0].ni[73].nvs" 18304;
-	setAttr ".tgi[0].ni[74].x" -3252.857177734375;
-	setAttr ".tgi[0].ni[74].y" 6612.85693359375;
+	setAttr ".tgi[0].ni[74].x" -1789.3751220703125;
+	setAttr ".tgi[0].ni[74].y" 8154.75390625;
 	setAttr ".tgi[0].ni[74].nvs" 18304;
-	setAttr ".tgi[0].ni[75].x" -2209.37646484375;
-	setAttr ".tgi[0].ni[75].y" 6973.57470703125;
-	setAttr ".tgi[0].ni[75].nvs" 18306;
-	setAttr ".tgi[0].ni[76].x" -85.714286804199219;
-	setAttr ".tgi[0].ni[76].y" 7147.14306640625;
+	setAttr ".tgi[0].ni[75].x" -704.28570556640625;
+	setAttr ".tgi[0].ni[75].y" 6131.4287109375;
+	setAttr ".tgi[0].ni[75].nvs" 18304;
+	setAttr ".tgi[0].ni[76].x" -2719.375;
+	setAttr ".tgi[0].ni[76].y" 8283.3251953125;
 	setAttr ".tgi[0].ni[76].nvs" 18304;
 	setAttr ".tgi[0].ni[77].x" -1314.2857666015625;
 	setAttr ".tgi[0].ni[77].y" 6997.14306640625;
 	setAttr ".tgi[0].ni[77].nvs" 18304;
-	setAttr ".tgi[0].ni[78].x" -2860.6435546875;
-	setAttr ".tgi[0].ni[78].y" 6883.57470703125;
-	setAttr ".tgi[0].ni[78].nvs" 18305;
+	setAttr ".tgi[0].ni[78].x" -84.285713195800781;
+	setAttr ".tgi[0].ni[78].y" 6691.4287109375;
+	setAttr ".tgi[0].ni[78].nvs" 18304;
 	setAttr ".tgi[1].tn" -type "string" "Untitled_2";
-	setAttr ".tgi[1].vl" -type "double2" 3825.9530713023337 -2113.8566376701924 ;
-	setAttr ".tgi[1].vh" -type "double2" 4473.4271548805064 -1716.950882811504 ;
-	setAttr -s 34 ".tgi[1].ni";
-	setAttr ".tgi[1].ni[0].x" 3915.71435546875;
-	setAttr ".tgi[1].ni[0].y" -2015.7142333984375;
-	setAttr ".tgi[1].ni[0].nvs" 18304;
-	setAttr ".tgi[1].ni[1].x" 5120;
-	setAttr ".tgi[1].ni[1].y" -2248.571533203125;
-	setAttr ".tgi[1].ni[1].nvs" 18304;
-	setAttr ".tgi[1].ni[2].x" 4108.5712890625;
-	setAttr ".tgi[1].ni[2].y" -2454.28564453125;
-	setAttr ".tgi[1].ni[2].nvs" 18304;
-	setAttr ".tgi[1].ni[3].x" 4000;
-	setAttr ".tgi[1].ni[3].y" -1880;
-	setAttr ".tgi[1].ni[3].nvs" 18304;
-	setAttr ".tgi[1].ni[4].x" 3871.428466796875;
-	setAttr ".tgi[1].ni[4].y" -1978.5714111328125;
-	setAttr ".tgi[1].ni[4].nvs" 18304;
-	setAttr ".tgi[1].ni[5].x" 3740;
-	setAttr ".tgi[1].ni[5].y" -1894.2857666015625;
-	setAttr ".tgi[1].ni[5].nvs" 18304;
-	setAttr ".tgi[1].ni[6].x" 4520;
-	setAttr ".tgi[1].ni[6].y" -1865.7142333984375;
-	setAttr ".tgi[1].ni[6].nvs" 18304;
-	setAttr ".tgi[1].ni[7].x" 4231.4287109375;
-	setAttr ".tgi[1].ni[7].y" -2101.428466796875;
-	setAttr ".tgi[1].ni[7].nvs" 18304;
-	setAttr ".tgi[1].ni[8].x" 4642.85693359375;
-	setAttr ".tgi[1].ni[8].y" -1658.5714111328125;
-	setAttr ".tgi[1].ni[8].nvs" 18304;
-	setAttr ".tgi[1].ni[9].x" 4054.28564453125;
-	setAttr ".tgi[1].ni[9].y" -1880;
-	setAttr ".tgi[1].ni[9].nvs" 18304;
-	setAttr ".tgi[1].ni[10].x" 4642.85693359375;
-	setAttr ".tgi[1].ni[10].y" -1861.4285888671875;
-	setAttr ".tgi[1].ni[10].nvs" 18304;
-	setAttr ".tgi[1].ni[11].x" 4054.28564453125;
-	setAttr ".tgi[1].ni[11].y" -1880;
-	setAttr ".tgi[1].ni[11].nvs" 18304;
-	setAttr ".tgi[1].ni[12].x" 3637.142822265625;
-	setAttr ".tgi[1].ni[12].y" -1880;
-	setAttr ".tgi[1].ni[12].nvs" 18304;
-	setAttr ".tgi[1].ni[13].x" 4060;
-	setAttr ".tgi[1].ni[13].y" -1880;
-	setAttr ".tgi[1].ni[13].nvs" 18304;
-	setAttr ".tgi[1].ni[14].x" 4367.14306640625;
-	setAttr ".tgi[1].ni[14].y" -1880;
-	setAttr ".tgi[1].ni[14].nvs" 18304;
-	setAttr ".tgi[1].ni[15].x" 4642.85693359375;
-	setAttr ".tgi[1].ni[15].y" -1962.857177734375;
-	setAttr ".tgi[1].ni[15].nvs" 18304;
-	setAttr ".tgi[1].ni[16].x" 4231.4287109375;
-	setAttr ".tgi[1].ni[16].y" -2000;
-	setAttr ".tgi[1].ni[16].nvs" 18304;
-	setAttr ".tgi[1].ni[17].x" 4054.28564453125;
-	setAttr ".tgi[1].ni[17].y" -1814.2857666015625;
-	setAttr ".tgi[1].ni[17].nvs" 18304;
-	setAttr ".tgi[1].ni[18].x" 3605.71435546875;
-	setAttr ".tgi[1].ni[18].y" -1780;
-	setAttr ".tgi[1].ni[18].nvs" 18304;
-	setAttr ".tgi[1].ni[19].x" 4642.85693359375;
-	setAttr ".tgi[1].ni[19].y" -1760;
-	setAttr ".tgi[1].ni[19].nvs" 18304;
-	setAttr ".tgi[1].ni[20].x" 3295.71435546875;
-	setAttr ".tgi[1].ni[20].y" -1762.857177734375;
-	setAttr ".tgi[1].ni[20].nvs" 18304;
-	setAttr ".tgi[1].ni[21].x" 3915.71435546875;
-	setAttr ".tgi[1].ni[21].y" -1755.7142333984375;
-	setAttr ".tgi[1].ni[21].nvs" 18304;
-	setAttr ".tgi[1].ni[22].x" 4231.4287109375;
-	setAttr ".tgi[1].ni[22].y" -1841.4285888671875;
-	setAttr ".tgi[1].ni[22].nvs" 18304;
-	setAttr ".tgi[1].ni[23].x" 4108.5712890625;
-	setAttr ".tgi[1].ni[23].y" -1724.2857666015625;
-	setAttr ".tgi[1].ni[23].nvs" 18304;
-	setAttr ".tgi[1].ni[24].x" 4514.28564453125;
-	setAttr ".tgi[1].ni[24].y" -1850;
-	setAttr ".tgi[1].ni[24].nvs" 18304;
-	setAttr ".tgi[1].ni[25].x" 3801.428466796875;
-	setAttr ".tgi[1].ni[25].y" -1720;
-	setAttr ".tgi[1].ni[25].nvs" 18306;
-	setAttr ".tgi[1].ni[26].x" 4108.5712890625;
-	setAttr ".tgi[1].ni[26].y" -1825.7142333984375;
-	setAttr ".tgi[1].ni[26].nvs" 18306;
-	setAttr ".tgi[1].ni[27].x" 3494.28564453125;
-	setAttr ".tgi[1].ni[27].y" -1305.7142333984375;
-	setAttr ".tgi[1].ni[27].nvs" 18306;
-	setAttr ".tgi[1].ni[28].x" 4054.28564453125;
-	setAttr ".tgi[1].ni[28].y" -1944.2857666015625;
-	setAttr ".tgi[1].ni[28].nvs" 18304;
-	setAttr ".tgi[1].ni[29].x" 4190;
-	setAttr ".tgi[1].ni[29].y" -1894.2857666015625;
-	setAttr ".tgi[1].ni[29].nvs" 18304;
-	setAttr ".tgi[1].ni[30].x" 4642.85693359375;
-	setAttr ".tgi[1].ni[30].y" -2101.428466796875;
-	setAttr ".tgi[1].ni[30].nvs" 18304;
-	setAttr ".tgi[1].ni[31].x" 3915.71435546875;
-	setAttr ".tgi[1].ni[31].y" -1857.142822265625;
-	setAttr ".tgi[1].ni[31].nvs" 18304;
-	setAttr ".tgi[1].ni[32].x" 4031.428466796875;
-	setAttr ".tgi[1].ni[32].y" -1814.2857666015625;
-	setAttr ".tgi[1].ni[32].nvs" 18304;
-	setAttr ".tgi[1].ni[33].x" 4514.28564453125;
-	setAttr ".tgi[1].ni[33].y" -2247.142822265625;
-	setAttr ".tgi[1].ni[33].nvs" 18304;
+	setAttr ".tgi[1].vl" -type "double2" 3727.0604595468471 -2565.3061682729108 ;
+	setAttr ".tgi[1].vh" -type "double2" 4904.7850504294356 -1843.3534606423264 ;
+	setAttr -s 3 ".tgi[1].ni";
+	setAttr ".tgi[1].ni[0].x" 3734.699951171875;
+	setAttr ".tgi[1].ni[0].y" -1985.38671875;
+	setAttr ".tgi[1].ni[0].nvs" 18306;
+	setAttr ".tgi[1].ni[1].x" 4596.12255859375;
+	setAttr ".tgi[1].ni[1].y" -1902.6248779296875;
+	setAttr ".tgi[1].ni[1].nvs" 18306;
+	setAttr ".tgi[1].ni[2].x" 4178.9619140625;
+	setAttr ".tgi[1].ni[2].y" -2043.5885009765625;
+	setAttr ".tgi[1].ni[2].nvs" 18306;
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -90188,7 +90878,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 58 ".u";
+	setAttr -s 63 ".u";
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
 	setAttr -s 3 ".tx";
@@ -90493,26 +91183,6 @@ connectAttr "L_arm_IK_base_ctrl.rpt" "L_arm_01_FK_jnt1_pointConstraint1.tg[0].tr
 connectAttr "L_arm_IK_base_ctrl.pm" "L_arm_01_FK_jnt1_pointConstraint1.tg[0].tpm"
 		;
 connectAttr "L_arm_01_FK_jnt1_pointConstraint1.w0" "L_arm_01_FK_jnt1_pointConstraint1.tg[0].tw"
-		;
-connectAttr "L_clav_FK_jnt.ro" "L_clav_FK_jnt_parentConstraint1.cro";
-connectAttr "L_clav_FK_jnt.pim" "L_clav_FK_jnt_parentConstraint1.cpim";
-connectAttr "L_clav_FK_jnt.rp" "L_clav_FK_jnt_parentConstraint1.crp";
-connectAttr "L_clav_FK_jnt.rpt" "L_clav_FK_jnt_parentConstraint1.crt";
-connectAttr "L_clav_FK_jnt.jo" "L_clav_FK_jnt_parentConstraint1.cjo";
-connectAttr "L_clav_FK_ctrl.t" "L_clav_FK_jnt_parentConstraint1.tg[0].tt";
-connectAttr "L_clav_FK_ctrl.rp" "L_clav_FK_jnt_parentConstraint1.tg[0].trp";
-connectAttr "L_clav_FK_ctrl.rpt" "L_clav_FK_jnt_parentConstraint1.tg[0].trt";
-connectAttr "L_clav_FK_ctrl.r" "L_clav_FK_jnt_parentConstraint1.tg[0].tr";
-connectAttr "L_clav_FK_ctrl.ro" "L_clav_FK_jnt_parentConstraint1.tg[0].tro";
-connectAttr "L_clav_FK_ctrl.s" "L_clav_FK_jnt_parentConstraint1.tg[0].ts";
-connectAttr "L_clav_FK_ctrl.pm" "L_clav_FK_jnt_parentConstraint1.tg[0].tpm";
-connectAttr "L_clav_FK_jnt_parentConstraint1.w0" "L_clav_FK_jnt_parentConstraint1.tg[0].tw"
-		;
-connectAttr "L_clav_FK_jnt.ssc" "L_clav_FK_jnt_scaleConstraint1.tsc";
-connectAttr "L_clav_FK_jnt.pim" "L_clav_FK_jnt_scaleConstraint1.cpim";
-connectAttr "L_clav_FK_ctrl.s" "L_clav_FK_jnt_scaleConstraint1.tg[0].ts";
-connectAttr "L_clav_FK_ctrl.pm" "L_clav_FK_jnt_scaleConstraint1.tg[0].tpm";
-connectAttr "L_clav_FK_jnt_scaleConstraint1.w0" "L_clav_FK_jnt_scaleConstraint1.tg[0].tw"
 		;
 connectAttr "L_clav_FK_jnt.s" "L_arm_01_RK_jnt.is";
 connectAttr "L_arm_01_RK_jnt_scaleConstraint1.csx" "L_arm_01_RK_jnt.sx";
@@ -91853,6 +92523,87 @@ connectAttr "L_arm_02_RK_jnt_scaleConstraint1.w1" "L_arm_02_RK_jnt_scaleConstrai
 		;
 connectAttr "Transform_ctrl.L_Arm_IKFK" "L_arm_02_RK_jnt_scaleConstraint1.w0";
 connectAttr "L_Arm_IKFK_Rev.ox" "L_arm_02_RK_jnt_scaleConstraint1.w1";
+connectAttr "L_arm_01_RK_jnt.s" "L_upper_arm_twist_01_jnt.is";
+connectAttr "L_upper_arm_twist_01_jnt_parentConstraint1.ctx" "L_upper_arm_twist_01_jnt.tx"
+		;
+connectAttr "L_upper_arm_twist_01_jnt_parentConstraint1.cty" "L_upper_arm_twist_01_jnt.ty"
+		;
+connectAttr "L_upper_arm_twist_01_jnt_parentConstraint1.ctz" "L_upper_arm_twist_01_jnt.tz"
+		;
+connectAttr "L_upper_arm_twist_01_jnt_parentConstraint1.crx" "L_upper_arm_twist_01_jnt.rx"
+		;
+connectAttr "L_upper_arm_twist_01_jnt_parentConstraint1.cry" "L_upper_arm_twist_01_jnt.ry"
+		;
+connectAttr "L_upper_arm_twist_01_jnt_parentConstraint1.crz" "L_upper_arm_twist_01_jnt.rz"
+		;
+connectAttr "L_upper_arm_twist_01_jnt.s" "L_upper_arm_twist_01_corrective_jnt.is"
+		;
+connectAttr "unitConversion33.o" "L_upper_arm_twist_01_corrective_jnt.rx";
+connectAttr "L_upper_arm_twist_01_jnt.ro" "L_upper_arm_twist_01_jnt_parentConstraint1.cro"
+		;
+connectAttr "L_upper_arm_twist_01_jnt.pim" "L_upper_arm_twist_01_jnt_parentConstraint1.cpim"
+		;
+connectAttr "L_upper_arm_twist_01_jnt.rp" "L_upper_arm_twist_01_jnt_parentConstraint1.crp"
+		;
+connectAttr "L_upper_arm_twist_01_jnt.rpt" "L_upper_arm_twist_01_jnt_parentConstraint1.crt"
+		;
+connectAttr "L_upper_arm_twist_01_jnt.jo" "L_upper_arm_twist_01_jnt_parentConstraint1.cjo"
+		;
+connectAttr "L_upper_arm_twist_aim_loc.t" "L_upper_arm_twist_01_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "L_upper_arm_twist_aim_loc.rp" "L_upper_arm_twist_01_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "L_upper_arm_twist_aim_loc.rpt" "L_upper_arm_twist_01_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "L_upper_arm_twist_aim_loc.r" "L_upper_arm_twist_01_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "L_upper_arm_twist_aim_loc.ro" "L_upper_arm_twist_01_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "L_upper_arm_twist_aim_loc.s" "L_upper_arm_twist_01_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "L_upper_arm_twist_aim_loc.pm" "L_upper_arm_twist_01_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "L_upper_arm_twist_01_jnt_parentConstraint1.w0" "L_upper_arm_twist_01_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "L_arm_01_RK_jnt.s" "L_upper_arm_twist_02_jnt.is";
+connectAttr "L_upper_arm_twist_02_jnt_parentConstraint1.ctx" "L_upper_arm_twist_02_jnt.tx"
+		;
+connectAttr "L_upper_arm_twist_02_jnt_parentConstraint1.cty" "L_upper_arm_twist_02_jnt.ty"
+		;
+connectAttr "L_upper_arm_twist_02_jnt_parentConstraint1.ctz" "L_upper_arm_twist_02_jnt.tz"
+		;
+connectAttr "L_upper_arm_twist_02_jnt_parentConstraint1.crx" "L_upper_arm_twist_02_jnt.rx"
+		;
+connectAttr "L_upper_arm_twist_02_jnt_parentConstraint1.cry" "L_upper_arm_twist_02_jnt.ry"
+		;
+connectAttr "L_upper_arm_twist_02_jnt_parentConstraint1.crz" "L_upper_arm_twist_02_jnt.rz"
+		;
+connectAttr "L_upper_arm_twist_02_jnt.ro" "L_upper_arm_twist_02_jnt_parentConstraint1.cro"
+		;
+connectAttr "L_upper_arm_twist_02_jnt.pim" "L_upper_arm_twist_02_jnt_parentConstraint1.cpim"
+		;
+connectAttr "L_upper_arm_twist_02_jnt.rp" "L_upper_arm_twist_02_jnt_parentConstraint1.crp"
+		;
+connectAttr "L_upper_arm_twist_02_jnt.rpt" "L_upper_arm_twist_02_jnt_parentConstraint1.crt"
+		;
+connectAttr "L_upper_arm_twist_02_jnt.jo" "L_upper_arm_twist_02_jnt_parentConstraint1.cjo"
+		;
+connectAttr "L_upper_arm_twist_mid_loc.t" "L_upper_arm_twist_02_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "L_upper_arm_twist_mid_loc.rp" "L_upper_arm_twist_02_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "L_upper_arm_twist_mid_loc.rpt" "L_upper_arm_twist_02_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "L_upper_arm_twist_mid_loc.r" "L_upper_arm_twist_02_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "L_upper_arm_twist_mid_loc.ro" "L_upper_arm_twist_02_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "L_upper_arm_twist_mid_loc.s" "L_upper_arm_twist_02_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "L_upper_arm_twist_mid_loc.pm" "L_upper_arm_twist_02_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "L_upper_arm_twist_02_jnt_parentConstraint1.w0" "L_upper_arm_twist_02_jnt_parentConstraint1.tg[0].tw"
+		;
 connectAttr "L_arm_01_RK_jnt.ro" "L_arm_01_RK_jnt_parentConstraint1.cro";
 connectAttr "L_arm_01_RK_jnt.pim" "L_arm_01_RK_jnt_parentConstraint1.cpim";
 connectAttr "L_arm_01_RK_jnt.rp" "L_arm_01_RK_jnt_parentConstraint1.crp";
@@ -91896,6 +92647,26 @@ connectAttr "L_arm_01_RK_jnt_scaleConstraint1.w1" "L_arm_01_RK_jnt_scaleConstrai
 		;
 connectAttr "Transform_ctrl.L_Arm_IKFK" "L_arm_01_RK_jnt_scaleConstraint1.w0";
 connectAttr "L_Arm_IKFK_Rev.ox" "L_arm_01_RK_jnt_scaleConstraint1.w1";
+connectAttr "L_clav_FK_jnt.ro" "L_clav_FK_jnt_parentConstraint1.cro";
+connectAttr "L_clav_FK_jnt.pim" "L_clav_FK_jnt_parentConstraint1.cpim";
+connectAttr "L_clav_FK_jnt.rp" "L_clav_FK_jnt_parentConstraint1.crp";
+connectAttr "L_clav_FK_jnt.rpt" "L_clav_FK_jnt_parentConstraint1.crt";
+connectAttr "L_clav_FK_jnt.jo" "L_clav_FK_jnt_parentConstraint1.cjo";
+connectAttr "L_clav_FK_ctrl.t" "L_clav_FK_jnt_parentConstraint1.tg[0].tt";
+connectAttr "L_clav_FK_ctrl.rp" "L_clav_FK_jnt_parentConstraint1.tg[0].trp";
+connectAttr "L_clav_FK_ctrl.rpt" "L_clav_FK_jnt_parentConstraint1.tg[0].trt";
+connectAttr "L_clav_FK_ctrl.r" "L_clav_FK_jnt_parentConstraint1.tg[0].tr";
+connectAttr "L_clav_FK_ctrl.ro" "L_clav_FK_jnt_parentConstraint1.tg[0].tro";
+connectAttr "L_clav_FK_ctrl.s" "L_clav_FK_jnt_parentConstraint1.tg[0].ts";
+connectAttr "L_clav_FK_ctrl.pm" "L_clav_FK_jnt_parentConstraint1.tg[0].tpm";
+connectAttr "L_clav_FK_jnt_parentConstraint1.w0" "L_clav_FK_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "L_clav_FK_jnt.ssc" "L_clav_FK_jnt_scaleConstraint1.tsc";
+connectAttr "L_clav_FK_jnt.pim" "L_clav_FK_jnt_scaleConstraint1.cpim";
+connectAttr "L_clav_FK_ctrl.s" "L_clav_FK_jnt_scaleConstraint1.tg[0].ts";
+connectAttr "L_clav_FK_ctrl.pm" "L_clav_FK_jnt_scaleConstraint1.tg[0].tpm";
+connectAttr "L_clav_FK_jnt_scaleConstraint1.w0" "L_clav_FK_jnt_scaleConstraint1.tg[0].tw"
+		;
 connectAttr "Spine_03_FK_jnt.s" "R_clav_FK_jnt.is";
 connectAttr "R_clav_RK_jnt_scaleConstraint1.csx" "R_clav_FK_jnt.sx";
 connectAttr "R_clav_RK_jnt_scaleConstraint1.csy" "R_clav_FK_jnt.sy";
@@ -93253,6 +94024,84 @@ connectAttr "R_arm_03_RK_jnt_scaleConstraint1.w1" "R_arm_03_RK_jnt_scaleConstrai
 		;
 connectAttr "Transform_ctrl.R_Arm_IKFK" "R_arm_03_RK_jnt_scaleConstraint1.w0";
 connectAttr "R_Arm_IKFK_Rev.ox" "R_arm_03_RK_jnt_scaleConstraint1.w1";
+connectAttr "R_arm_02_RK_jnt.s" "R_Forearm_Twist_02_jnt.is";
+connectAttr "R_Forearm_Twist_02_jnt_parentConstraint1.ctx" "R_Forearm_Twist_02_jnt.tx"
+		;
+connectAttr "R_Forearm_Twist_02_jnt_parentConstraint1.cty" "R_Forearm_Twist_02_jnt.ty"
+		;
+connectAttr "R_Forearm_Twist_02_jnt_parentConstraint1.ctz" "R_Forearm_Twist_02_jnt.tz"
+		;
+connectAttr "R_Forearm_Twist_02_jnt_parentConstraint1.crx" "R_Forearm_Twist_02_jnt.rx"
+		;
+connectAttr "R_Forearm_Twist_02_jnt_parentConstraint1.cry" "R_Forearm_Twist_02_jnt.ry"
+		;
+connectAttr "R_Forearm_Twist_02_jnt_parentConstraint1.crz" "R_Forearm_Twist_02_jnt.rz"
+		;
+connectAttr "R_Forearm_Twist_02_jnt.ro" "R_Forearm_Twist_02_jnt_parentConstraint1.cro"
+		;
+connectAttr "R_Forearm_Twist_02_jnt.pim" "R_Forearm_Twist_02_jnt_parentConstraint1.cpim"
+		;
+connectAttr "R_Forearm_Twist_02_jnt.rp" "R_Forearm_Twist_02_jnt_parentConstraint1.crp"
+		;
+connectAttr "R_Forearm_Twist_02_jnt.rpt" "R_Forearm_Twist_02_jnt_parentConstraint1.crt"
+		;
+connectAttr "R_Forearm_Twist_02_jnt.jo" "R_Forearm_Twist_02_jnt_parentConstraint1.cjo"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.t" "R_Forearm_Twist_02_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.rp" "R_Forearm_Twist_02_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.rpt" "R_Forearm_Twist_02_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.r" "R_Forearm_Twist_02_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.ro" "R_Forearm_Twist_02_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.s" "R_Forearm_Twist_02_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.pm" "R_Forearm_Twist_02_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_Forearm_Twist_02_jnt_parentConstraint1.w0" "R_Forearm_Twist_02_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_arm_02_RK_jnt.s" "R_Forearm_Twist_01_jnt.is";
+connectAttr "R_Forearm_Twist_01_jnt_parentConstraint1.ctx" "R_Forearm_Twist_01_jnt.tx"
+		;
+connectAttr "R_Forearm_Twist_01_jnt_parentConstraint1.cty" "R_Forearm_Twist_01_jnt.ty"
+		;
+connectAttr "R_Forearm_Twist_01_jnt_parentConstraint1.ctz" "R_Forearm_Twist_01_jnt.tz"
+		;
+connectAttr "R_Forearm_Twist_01_jnt_parentConstraint1.crx" "R_Forearm_Twist_01_jnt.rx"
+		;
+connectAttr "R_Forearm_Twist_01_jnt_parentConstraint1.cry" "R_Forearm_Twist_01_jnt.ry"
+		;
+connectAttr "R_Forearm_Twist_01_jnt_parentConstraint1.crz" "R_Forearm_Twist_01_jnt.rz"
+		;
+connectAttr "R_Forearm_Twist_01_jnt.ro" "R_Forearm_Twist_01_jnt_parentConstraint1.cro"
+		;
+connectAttr "R_Forearm_Twist_01_jnt.pim" "R_Forearm_Twist_01_jnt_parentConstraint1.cpim"
+		;
+connectAttr "R_Forearm_Twist_01_jnt.rp" "R_Forearm_Twist_01_jnt_parentConstraint1.crp"
+		;
+connectAttr "R_Forearm_Twist_01_jnt.rpt" "R_Forearm_Twist_01_jnt_parentConstraint1.crt"
+		;
+connectAttr "R_Forearm_Twist_01_jnt.jo" "R_Forearm_Twist_01_jnt_parentConstraint1.cjo"
+		;
+connectAttr "R_Forearm_Twist_Mid_Loc.t" "R_Forearm_Twist_01_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "R_Forearm_Twist_Mid_Loc.rp" "R_Forearm_Twist_01_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "R_Forearm_Twist_Mid_Loc.rpt" "R_Forearm_Twist_01_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_Forearm_Twist_Mid_Loc.r" "R_Forearm_Twist_01_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "R_Forearm_Twist_Mid_Loc.ro" "R_Forearm_Twist_01_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "R_Forearm_Twist_Mid_Loc.s" "R_Forearm_Twist_01_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "R_Forearm_Twist_Mid_Loc.pm" "R_Forearm_Twist_01_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_Forearm_Twist_01_jnt_parentConstraint1.w0" "R_Forearm_Twist_01_jnt_parentConstraint1.tg[0].tw"
+		;
 connectAttr "R_arm_02_RK_jnt.ro" "R_arm_02_RK_jnt_parentConstraint1.cro";
 connectAttr "R_arm_02_RK_jnt.pim" "R_arm_02_RK_jnt_parentConstraint1.cpim";
 connectAttr "R_arm_02_RK_jnt.rp" "R_arm_02_RK_jnt_parentConstraint1.crp";
@@ -93296,6 +94145,87 @@ connectAttr "R_arm_02_RK_jnt_scaleConstraint1.w1" "R_arm_02_RK_jnt_scaleConstrai
 		;
 connectAttr "Transform_ctrl.R_Arm_IKFK" "R_arm_02_RK_jnt_scaleConstraint1.w0";
 connectAttr "R_Arm_IKFK_Rev.ox" "R_arm_02_RK_jnt_scaleConstraint1.w1";
+connectAttr "R_arm_01_RK_jnt.s" "R_upper_arm_twist_01_jnt.is";
+connectAttr "R_upper_arm_twist_01_jnt_parentConstraint1.ctx" "R_upper_arm_twist_01_jnt.tx"
+		;
+connectAttr "R_upper_arm_twist_01_jnt_parentConstraint1.cty" "R_upper_arm_twist_01_jnt.ty"
+		;
+connectAttr "R_upper_arm_twist_01_jnt_parentConstraint1.ctz" "R_upper_arm_twist_01_jnt.tz"
+		;
+connectAttr "R_upper_arm_twist_01_jnt_parentConstraint1.crx" "R_upper_arm_twist_01_jnt.rx"
+		;
+connectAttr "R_upper_arm_twist_01_jnt_parentConstraint1.cry" "R_upper_arm_twist_01_jnt.ry"
+		;
+connectAttr "R_upper_arm_twist_01_jnt_parentConstraint1.crz" "R_upper_arm_twist_01_jnt.rz"
+		;
+connectAttr "R_upper_arm_twist_01_jnt.s" "R_upper_arm_twist_01_corrective_jnt.is"
+		;
+connectAttr "unitConversion39.o" "R_upper_arm_twist_01_corrective_jnt.rx";
+connectAttr "R_upper_arm_twist_01_jnt.ro" "R_upper_arm_twist_01_jnt_parentConstraint1.cro"
+		;
+connectAttr "R_upper_arm_twist_01_jnt.pim" "R_upper_arm_twist_01_jnt_parentConstraint1.cpim"
+		;
+connectAttr "R_upper_arm_twist_01_jnt.rp" "R_upper_arm_twist_01_jnt_parentConstraint1.crp"
+		;
+connectAttr "R_upper_arm_twist_01_jnt.rpt" "R_upper_arm_twist_01_jnt_parentConstraint1.crt"
+		;
+connectAttr "R_upper_arm_twist_01_jnt.jo" "R_upper_arm_twist_01_jnt_parentConstraint1.cjo"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.t" "R_upper_arm_twist_01_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.rp" "R_upper_arm_twist_01_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.rpt" "R_upper_arm_twist_01_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.r" "R_upper_arm_twist_01_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.ro" "R_upper_arm_twist_01_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.s" "R_upper_arm_twist_01_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.pm" "R_upper_arm_twist_01_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_upper_arm_twist_01_jnt_parentConstraint1.w0" "R_upper_arm_twist_01_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_arm_01_RK_jnt.s" "R_upper_arm_twist_02_jnt.is";
+connectAttr "R_upper_arm_twist_02_jnt_parentConstraint1.ctx" "R_upper_arm_twist_02_jnt.tx"
+		;
+connectAttr "R_upper_arm_twist_02_jnt_parentConstraint1.cty" "R_upper_arm_twist_02_jnt.ty"
+		;
+connectAttr "R_upper_arm_twist_02_jnt_parentConstraint1.ctz" "R_upper_arm_twist_02_jnt.tz"
+		;
+connectAttr "R_upper_arm_twist_02_jnt_parentConstraint1.crx" "R_upper_arm_twist_02_jnt.rx"
+		;
+connectAttr "R_upper_arm_twist_02_jnt_parentConstraint1.cry" "R_upper_arm_twist_02_jnt.ry"
+		;
+connectAttr "R_upper_arm_twist_02_jnt_parentConstraint1.crz" "R_upper_arm_twist_02_jnt.rz"
+		;
+connectAttr "R_upper_arm_twist_02_jnt.ro" "R_upper_arm_twist_02_jnt_parentConstraint1.cro"
+		;
+connectAttr "R_upper_arm_twist_02_jnt.pim" "R_upper_arm_twist_02_jnt_parentConstraint1.cpim"
+		;
+connectAttr "R_upper_arm_twist_02_jnt.rp" "R_upper_arm_twist_02_jnt_parentConstraint1.crp"
+		;
+connectAttr "R_upper_arm_twist_02_jnt.rpt" "R_upper_arm_twist_02_jnt_parentConstraint1.crt"
+		;
+connectAttr "R_upper_arm_twist_02_jnt.jo" "R_upper_arm_twist_02_jnt_parentConstraint1.cjo"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc.t" "R_upper_arm_twist_02_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc.rp" "R_upper_arm_twist_02_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc.rpt" "R_upper_arm_twist_02_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc.r" "R_upper_arm_twist_02_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc.ro" "R_upper_arm_twist_02_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc.s" "R_upper_arm_twist_02_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc.pm" "R_upper_arm_twist_02_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_upper_arm_twist_02_jnt_parentConstraint1.w0" "R_upper_arm_twist_02_jnt_parentConstraint1.tg[0].tw"
+		;
 connectAttr "R_arm_01_RK_jnt.ro" "R_arm_01_RK_jnt_parentConstraint1.cro";
 connectAttr "R_arm_01_RK_jnt.pim" "R_arm_01_RK_jnt_parentConstraint1.cpim";
 connectAttr "R_arm_01_RK_jnt.rp" "R_arm_01_RK_jnt_parentConstraint1.crp";
@@ -101837,30 +102767,30 @@ connectAttr "R_leg_IK_ctrl.pm" "R_Leg_IK_Dist_02_Loc_parentConstraint1.tg[0].tpm
 		;
 connectAttr "R_Leg_IK_Dist_02_Loc_parentConstraint1.w0" "R_Leg_IK_Dist_02_Loc_parentConstraint1.tg[0].tw"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.ctx" "L_Arm_Twist_Aim_Loc_Grp.tx"
+connectAttr "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.ctx" "L_Forearm_Twist_Aim_Loc_Grp.tx"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.cty" "L_Arm_Twist_Aim_Loc_Grp.ty"
+connectAttr "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.cty" "L_Forearm_Twist_Aim_Loc_Grp.ty"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.ctz" "L_Arm_Twist_Aim_Loc_Grp.tz"
+connectAttr "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.ctz" "L_Forearm_Twist_Aim_Loc_Grp.tz"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.crx" "L_Arm_Twist_Aim_Loc_Grp.rx"
+connectAttr "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.crx" "L_Forearm_Twist_Aim_Loc_Grp.rx"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.cry" "L_Arm_Twist_Aim_Loc_Grp.ry"
+connectAttr "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.cry" "L_Forearm_Twist_Aim_Loc_Grp.ry"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.crz" "L_Arm_Twist_Aim_Loc_Grp.rz"
+connectAttr "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.crz" "L_Forearm_Twist_Aim_Loc_Grp.rz"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp_scaleConstraint1.csx" "L_Arm_Twist_Aim_Loc_Grp.sx"
+connectAttr "L_Arm_Twist_Aim_Loc_Grp_scaleConstraint1.csx" "L_Forearm_Twist_Aim_Loc_Grp.sx"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp_scaleConstraint1.csy" "L_Arm_Twist_Aim_Loc_Grp.sy"
+connectAttr "L_Arm_Twist_Aim_Loc_Grp_scaleConstraint1.csy" "L_Forearm_Twist_Aim_Loc_Grp.sy"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp_scaleConstraint1.csz" "L_Arm_Twist_Aim_Loc_Grp.sz"
+connectAttr "L_Arm_Twist_Aim_Loc_Grp_scaleConstraint1.csz" "L_Forearm_Twist_Aim_Loc_Grp.sz"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_aimConstraint1.crx" "L_Arm_Twist_Aim_Loc.rx";
-connectAttr "L_Arm_Twist_Aim_Loc_aimConstraint1.cry" "L_Arm_Twist_Aim_Loc.ry";
-connectAttr "L_Arm_Twist_Aim_Loc_aimConstraint1.crz" "L_Arm_Twist_Aim_Loc.rz";
 connectAttr "L_Arm_Twist_Aim_Loc_pointConstraint1.ctx" "L_Arm_Twist_Aim_Loc.tx";
 connectAttr "L_Arm_Twist_Aim_Loc_pointConstraint1.cty" "L_Arm_Twist_Aim_Loc.ty";
 connectAttr "L_Arm_Twist_Aim_Loc_pointConstraint1.ctz" "L_Arm_Twist_Aim_Loc.tz";
+connectAttr "L_Arm_Twist_Aim_Loc_aimConstraint1.crx" "L_Arm_Twist_Aim_Loc.rx";
+connectAttr "L_Arm_Twist_Aim_Loc_aimConstraint1.cry" "L_Arm_Twist_Aim_Loc.ry";
+connectAttr "L_Arm_Twist_Aim_Loc_aimConstraint1.crz" "L_Arm_Twist_Aim_Loc.rz";
 connectAttr "L_Arm_Twist_Aim_Loc.pim" "L_Arm_Twist_Aim_Loc_aimConstraint1.cpim";
 connectAttr "L_Arm_Twist_Aim_Loc.t" "L_Arm_Twist_Aim_Loc_aimConstraint1.ct";
 connectAttr "L_Arm_Twist_Aim_Loc.rp" "L_Arm_Twist_Aim_Loc_aimConstraint1.crp";
@@ -101914,13 +102844,13 @@ connectAttr "L_hand_FK_jnt.ssc" "L_Arm_Twist_Up_Loc_parentConstraint1.tg[0].tsc"
 connectAttr "L_hand_FK_jnt.is" "L_Arm_Twist_Up_Loc_parentConstraint1.tg[0].tis";
 connectAttr "L_Arm_Twist_Up_Loc_parentConstraint1.w0" "L_Arm_Twist_Up_Loc_parentConstraint1.tg[0].tw"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp.ro" "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.cro"
+connectAttr "L_Forearm_Twist_Aim_Loc_Grp.ro" "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.cro"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp.pim" "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.cpim"
+connectAttr "L_Forearm_Twist_Aim_Loc_Grp.pim" "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.cpim"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp.rp" "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.crp"
+connectAttr "L_Forearm_Twist_Aim_Loc_Grp.rp" "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.crp"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp.rpt" "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.crt"
+connectAttr "L_Forearm_Twist_Aim_Loc_Grp.rpt" "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.crt"
 		;
 connectAttr "L_arm_02_RK_jnt.t" "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.tg[0].tt"
 		;
@@ -101944,10 +102874,10 @@ connectAttr "L_arm_02_RK_jnt.is" "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.tg[0
 		;
 connectAttr "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.w0" "L_Arm_Twist_Aim_Loc_Grp_parentConstraint1.tg[0].tw"
 		;
-connectAttr "unitConversion25.o" "L_Arm_Twist_Mid_Loc.rx";
 connectAttr "L_Arm_Twist_Mid_Loc_pointConstraint1.ctx" "L_Arm_Twist_Mid_Loc.tx";
 connectAttr "L_Arm_Twist_Mid_Loc_pointConstraint1.cty" "L_Arm_Twist_Mid_Loc.ty";
 connectAttr "L_Arm_Twist_Mid_Loc_pointConstraint1.ctz" "L_Arm_Twist_Mid_Loc.tz";
+connectAttr "unitConversion25.o" "L_Arm_Twist_Mid_Loc.rx";
 connectAttr "L_Arm_Twist_Mid_Loc.pim" "L_Arm_Twist_Mid_Loc_pointConstraint1.cpim"
 		;
 connectAttr "L_Arm_Twist_Mid_Loc.rp" "L_Arm_Twist_Mid_Loc_pointConstraint1.crp";
@@ -101973,7 +102903,7 @@ connectAttr "L_Arm_Twist_Target_Loc.pm" "L_Arm_Twist_Mid_Loc_pointConstraint1.tg
 		;
 connectAttr "L_Arm_Twist_Mid_Loc_pointConstraint1.w1" "L_Arm_Twist_Mid_Loc_pointConstraint1.tg[1].tw"
 		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp.pim" "L_Arm_Twist_Aim_Loc_Grp_scaleConstraint1.cpim"
+connectAttr "L_Forearm_Twist_Aim_Loc_Grp.pim" "L_Arm_Twist_Aim_Loc_Grp_scaleConstraint1.cpim"
 		;
 connectAttr "L_arm_02_RK_jnt.s" "L_Arm_Twist_Aim_Loc_Grp_scaleConstraint1.tg[0].ts"
 		;
@@ -102090,6 +103020,39 @@ connectAttr "L_upper_arm_twist_IK_01_jnt.ssc" "L_upper_arm_twist_up_loc_parentCo
 connectAttr "L_upper_arm_twist_IK_01_jnt.is" "L_upper_arm_twist_up_loc_parentConstraint1.tg[0].tis"
 		;
 connectAttr "L_upper_arm_twist_up_loc_parentConstraint1.w0" "L_upper_arm_twist_up_loc_parentConstraint1.tg[0].tw"
+		;
+connectAttr "unitConversion31.o" "L_upper_arm_twist_mid_loc.rx";
+connectAttr "L_upper_arm_twist_mid_loc_pointConstraint1.ctx" "L_upper_arm_twist_mid_loc.tx"
+		;
+connectAttr "L_upper_arm_twist_mid_loc_pointConstraint1.cty" "L_upper_arm_twist_mid_loc.ty"
+		;
+connectAttr "L_upper_arm_twist_mid_loc_pointConstraint1.ctz" "L_upper_arm_twist_mid_loc.tz"
+		;
+connectAttr "L_upper_arm_twist_mid_loc.pim" "L_upper_arm_twist_mid_loc_pointConstraint1.cpim"
+		;
+connectAttr "L_upper_arm_twist_mid_loc.rp" "L_upper_arm_twist_mid_loc_pointConstraint1.crp"
+		;
+connectAttr "L_upper_arm_twist_mid_loc.rpt" "L_upper_arm_twist_mid_loc_pointConstraint1.crt"
+		;
+connectAttr "L_upper_arm_twist_aim_loc.t" "L_upper_arm_twist_mid_loc_pointConstraint1.tg[0].tt"
+		;
+connectAttr "L_upper_arm_twist_aim_loc.rp" "L_upper_arm_twist_mid_loc_pointConstraint1.tg[0].trp"
+		;
+connectAttr "L_upper_arm_twist_aim_loc.rpt" "L_upper_arm_twist_mid_loc_pointConstraint1.tg[0].trt"
+		;
+connectAttr "L_upper_arm_twist_aim_loc.pm" "L_upper_arm_twist_mid_loc_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "L_upper_arm_twist_mid_loc_pointConstraint1.w0" "L_upper_arm_twist_mid_loc_pointConstraint1.tg[0].tw"
+		;
+connectAttr "L_upper_arm_twist_target_loc.t" "L_upper_arm_twist_mid_loc_pointConstraint1.tg[1].tt"
+		;
+connectAttr "L_upper_arm_twist_target_loc.rp" "L_upper_arm_twist_mid_loc_pointConstraint1.tg[1].trp"
+		;
+connectAttr "L_upper_arm_twist_target_loc.rpt" "L_upper_arm_twist_mid_loc_pointConstraint1.tg[1].trt"
+		;
+connectAttr "L_upper_arm_twist_target_loc.pm" "L_upper_arm_twist_mid_loc_pointConstraint1.tg[1].tpm"
+		;
+connectAttr "L_upper_arm_twist_mid_loc_pointConstraint1.w1" "L_upper_arm_twist_mid_loc_pointConstraint1.tg[1].tw"
 		;
 connectAttr "L_upper_arm_twist_aim_loc_grp.ro" "L_upper_arm_twist_aim_loc_grp_parentConstraint1.cro"
 		;
@@ -102236,6 +103199,527 @@ connectAttr "L_clav_FK_jnt.s" "L_upper_arm_twist_IK_grp_scaleConstraint1.tg[0].t
 connectAttr "L_clav_FK_jnt.pm" "L_upper_arm_twist_IK_grp_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "L_upper_arm_twist_IK_grp_scaleConstraint1.w0" "L_upper_arm_twist_IK_grp_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.ctx" "R_Forearm_Twist_Aim_Loc_grp.tx"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.cty" "R_Forearm_Twist_Aim_Loc_grp.ty"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.ctz" "R_Forearm_Twist_Aim_Loc_grp.tz"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.crx" "R_Forearm_Twist_Aim_Loc_grp.rx"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.cry" "R_Forearm_Twist_Aim_Loc_grp.ry"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.crz" "R_Forearm_Twist_Aim_Loc_grp.rz"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp_scaleConstraint1.csx" "R_Forearm_Twist_Aim_Loc_grp.sx"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp_scaleConstraint1.csy" "R_Forearm_Twist_Aim_Loc_grp.sy"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp_scaleConstraint1.csz" "R_Forearm_Twist_Aim_Loc_grp.sz"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_aimConstraint1.crx" "R_Forearm_Twist_Aim_Loc.rx"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_aimConstraint1.cry" "R_Forearm_Twist_Aim_Loc.ry"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_aimConstraint1.crz" "R_Forearm_Twist_Aim_Loc.rz"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_pointConstraint1.ctx" "R_Forearm_Twist_Aim_Loc.tx"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_pointConstraint1.cty" "R_Forearm_Twist_Aim_Loc.ty"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_pointConstraint1.ctz" "R_Forearm_Twist_Aim_Loc.tz"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.pim" "R_Forearm_Twist_Aim_Loc_aimConstraint1.cpim"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.t" "R_Forearm_Twist_Aim_Loc_aimConstraint1.ct"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.rp" "R_Forearm_Twist_Aim_Loc_aimConstraint1.crp"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.rpt" "R_Forearm_Twist_Aim_Loc_aimConstraint1.crt"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.ro" "R_Forearm_Twist_Aim_Loc_aimConstraint1.cro"
+		;
+connectAttr "R_Forearm_Twist_Target_Loc.t" "R_Forearm_Twist_Aim_Loc_aimConstraint1.tg[0].tt"
+		;
+connectAttr "R_Forearm_Twist_Target_Loc.rp" "R_Forearm_Twist_Aim_Loc_aimConstraint1.tg[0].trp"
+		;
+connectAttr "R_Forearm_Twist_Target_Loc.rpt" "R_Forearm_Twist_Aim_Loc_aimConstraint1.tg[0].trt"
+		;
+connectAttr "R_Forearm_Twist_Target_Loc.pm" "R_Forearm_Twist_Aim_Loc_aimConstraint1.tg[0].tpm"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_aimConstraint1.w0" "R_Forearm_Twist_Aim_Loc_aimConstraint1.tg[0].tw"
+		;
+connectAttr "R_Forearm_Twist_Up_Loc.wm" "R_Forearm_Twist_Aim_Loc_aimConstraint1.wum"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.pim" "R_Forearm_Twist_Aim_Loc_pointConstraint1.cpim"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.rp" "R_Forearm_Twist_Aim_Loc_pointConstraint1.crp"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.rpt" "R_Forearm_Twist_Aim_Loc_pointConstraint1.crt"
+		;
+connectAttr "R_hand_FK_jnt.t" "R_Forearm_Twist_Aim_Loc_pointConstraint1.tg[0].tt"
+		;
+connectAttr "R_hand_FK_jnt.rp" "R_Forearm_Twist_Aim_Loc_pointConstraint1.tg[0].trp"
+		;
+connectAttr "R_hand_FK_jnt.rpt" "R_Forearm_Twist_Aim_Loc_pointConstraint1.tg[0].trt"
+		;
+connectAttr "R_hand_FK_jnt.pm" "R_Forearm_Twist_Aim_Loc_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_pointConstraint1.w0" "R_Forearm_Twist_Aim_Loc_pointConstraint1.tg[0].tw"
+		;
+connectAttr "R_Forearm_Twist_Up_Loc_parentConstraint1.ctx" "R_Forearm_Twist_Up_Loc.tx"
+		;
+connectAttr "R_Forearm_Twist_Up_Loc_parentConstraint1.cty" "R_Forearm_Twist_Up_Loc.ty"
+		;
+connectAttr "R_Forearm_Twist_Up_Loc_parentConstraint1.ctz" "R_Forearm_Twist_Up_Loc.tz"
+		;
+connectAttr "R_Forearm_Twist_Up_Loc_parentConstraint1.crx" "R_Forearm_Twist_Up_Loc.rx"
+		;
+connectAttr "R_Forearm_Twist_Up_Loc_parentConstraint1.cry" "R_Forearm_Twist_Up_Loc.ry"
+		;
+connectAttr "R_Forearm_Twist_Up_Loc_parentConstraint1.crz" "R_Forearm_Twist_Up_Loc.rz"
+		;
+connectAttr "R_Forearm_Twist_Up_Loc.ro" "R_Forearm_Twist_Up_Loc_parentConstraint1.cro"
+		;
+connectAttr "R_Forearm_Twist_Up_Loc.pim" "R_Forearm_Twist_Up_Loc_parentConstraint1.cpim"
+		;
+connectAttr "R_Forearm_Twist_Up_Loc.rp" "R_Forearm_Twist_Up_Loc_parentConstraint1.crp"
+		;
+connectAttr "R_Forearm_Twist_Up_Loc.rpt" "R_Forearm_Twist_Up_Loc_parentConstraint1.crt"
+		;
+connectAttr "R_hand_FK_jnt.t" "R_Forearm_Twist_Up_Loc_parentConstraint1.tg[0].tt"
+		;
+connectAttr "R_hand_FK_jnt.rp" "R_Forearm_Twist_Up_Loc_parentConstraint1.tg[0].trp"
+		;
+connectAttr "R_hand_FK_jnt.rpt" "R_Forearm_Twist_Up_Loc_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_hand_FK_jnt.r" "R_Forearm_Twist_Up_Loc_parentConstraint1.tg[0].tr"
+		;
+connectAttr "R_hand_FK_jnt.ro" "R_Forearm_Twist_Up_Loc_parentConstraint1.tg[0].tro"
+		;
+connectAttr "R_hand_FK_jnt.s" "R_Forearm_Twist_Up_Loc_parentConstraint1.tg[0].ts"
+		;
+connectAttr "R_hand_FK_jnt.pm" "R_Forearm_Twist_Up_Loc_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_hand_FK_jnt.jo" "R_Forearm_Twist_Up_Loc_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "R_hand_FK_jnt.ssc" "R_Forearm_Twist_Up_Loc_parentConstraint1.tg[0].tsc"
+		;
+connectAttr "R_hand_FK_jnt.is" "R_Forearm_Twist_Up_Loc_parentConstraint1.tg[0].tis"
+		;
+connectAttr "R_Forearm_Twist_Up_Loc_parentConstraint1.w0" "R_Forearm_Twist_Up_Loc_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp.ro" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.cro"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp.pim" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.cpim"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp.rp" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.crp"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp.rpt" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.crt"
+		;
+connectAttr "R_arm_02_RK_jnt.t" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "R_arm_02_RK_jnt.rp" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "R_arm_02_RK_jnt.rpt" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_arm_02_RK_jnt.r" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "R_arm_02_RK_jnt.ro" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "R_arm_02_RK_jnt.s" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "R_arm_02_RK_jnt.pm" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_arm_02_RK_jnt.jo" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "R_arm_02_RK_jnt.ssc" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.tg[0].tsc"
+		;
+connectAttr "R_arm_02_RK_jnt.is" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.tg[0].tis"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.w0" "R_Forearm_Twist_Aim_Loc_grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp.pim" "R_Forearm_Twist_Aim_Loc_grp_scaleConstraint1.cpim"
+		;
+connectAttr "R_arm_02_RK_jnt.s" "R_Forearm_Twist_Aim_Loc_grp_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "R_arm_02_RK_jnt.pm" "R_Forearm_Twist_Aim_Loc_grp_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc_grp_scaleConstraint1.w0" "R_Forearm_Twist_Aim_Loc_grp_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "pairBlend1.orx" "R_Forearm_Twist_Mid_Loc.rx";
+connectAttr "pairBlend1.ory" "R_Forearm_Twist_Mid_Loc.ry";
+connectAttr "pairBlend1.orz" "R_Forearm_Twist_Mid_Loc.rz";
+connectAttr "pairBlend1.otx" "R_Forearm_Twist_Mid_Loc.tx";
+connectAttr "pairBlend1.oty" "R_Forearm_Twist_Mid_Loc.ty";
+connectAttr "pairBlend1.otz" "R_Forearm_Twist_Mid_Loc.tz";
+connectAttr "R_Forearm_Twist_Mid_Loc.ro" "R_Forearm_Twist_Mid_Loc_parentConstraint1.cro"
+		;
+connectAttr "R_Forearm_Twist_Mid_Loc.pim" "R_Forearm_Twist_Mid_Loc_parentConstraint1.cpim"
+		;
+connectAttr "R_Forearm_Twist_Mid_Loc.rp" "R_Forearm_Twist_Mid_Loc_parentConstraint1.crp"
+		;
+connectAttr "R_Forearm_Twist_Mid_Loc.rpt" "R_Forearm_Twist_Mid_Loc_parentConstraint1.crt"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.t" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[0].tt"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.rp" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[0].trp"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.rpt" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.r" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[0].tr"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.ro" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[0].tro"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.s" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[0].ts"
+		;
+connectAttr "R_Forearm_Twist_Aim_Loc.pm" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_Forearm_Twist_Mid_Loc_parentConstraint1.w0" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_Forearm_Twist_Target_Loc.t" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[1].tt"
+		;
+connectAttr "R_Forearm_Twist_Target_Loc.rp" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[1].trp"
+		;
+connectAttr "R_Forearm_Twist_Target_Loc.rpt" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[1].trt"
+		;
+connectAttr "R_Forearm_Twist_Target_Loc.r" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[1].tr"
+		;
+connectAttr "R_Forearm_Twist_Target_Loc.ro" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[1].tro"
+		;
+connectAttr "R_Forearm_Twist_Target_Loc.s" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[1].ts"
+		;
+connectAttr "R_Forearm_Twist_Target_Loc.pm" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[1].tpm"
+		;
+connectAttr "R_Forearm_Twist_Mid_Loc_parentConstraint1.w1" "R_Forearm_Twist_Mid_Loc_parentConstraint1.tg[1].tw"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.ctx" "R_upper_arm_twist_IK_jnt_grp.tx"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.cty" "R_upper_arm_twist_IK_jnt_grp.ty"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.ctz" "R_upper_arm_twist_IK_jnt_grp.tz"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.crx" "R_upper_arm_twist_IK_jnt_grp.rx"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.cry" "R_upper_arm_twist_IK_jnt_grp.ry"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.crz" "R_upper_arm_twist_IK_jnt_grp.rz"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp_scaleConstraint1.csx" "R_upper_arm_twist_IK_jnt_grp.sx"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp_scaleConstraint1.csy" "R_upper_arm_twist_IK_jnt_grp.sy"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp_scaleConstraint1.csz" "R_upper_arm_twist_IK_jnt_grp.sz"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.msg" "R_upper_arm_twist_IK_handle.hsj";
+connectAttr "effector10.hp" "R_upper_arm_twist_IK_handle.hee";
+connectAttr "ikRPsolver.msg" "R_upper_arm_twist_IK_handle.hsv";
+connectAttr "R_upper_arm_twist_IK_handle_pointConstraint1.ctx" "R_upper_arm_twist_IK_handle.tx"
+		;
+connectAttr "R_upper_arm_twist_IK_handle_pointConstraint1.cty" "R_upper_arm_twist_IK_handle.ty"
+		;
+connectAttr "R_upper_arm_twist_IK_handle_pointConstraint1.ctz" "R_upper_arm_twist_IK_handle.tz"
+		;
+connectAttr "R_upper_arm_twist_IK_handle_poleVectorConstraint1.ctx" "R_upper_arm_twist_IK_handle.pvx"
+		;
+connectAttr "R_upper_arm_twist_IK_handle_poleVectorConstraint1.cty" "R_upper_arm_twist_IK_handle.pvy"
+		;
+connectAttr "R_upper_arm_twist_IK_handle_poleVectorConstraint1.ctz" "R_upper_arm_twist_IK_handle.pvz"
+		;
+connectAttr "R_upper_arm_twist_IK_handle.pim" "R_upper_arm_twist_IK_handle_pointConstraint1.cpim"
+		;
+connectAttr "R_upper_arm_twist_IK_handle.rp" "R_upper_arm_twist_IK_handle_pointConstraint1.crp"
+		;
+connectAttr "R_upper_arm_twist_IK_handle.rpt" "R_upper_arm_twist_IK_handle_pointConstraint1.crt"
+		;
+connectAttr "R_arm_02_RK_jnt.t" "R_upper_arm_twist_IK_handle_pointConstraint1.tg[0].tt"
+		;
+connectAttr "R_arm_02_RK_jnt.rp" "R_upper_arm_twist_IK_handle_pointConstraint1.tg[0].trp"
+		;
+connectAttr "R_arm_02_RK_jnt.rpt" "R_upper_arm_twist_IK_handle_pointConstraint1.tg[0].trt"
+		;
+connectAttr "R_arm_02_RK_jnt.pm" "R_upper_arm_twist_IK_handle_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "R_upper_arm_twist_IK_handle_pointConstraint1.w0" "R_upper_arm_twist_IK_handle_pointConstraint1.tg[0].tw"
+		;
+connectAttr "R_upper_arm_twist_IK_handle.pim" "R_upper_arm_twist_IK_handle_poleVectorConstraint1.cpim"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.pm" "R_upper_arm_twist_IK_handle_poleVectorConstraint1.ps"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.t" "R_upper_arm_twist_IK_handle_poleVectorConstraint1.crp"
+		;
+connectAttr "R_upper_arm_twist_PV_loc.t" "R_upper_arm_twist_IK_handle_poleVectorConstraint1.tg[0].tt"
+		;
+connectAttr "R_upper_arm_twist_PV_loc.rp" "R_upper_arm_twist_IK_handle_poleVectorConstraint1.tg[0].trp"
+		;
+connectAttr "R_upper_arm_twist_PV_loc.rpt" "R_upper_arm_twist_IK_handle_poleVectorConstraint1.tg[0].trt"
+		;
+connectAttr "R_upper_arm_twist_PV_loc.pm" "R_upper_arm_twist_IK_handle_poleVectorConstraint1.tg[0].tpm"
+		;
+connectAttr "R_upper_arm_twist_IK_handle_poleVectorConstraint1.w0" "R_upper_arm_twist_IK_handle_poleVectorConstraint1.tg[0].tw"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.s" "R_Upper_Arm_Twist_IK_02_jnt.is";
+connectAttr "R_Upper_Arm_Twist_IK_02_jnt.tx" "effector10.tx";
+connectAttr "R_Upper_Arm_Twist_IK_02_jnt.ty" "effector10.ty";
+connectAttr "R_Upper_Arm_Twist_IK_02_jnt.tz" "effector10.tz";
+connectAttr "R_Upper_Arm_Twist_IK_02_jnt.opm" "effector10.opm";
+connectAttr "R_upper_arm_twist_IK_jnt_grp.ro" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.cro"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp.pim" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.cpim"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp.rp" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.crp"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp.rpt" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.crt"
+		;
+connectAttr "R_clav_FK_jnt.t" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "R_clav_FK_jnt.rp" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "R_clav_FK_jnt.rpt" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_clav_FK_jnt.r" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "R_clav_FK_jnt.ro" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "R_clav_FK_jnt.s" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "R_clav_FK_jnt.pm" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_clav_FK_jnt.jo" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "R_clav_FK_jnt.ssc" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.tg[0].tsc"
+		;
+connectAttr "R_clav_FK_jnt.is" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.tg[0].tis"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.w0" "R_upper_arm_twist_IK_jnt_grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp.pim" "R_upper_arm_twist_IK_jnt_grp_scaleConstraint1.cpim"
+		;
+connectAttr "R_clav_FK_jnt.s" "R_upper_arm_twist_IK_jnt_grp_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "R_clav_FK_jnt.pm" "R_upper_arm_twist_IK_jnt_grp_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "R_upper_arm_twist_IK_jnt_grp_scaleConstraint1.w0" "R_upper_arm_twist_IK_jnt_grp_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.ctx" "R_Upper_Arm_Twist_Aim_Grp.tx"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.cty" "R_Upper_Arm_Twist_Aim_Grp.ty"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.ctz" "R_Upper_Arm_Twist_Aim_Grp.tz"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.crx" "R_Upper_Arm_Twist_Aim_Grp.rx"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.cry" "R_Upper_Arm_Twist_Aim_Grp.ry"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.crz" "R_Upper_Arm_Twist_Aim_Grp.rz"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp_scaleConstraint1.csx" "R_Upper_Arm_Twist_Aim_Grp.sx"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp_scaleConstraint1.csy" "R_Upper_Arm_Twist_Aim_Grp.sy"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp_scaleConstraint1.csz" "R_Upper_Arm_Twist_Aim_Grp.sz"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.crx" "R_Upper_Arm_Twist_Aim_Loc.rx"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.cry" "R_Upper_Arm_Twist_Aim_Loc.ry"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.crz" "R_Upper_Arm_Twist_Aim_Loc.rz"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.pim" "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.cpim"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.t" "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.ct"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.rp" "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.crp"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.rpt" "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.crt"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.ro" "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.cro"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.t" "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.tg[0].tt"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.rp" "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.tg[0].trp"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.rpt" "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.tg[0].trt"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.pm" "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.tg[0].tpm"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.w0" "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.tg[0].tw"
+		;
+connectAttr "R_Upper_Arm_Twist_Up_Loc.wm" "R_Upper_Arm_Twist_Aim_Loc_aimConstraint1.wum"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.crx" "R_Upper_Arm_Twist_Target_Loc.rx"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.cry" "R_Upper_Arm_Twist_Target_Loc.ry"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.crz" "R_Upper_Arm_Twist_Target_Loc.rz"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.ctx" "R_Upper_Arm_Twist_Target_Loc.tx"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.cty" "R_Upper_Arm_Twist_Target_Loc.ty"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.ctz" "R_Upper_Arm_Twist_Target_Loc.tz"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.ro" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.cro"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.pim" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.cpim"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.rp" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.crp"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.rpt" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.crt"
+		;
+connectAttr "R_arm_02_RK_jnt.t" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.tg[0].tt"
+		;
+connectAttr "R_arm_02_RK_jnt.rp" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.tg[0].trp"
+		;
+connectAttr "R_arm_02_RK_jnt.rpt" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_arm_02_RK_jnt.r" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.tg[0].tr"
+		;
+connectAttr "R_arm_02_RK_jnt.ro" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.tg[0].tro"
+		;
+connectAttr "R_arm_02_RK_jnt.s" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.tg[0].ts"
+		;
+connectAttr "R_arm_02_RK_jnt.pm" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_arm_02_RK_jnt.jo" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "R_arm_02_RK_jnt.ssc" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.tg[0].tsc"
+		;
+connectAttr "R_arm_02_RK_jnt.is" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.tg[0].tis"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.w0" "R_Upper_Arm_Twist_Target_Loc_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.ctx" "R_Upper_Arm_Twist_Up_Loc.tx"
+		;
+connectAttr "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.cty" "R_Upper_Arm_Twist_Up_Loc.ty"
+		;
+connectAttr "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.ctz" "R_Upper_Arm_Twist_Up_Loc.tz"
+		;
+connectAttr "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.crx" "R_Upper_Arm_Twist_Up_Loc.rx"
+		;
+connectAttr "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.cry" "R_Upper_Arm_Twist_Up_Loc.ry"
+		;
+connectAttr "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.crz" "R_Upper_Arm_Twist_Up_Loc.rz"
+		;
+connectAttr "R_Upper_Arm_Twist_Up_Loc.ro" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.cro"
+		;
+connectAttr "R_Upper_Arm_Twist_Up_Loc.pim" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.cpim"
+		;
+connectAttr "R_Upper_Arm_Twist_Up_Loc.rp" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.crp"
+		;
+connectAttr "R_Upper_Arm_Twist_Up_Loc.rpt" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.crt"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.t" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.tg[0].tt"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.rp" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.tg[0].trp"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.rpt" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.r" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.tg[0].tr"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.ro" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.tg[0].tro"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.s" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.tg[0].ts"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.pm" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.jo" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.ssc" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.tg[0].tsc"
+		;
+connectAttr "R_Upper_Arm_Twist_IK_01_jnt.is" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.tg[0].tis"
+		;
+connectAttr "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.w0" "R_Upper_Arm_Twist_Up_Loc_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.ctx" "R_Upper_Arm_Twist_Mid_Loc.tx"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.cty" "R_Upper_Arm_Twist_Mid_Loc.ty"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.ctz" "R_Upper_Arm_Twist_Mid_Loc.tz"
+		;
+connectAttr "unitConversion37.o" "R_Upper_Arm_Twist_Mid_Loc.rx";
+connectAttr "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.cry" "R_Upper_Arm_Twist_Mid_Loc.ry"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.crz" "R_Upper_Arm_Twist_Mid_Loc.rz"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc.ro" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.cro"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc.pim" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.cpim"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc.rp" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.crp"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc.rpt" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.crt"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.t" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[0].tt"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.rp" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[0].trp"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.rpt" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.r" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[0].tr"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.ro" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[0].tro"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.s" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[0].ts"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.pm" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.w0" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.t" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[1].tt"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.rp" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[1].trp"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.rpt" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[1].trt"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.r" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[1].tr"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.ro" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[1].tro"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.s" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[1].ts"
+		;
+connectAttr "R_Upper_Arm_Twist_Target_Loc.pm" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[1].tpm"
+		;
+connectAttr "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.w1" "R_Upper_Arm_Twist_Mid_Loc_parentConstraint1.tg[1].tw"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp.ro" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.cro"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp.pim" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.cpim"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp.rp" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.crp"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp.rpt" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.crt"
+		;
+connectAttr "R_arm_01_RK_jnt.t" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "R_arm_01_RK_jnt.rp" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "R_arm_01_RK_jnt.rpt" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "R_arm_01_RK_jnt.r" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "R_arm_01_RK_jnt.ro" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "R_arm_01_RK_jnt.s" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "R_arm_01_RK_jnt.pm" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "R_arm_01_RK_jnt.jo" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "R_arm_01_RK_jnt.ssc" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.tg[0].tsc"
+		;
+connectAttr "R_arm_01_RK_jnt.is" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.tg[0].tis"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.w0" "R_Upper_Arm_Twist_Aim_Grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp.pim" "R_Upper_Arm_Twist_Aim_Grp_scaleConstraint1.cpim"
+		;
+connectAttr "R_arm_01_RK_jnt.s" "R_Upper_Arm_Twist_Aim_Grp_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "R_arm_01_RK_jnt.pm" "R_Upper_Arm_Twist_Aim_Grp_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "R_Upper_Arm_Twist_Aim_Grp_scaleConstraint1.w0" "R_Upper_Arm_Twist_Aim_Grp_scaleConstraint1.tg[0].tw"
 		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -102723,223 +104207,186 @@ connectAttr "L_Arm_Twist_Aim_Loc.rx" "unitConversion24.i";
 connectAttr "Left_Forearm_Twist_MD.ox" "unitConversion25.i";
 connectAttr "L_Arm_Twist_Aim_Loc.rx" "unitConversion26.i";
 connectAttr "L_Arm_Twist_Aim_Loc.rx" "unitConversion29.i";
-connectAttr "R_Arm_IK_Joint_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "unitConversion30.o" "L_upper_arm_IK_twist_md.i1x";
+connectAttr "L_upper_arm_twist_aim_loc.rx" "unitConversion30.i";
+connectAttr "L_upper_arm_IK_twist_md.ox" "unitConversion31.i";
+connectAttr "unitConversion32.o" "L_upper_arm_IK_twist_corrective_MD.i1x";
+connectAttr "L_upper_arm_twist_aim_loc.rx" "unitConversion32.i";
+connectAttr "L_upper_arm_IK_twist_corrective_MD.ox" "unitConversion33.i";
+connectAttr "unitConversion34.o" "R_Forearm_Twist_MD.i1x";
+connectAttr "R_Forearm_Twist_Aim_Loc.rx" "unitConversion34.i";
+connectAttr "R_Forearm_Twist_MD.ox" "unitConversion35.i";
+connectAttr "unitConversion35.o" "pairBlend1.irx1";
+connectAttr "R_Forearm_Twist_Mid_Loc.blendParent1" "pairBlend1.w";
+connectAttr "R_Forearm_Twist_Mid_Loc.ro" "pairBlend1.ro";
+connectAttr "R_Forearm_Twist_Mid_Loc_parentConstraint1.ctx" "pairBlend1.itx2";
+connectAttr "R_Forearm_Twist_Mid_Loc_parentConstraint1.cty" "pairBlend1.ity2";
+connectAttr "R_Forearm_Twist_Mid_Loc_parentConstraint1.ctz" "pairBlend1.itz2";
+connectAttr "R_Forearm_Twist_Mid_Loc_parentConstraint1.crx" "pairBlend1.irx2";
+connectAttr "R_Forearm_Twist_Mid_Loc_parentConstraint1.cry" "pairBlend1.iry2";
+connectAttr "R_Forearm_Twist_Mid_Loc_parentConstraint1.crz" "pairBlend1.irz2";
+connectAttr "unitConversion36.o" "R_Upper_Arm_Twist_MD.i1x";
+connectAttr "R_Upper_Arm_Twist_Aim_Loc.rx" "unitConversion36.i";
+connectAttr "R_Upper_Arm_Twist_MD.ox" "unitConversion37.i";
+connectAttr "unitConversion38.o" "R_upper_arm_twist_corrective_MD.i1x";
+connectAttr "R_Upper_Arm_Twist_Up_Loc.rx" "unitConversion38.i";
+connectAttr "R_upper_arm_twist_corrective_MD.ox" "unitConversion39.i";
+connectAttr "R_arm_03_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn";
+connectAttr "L_arm_03_IK_jnt_orientConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "R_Arm_Upper_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "R_Arm_IK_Joint_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "L_leg_02_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn";
-connectAttr "L_Leg_Stretch_Global_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "R_Leg_IK_Joint_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "R_Arm_IK_Dist_01_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "L_Arm_IK_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "L_Arm_IK_Joint_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "L_leg_03_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn";
+connectAttr "L_Leg_IK_Stretch_Scalar_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "R_leg_01_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn";
-connectAttr "L_arm_03_IK_jnt_orientConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr "R_Arm_IK_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
-connectAttr "L_Arm_IK_Stretch_Clamp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+connectAttr "L_Leg_Stretch_Switch_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
 		;
-connectAttr "L_Arm_IK_Dist_01_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+connectAttr "L_Arm_IK_Stretch_Scalar_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
-connectAttr "R_leg_02_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+connectAttr "L_Leg_IK_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
 		;
-connectAttr "L_Arm_IK_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+connectAttr "L_Leg_Lower_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
 		;
-connectAttr "L_Leg_IK_Dist_02_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+connectAttr "Left_Arm_Length_Denominator_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
 		;
-connectAttr "L_leg_03_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+connectAttr "L_Arm_IK_Stretch_Clamp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
 		;
-connectAttr "L_Leg_IK_Stretch_Scalar_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+connectAttr "R_Leg_IK_Length_Combined_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
 		;
-connectAttr "L_leg_IK_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[15].dn";
-connectAttr "R_arm_01_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
+connectAttr "L_Arm_IK_Dist_02_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
 		;
-connectAttr "L_leg_03_IK_jnt_orientConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+connectAttr "L_Leg_Upper_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
 		;
-connectAttr "L_leg_01_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
+connectAttr "R_leg_03_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
 		;
-connectAttr "L_Arm_IK_Dist_02_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
+connectAttr "L_leg_02_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
 		;
-connectAttr "L_Leg_Lower_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
+connectAttr "L_Leg_IK_Length_Combined_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
 		;
-connectAttr "R_Arm_IK_Stretch_Clamp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
+connectAttr "R_leg_IK_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[20].dn";
+connectAttr "R_Leg_IK_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
 		;
-connectAttr "Left_Arm_Lower_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[22].dn"
+connectAttr "R_Leg_IK_Dist_01_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[22].dn"
 		;
-connectAttr "R_leg_03_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[23].dn"
+connectAttr "R_Arm_Stretch_Switch_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[23].dn"
 		;
-connectAttr "R_Leg_IK_Dist_01_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[24].dn"
+connectAttr "R_Leg_IK_Distance.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[24].dn"
 		;
-connectAttr "L_Leg_Length_Denominator_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[25].dn"
+connectAttr "L_arm_02_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[25].dn"
 		;
-connectAttr "R_Arm_Stretch_Global_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[26].dn"
+connectAttr "L_arm_IK_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[26].dn";
+connectAttr "R_Leg_Stretch_Global_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[27].dn"
 		;
-connectAttr "R_Arm_IK_Joint_Length_Ref_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[27].dn"
+connectAttr "R_leg_02_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[28].dn"
 		;
-connectAttr "L_Arm_IK_Stretch_Scalar_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[28].dn"
+connectAttr "L_Leg_IK_Joint_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[29].dn"
 		;
-connectAttr "R_arm_02_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[29].dn"
+connectAttr "R_Arm_IK_Stretch_Clamp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[30].dn"
 		;
-connectAttr "R_Arm_IK_Length_Combined_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[30].dn"
+connectAttr "R_arm_01_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[31].dn"
 		;
-connectAttr "R_Arm_Length_Denom_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[31].dn"
+connectAttr "R_Arm_Lower_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[32].dn"
 		;
-connectAttr "L_Leg_IK_Joint_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[32].dn"
+connectAttr "R_Leg_Length_Denominator_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[33].dn"
 		;
-connectAttr "R_Arm_IK_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[33].dn"
+connectAttr "L_Leg_Stretch_Global_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[34].dn"
 		;
-connectAttr "R_Arm_IK_Stretch_Negative_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[34].dn"
+connectAttr "R_Arm_Length_Denom_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[35].dn"
 		;
-connectAttr "R_Leg_IK_Joint_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[35].dn"
+connectAttr "R_Leg_Lower_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[36].dn"
 		;
-connectAttr "Left_Arm_Length_Denominator_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[36].dn"
+connectAttr "Left_Arm_Upper_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[37].dn"
 		;
-connectAttr "L_Arm_Stretch_Global_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[37].dn"
+connectAttr "R_Arm_Stretch_Global_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[38].dn"
 		;
-connectAttr "L_arm_03_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[38].dn"
+connectAttr "L_Leg_IK_Dist_02_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[39].dn"
 		;
-connectAttr "R_Arm_IK_Stretch_Scalar_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[39].dn"
+connectAttr "L_Arm_IK_Dist_01_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[40].dn"
 		;
-connectAttr "R_arm_03_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[40].dn"
+connectAttr "R_leg_03_IK_jnt_orientConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[41].dn"
 		;
-connectAttr "L_Leg_Upper_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[41].dn"
+connectAttr "R_Leg_Stretch_Switch_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[42].dn"
 		;
-connectAttr "R_arm_03_IK_jnt_orientConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[42].dn"
+connectAttr "L_Leg_IK_Joint_Length_Ref_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[43].dn"
 		;
-connectAttr "R_Leg_Stretch_Global_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[43].dn"
+connectAttr "L_Arm_IK_Joint_Length_Ref_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[44].dn"
 		;
-connectAttr "L_Arm_Stretch_Switch_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[44].dn"
+connectAttr "Left_Arm_Lower_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[45].dn"
 		;
-connectAttr "R_Leg_Length_Denominator_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[45].dn"
+connectAttr "L_arm_01_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[46].dn"
 		;
-connectAttr "R_Leg_IK_Stretch_Scalar_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[46].dn"
+connectAttr "R_Leg_IK_Stretch_Scalar_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[47].dn"
 		;
-connectAttr "R_Leg_IK_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[47].dn"
+connectAttr "R_Arm_IK_Stretch_Scalar_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[48].dn"
 		;
-connectAttr "L_arm_IK_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[48].dn";
-connectAttr "L_Leg_Stretch_Switch_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[49].dn"
+connectAttr "R_Leg_IK_Joint_Length_Ref_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[49].dn"
 		;
-connectAttr "R_Leg_IK_Length_Combined_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[50].dn"
+connectAttr "L_Arm_Stretch_Global_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[50].dn"
 		;
-connectAttr "Left_Arm_Upper_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[51].dn"
+connectAttr "R_Arm_IK_Dist_01_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[51].dn"
 		;
-connectAttr "R_Leg_IK_Dist_02_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[52].dn"
+connectAttr "L_Leg_IK_Distance.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[52].dn"
 		;
-connectAttr "R_Arm_IK_Distance.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[53].dn"
+connectAttr "R_Leg_Upper_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[53].dn"
 		;
-connectAttr "Transform_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[54].dn";
-connectAttr "R_Arm_Stretch_Switch_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[55].dn"
+connectAttr "L_leg_01_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[54].dn"
 		;
-connectAttr "L_arm_01_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[56].dn"
+connectAttr "R_Arm_IK_Dist_02_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[55].dn"
 		;
-connectAttr "L_Leg_IK_Dist_01_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[57].dn"
+connectAttr "L_Leg_IK_Stretch_Clamp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[56].dn"
 		;
-connectAttr "R_Leg_Lower_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[58].dn"
+connectAttr "Transform_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[57].dn";
+connectAttr "L_leg_IK_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[58].dn";
+connectAttr "L_arm_03_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[59].dn"
 		;
-connectAttr "R_Leg_IK_Negative_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[59].dn"
+connectAttr "L_Arm_Stretch_Switch_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[60].dn"
 		;
-connectAttr "R_leg_IK_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[60].dn";
-connectAttr "R_Leg_IK_Joint_Length_Ref_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[61].dn"
+connectAttr "L_Arm_IK_Length_Combined_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[61].dn"
 		;
-connectAttr "L_Arm_IK_Joint_Length_Ref_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[62].dn"
+connectAttr "R_arm_02_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[62].dn"
 		;
-connectAttr "L_Leg_IK_Joint_Length_Ref_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[63].dn"
+connectAttr "R_arm_IK_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[63].dn";
+connectAttr "R_leg_01_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[64].dn"
 		;
-connectAttr "L_Leg_IK_Distance.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[64].dn"
+connectAttr "L_Arm_IK_Distance.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[65].dn"
 		;
-connectAttr "R_arm_IK_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[65].dn";
-connectAttr "L_Arm_IK_Length_Combined_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[66].dn"
+connectAttr "R_arm_03_IK_jnt_orientConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[66].dn"
 		;
-connectAttr "L_arm_02_IK_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[67].dn"
+connectAttr "R_Arm_IK_Distance.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[67].dn"
 		;
-connectAttr "R_Leg_Upper_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[68].dn"
+connectAttr "R_Arm_IK_Length_Combined_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[68].dn"
 		;
-connectAttr "R_Arm_Lower_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[69].dn"
+connectAttr "R_Arm_IK_Joint_Length_Ref_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[69].dn"
 		;
-connectAttr "R_Arm_IK_Dist_02_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[70].dn"
+connectAttr "R_Leg_IK_Negative_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[70].dn"
 		;
-connectAttr "L_Arm_IK_Distance.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[71].dn"
+connectAttr "R_Leg_IK_Dist_02_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[71].dn"
 		;
-connectAttr "L_Leg_IK_Stretch_Clamp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[72].dn"
+connectAttr "L_Leg_IK_Dist_01_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[72].dn"
 		;
-connectAttr "L_Leg_IK_Length_Combined_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[73].dn"
+connectAttr "L_Leg_Length_Denominator_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[73].dn"
 		;
-connectAttr "L_Leg_IK_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[74].dn"
+connectAttr "R_Arm_IK_Stretch_Negative_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[74].dn"
 		;
-connectAttr "R_Leg_Stretch_Switch_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[75].dn"
+connectAttr "L_Arm_IK_Joint_Length_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[75].dn"
 		;
-connectAttr "R_leg_03_IK_jnt_orientConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[76].dn"
+connectAttr "R_Arm_Upper_Length_PMA.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[76].dn"
 		;
 connectAttr "R_Leg_IK_Stretch_Clamp.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[77].dn"
 		;
-connectAttr "R_Leg_IK_Distance.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[78].dn"
+connectAttr "L_leg_03_IK_jnt_orientConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[78].dn"
 		;
-connectAttr "L_upper_arm_twist_target_loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[0].dn"
+connectAttr "R_Upper_Arm_Twist_Up_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[0].dn"
 		;
-connectAttr "L_upper_arm_twist_target_locShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[1].dn"
+connectAttr "R_upper_arm_twist_01_corrective_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[1].dn"
 		;
-connectAttr "L_Forearm_Twist_01_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[2].dn"
-		;
-connectAttr "L_Arm_Twist_Aim_Loc_Grp_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[3].dn"
-		;
-connectAttr "Limb_Twist_Locator_Group.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[4].dn"
-		;
-connectAttr "L_upper_arm_twist_aim_loc_grp_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[5].dn"
-		;
-connectAttr "L_upper_arm_twist_aim_loc_grp_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[6].dn"
-		;
-connectAttr "L_upper_arm_twist_aim_loc_aimConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[7].dn"
-		;
-connectAttr "L_upper_arm_twist_up_loc_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[8].dn"
-		;
-connectAttr "L_upper_arm_twist_IK_jnt_grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[9].dn"
-		;
-connectAttr "L_upper_arm_twist_IK_handle_pointConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[10].dn"
-		;
-connectAttr "L_upper_arm_twist_aim_grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[11].dn"
-		;
-connectAttr "L_upper_arm_twist_IK_grp_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[12].dn"
-		;
-connectAttr "L_upper_arm_twist_IK_grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[13].dn"
-		;
-connectAttr "L_upper_arm_twist_IK_grp_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[14].dn"
-		;
-connectAttr "L_upper_arm_twist_IK_handle_poleVectorConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[15].dn"
-		;
-connectAttr "L_upper_arm_twist_PV_loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[16].dn"
-		;
-connectAttr "L_upper_arm_twist_PV_locShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[17].dn"
-		;
-connectAttr "L_upper_arm_twist_IK_02_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[18].dn"
-		;
-connectAttr "L_upper_arm_twist_target_loc_pointConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[19].dn"
-		;
-connectAttr "L_upper_arm_twist_IK_01_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[20].dn"
-		;
-connectAttr "effector9.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[21].dn";
-connectAttr "L_upper_arm_twist_IK_handle.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[22].dn"
-		;
-connectAttr "L_Forearm_Twist_02_jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[23].dn"
-		;
-connectAttr "L_Forearm_Twist_02_jnt.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[24].dn"
-		;
-connectAttr "Left_Forearm_Twist_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[25].dn"
-		;
-connectAttr "L_Arm_Twist_Mid_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[26].dn"
-		;
-connectAttr "L_Arm_Twist_Aim_Loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[27].dn"
-		;
-connectAttr "L_upper_arm_twist_aim_locShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[28].dn"
-		;
-connectAttr "L_upper_arm_twist_aim_loc_grp.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[29].dn"
-		;
-connectAttr "L_upper_arm_twist_aim_loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[30].dn"
-		;
-connectAttr "L_upper_arm_twist_up_loc.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[31].dn"
-		;
-connectAttr "L_upper_arm_twist_up_locShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[32].dn"
-		;
-connectAttr "L_Forearm_Twist_01_jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[33].dn"
+connectAttr "R_upper_arm_twist_corrective_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[1].ni[2].dn"
 		;
 connectAttr "Pants_GeoSG.pa" ":renderPartition.st" -na;
 connectAttr "Body_GeoSG.pa" ":renderPartition.st" -na;
@@ -103017,6 +104464,13 @@ connectAttr "R_Leg_Stretch_Global_MD.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "L_Leg_Stretch_Global_MD.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "L_Arm_Stretch_Global_MD.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "Left_Forearm_Twist_MD.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "L_upper_arm_IK_twist_md.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "L_upper_arm_IK_twist_corrective_MD.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "R_Forearm_Twist_MD.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "R_Upper_Arm_Twist_MD.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "R_upper_arm_twist_corrective_MD.msg" ":defaultRenderUtilityList1.u"
+		 -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "base_color_texture.msg" ":defaultTextureList1.tx" -na;
 connectAttr "base_color_texture_ncl1_1.msg" ":defaultTextureList1.tx" -na;
